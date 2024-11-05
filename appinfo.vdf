@@ -1,7 +1,7 @@
 "appid" "1562940"
 "common"
 {
-	"name" "THE LEGEND OF HEROES: HAJIMARI NO KISEKI"
+	"name" "英雄伝説 創の軌跡"
 	"type" "Game"
 	"oslist" "windows"
 	"osarch" "64"
@@ -105,6 +105,64 @@
 			"height_pct" "50"
 		}
 	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"english" "library_600x900.jpg"
+				"japanese" "library_600x900_japanese.jpg"
+				"koreana" "library_600x900_koreana.jpg"
+				"tchinese" "library_600x900_tchinese.jpg"
+				"schinese" "library_600x900_schinese.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_600x900_2x.jpg"
+				"japanese" "library_600x900_japanese_2x.jpg"
+				"koreana" "library_600x900_koreana_2x.jpg"
+				"tchinese" "library_600x900_tchinese_2x.jpg"
+				"schinese" "library_600x900_schinese_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"image"
+			{
+				"english" "logo.png"
+				"japanese" "logo_japanese.png"
+				"koreana" "logo_koreana.png"
+				"tchinese" "logo_tchinese.png"
+				"schinese" "logo_schinese.png"
+			}
+			"image2x"
+			{
+				"english" "logo_2x.png"
+				"japanese" "logo_japanese_2x.png"
+				"koreana" "logo_koreana_2x.png"
+				"tchinese" "logo_tchinese_2x.png"
+				"schinese" "logo_schinese_2x.png"
+			}
+			"logo_position"
+			{
+				"pinned_position" "BottomLeft"
+				"width_pct" "50"
+				"height_pct" "50"
+			}
+		}
+	}
 	"store_asset_mtime" "1642136328"
 	"associations"
 	{
@@ -153,6 +211,7 @@
 		"category_56" "1"
 		"category_18" "1"
 		"category_60" "1"
+		"category_62" "1"
 	}
 	"supported_languages"
 	{
@@ -185,8 +244,8 @@
 		"3" "4191"
 		"4" "1684"
 		"5" "1677"
-		"6" "5230"
-		"7" "4325"
+		"6" "4325"
+		"7" "5230"
 		"8" "10695"
 		"9" "4182"
 		"10" "4947"
@@ -195,7 +254,7 @@
 		"13" "51306"
 	}
 	"review_score" "8"
-	"review_percentage" "82"
+	"review_percentage" "83"
 }
 "extended"
 {
@@ -264,6 +323,12 @@
 		{
 			"public"
 			{
+				"gid" "7224740724412495727"
+				"size" "43847395443"
+				"download" "31657090704"
+			}
+			"1.10"
+			{
 				"gid" "2504388095903895814"
 				"size" "43847419371"
 				"download" "31657116400"
@@ -271,47 +336,53 @@
 		}
 		"encryptedmanifests"
 		{
+			"1.11"
+			{
+				"gid" "E8414E4A5021BA3E33968494D52163BE"
+				"size" "E0AF2B8DEB2085F2C80D8ACC152B5D59"
+				"download" "9F7670B78469E69D087A3C8C7C95A7F3"
+			}
 			"beta"
 			{
-				"gid" "547AF187167FC0858F558451FE1404DB"
-				"size" "DF20720556B8DB29E534FE500D8CDCDA"
-				"download" "BCA01D04F79FCB0B2060709F4A2833AC"
+				"gid" "7CD78C14DEB77F7793A055E0E60E20A9"
+				"size" "78F3684253103E50D840644E6221522A"
+				"download" "32CE95474FF440E5400B32BC6F92CF4E"
 			}
 			"beta_staging"
 			{
-				"gid" "A6C828875B7C44672862D529C5AEB981"
-				"size" "2D5E5A07BA38C7A92EC965246922B465"
-				"download" "316FD2BA40E6E9AD429FD12668C2C8EC"
+				"gid" "7DF63B91C0C4A1798CB2F42F370C9A07"
+				"size" "C6BF79CF743D1EC74E4152E8758685F4"
+				"download" "1A07DBCC4385344AD439953BE48E9787"
 			}
 			"daily"
 			{
-				"gid" "EDF8AB373486CA6C63C7DEEE46A848E5"
-				"size" "95B9C0987983FDD41E08B92067745E94"
-				"download" "62F2912108177F19150AC11E3FC40486"
+				"gid" "8ABDE3D1D95DFEFDAC89AFFBFFB8924C"
+				"size" "6803915229F3F3A0DC45F7356FA28DD9"
+				"download" "AC940549CA94B4A40A7CC3958745C02B"
 			}
 			"qadebug"
 			{
-				"gid" "0B3B63AA9FF40895463B08EBDDFF1D5A"
-				"size" "CA3A020DEBC98C55AA8B8CFE08686922"
-				"download" "171D2504DA782FB1A36DE8773B028AEA"
+				"gid" "473AEEA42BA6B61CFE4A1B9B70A677D5"
+				"size" "C60D9CA49F553C09049CFC4A01B4BA69"
+				"download" "4511635226C00C78AA65752ADDBCBA49"
 			}
 			"qadebug_staging"
 			{
-				"gid" "FF1DC08EF8C79D8B24ABF54EE2CC98B1"
-				"size" "0DB5C98BD2ED81E2C616694D4FD8BCDB"
-				"download" "FB6F261C5408F6446865D0B2B48AD0F2"
+				"gid" "0D0BA66371BEC72931EEE8C6EDF80843"
+				"size" "6B466BB093696C307B4D2FCF5B9522F7"
+				"download" "70CF40282559E88A7787109EE7DE5EAA"
 			}
 			"test"
 			{
-				"gid" "B94B1C21A43CF89123D922D347849086"
-				"size" "CC601FD2F4BBC7DE176B1833D0FA4028"
-				"download" "0DDCB0AE84755D8292830854DA221063"
+				"gid" "634B0A57366499D43F9CE47FCBE51DF0"
+				"size" "31011E8CA4DC44D54DEBB8923F414855"
+				"download" "6BF8D7A2BA5C63BA93D5460F9EB488B3"
 			}
 			"uiskip"
 			{
-				"gid" "172DDBB7D65E2924EB1560FEE9AC2B70"
-				"size" "D6FC5110DA77DDC0019EF5696C41F279"
-				"download" "9ADF744B12C177331A9A691FF5930083"
+				"gid" "40C056BFBB922EBCF59CB66CD07DAACF"
+				"size" "992F5AF12E8B896896CAABCB9E618798"
+				"download" "83F9DCD6C88FAA6D9475C1A7EE626F7D"
 			}
 		}
 	}
@@ -319,14 +390,26 @@
 	{
 		"public"
 		{
+			"buildid" "16251753"
+			"timeupdated" "1730380106"
+		}
+		"1.10"
+		{
 			"buildid" "8543325"
-			"timeupdated" "1650250672"
+			"description" "1.10"
+			"timeupdated" "1730326423"
+		}
+		"1.11"
+		{
+			"buildid" "16251753"
+			"pwdrequired" "1"
+			"timeupdated" "1730379955"
 		}
 		"beta"
 		{
-			"buildid" "8543325"
+			"buildid" "16251753"
 			"pwdrequired" "1"
-			"timeupdated" "1649821745"
+			"timeupdated" "1730379517"
 		}
 		"beta_staging"
 		{
@@ -395,6 +478,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "21313258"
-"_sha" "c0630834ac97f78f0a54fbdd99e68c997366ebfc"
-"_size" "8210"
+"_change_number" "25989518"
+"_sha" "0712ab74bb7f8e0126c3d32c7ec93cd1ad216b0b"
+"_size" "10013"
