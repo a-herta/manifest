@@ -67,7 +67,7 @@ class MainApp:
         return logger
 
     def get_repos(self):
-        repo_list = ['ciocoa/manifest']
+        repo_list = ['reimuc/manifest']
         repo = self.args.repo
         if repo:
             repo_list.insert(0, repo)
