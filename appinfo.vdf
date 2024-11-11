@@ -31,6 +31,7 @@
 	{
 		"english" "header.jpg"
 		"schinese" "header_schinese.jpg"
+		"tchinese" "header_tchinese.jpg"
 	}
 	"library_assets"
 	{
@@ -99,7 +100,7 @@
 			}
 		}
 	}
-	"store_asset_mtime" "1726487890"
+	"store_asset_mtime" "1730831227"
 	"associations"
 	{
 		"0"
@@ -127,6 +128,9 @@
 		"category_2" "1"
 		"category_22" "1"
 		"category_23" "1"
+		"category_25" "1"
+		"category_41" "1"
+		"category_42" "1"
 		"category_62" "1"
 	}
 	"supported_languages"
@@ -175,7 +179,7 @@
 		"19" "599"
 	}
 	"review_score" "8"
-	"review_percentage" "93"
+	"review_percentage" "94"
 }
 "extended"
 {
@@ -215,15 +219,21 @@
 		{
 			"public"
 			{
-				"gid" "1954495914150567365"
-				"size" "278587691"
-				"download" "118877440"
+				"gid" "5596533648216055319"
+				"size" "280949811"
+				"download" "119212912"
 			}
 			"beta"
 			{
-				"gid" "1954495914150567365"
-				"size" "278587691"
-				"download" "118877440"
+				"gid" "5596533648216055319"
+				"size" "280949811"
+				"download" "119212912"
+			}
+			"mod_test"
+			{
+				"gid" "7981475495848573595"
+				"size" "280917388"
+				"download" "119414416"
 			}
 		}
 	}
@@ -231,14 +241,20 @@
 	{
 		"public"
 		{
-			"buildid" "15836764"
-			"timeupdated" "1727355828"
+			"buildid" "16337053"
+			"timeupdated" "1731041975"
 		}
 		"beta"
 		{
-			"buildid" "15836764"
+			"buildid" "16337053"
 			"description" "Beta Test"
-			"timeupdated" "1727354516"
+			"timeupdated" "1731041268"
+		}
+		"mod_test"
+		{
+			"buildid" "15938842"
+			"description" "Mod Test"
+			"timeupdated" "1728120683"
 		}
 	}
 }
@@ -267,3 +283,7 @@
 		}
 	}
 }
+"_missing_token" "False"
+"_change_number" "26101655"
+"_sha" "b31eb276c9efb6d241692512d106f6800843bf1f"
+"_size" "4939"
