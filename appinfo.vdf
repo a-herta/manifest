@@ -266,7 +266,7 @@
 		}
 	}
 	"steam_release_date" "1726851646"
-	"metacritic_score" "86"
+	"metacritic_score" "85"
 	"metacritic_fullurl" "https://www.metacritic.com/game/pc/frostpunk-2\?ftag=MCD-06-10aaa1f"
 	"community_visible_stats" "1"
 	"workshop_visible" "1"
@@ -369,9 +369,9 @@
 		{
 			"public"
 			{
-				"gid" "8738599538367131614"
-				"size" "14313731256"
-				"download" "11353775872"
+				"gid" "7461071766472418228"
+				"size" "14316893717"
+				"download" "11353512016"
 			}
 		}
 		"encryptedmanifests"
@@ -402,9 +402,9 @@
 			}
 			"development"
 			{
-				"gid" "6A2E5B359969D749A8FC4BF191974E42"
-				"size" "C54413A72AAC6CCFE7E5FC8690E9E5FA"
-				"download" "56CC668F062DE1A10288BF2B1E81191E"
+				"gid" "114A106C432FBBEB774D676BA629C4BE"
+				"size" "6FDCF62A1B5692F8E3DC539AF3016E58"
+				"download" "E4ED3E2B8417AC236C0F7F3C70504048"
 			}
 			"glimmer"
 			{
@@ -432,9 +432,9 @@
 			}
 			"nova"
 			{
-				"gid" "8A9FDB41B5A65FCF4A4465ED6E8459DB"
-				"size" "2B97BEDEB3B02813398FD469AC823DA0"
-				"download" "CEB19279F174C8D5C0697769EBE0600C"
+				"gid" "7404022BE888AED73FC2B02B704299DF"
+				"size" "9BA287FD7C6014D149FCEC5C05063806"
+				"download" "492145D2B6437FD5F237830277C34C58"
 			}
 			"radiance"
 			{
@@ -462,9 +462,9 @@
 			}
 			"thunderstorm"
 			{
-				"gid" "9ED5254A63CAB880B5FC3C1BB17E9327"
-				"size" "FD0468F0FFA9A418209888D8A62C4C46"
-				"download" "731CD249DFDE3AD8C47812AE567735F4"
+				"gid" "88731398C05146DDC0F09B3680EB2AB0"
+				"size" "64D6652FC331009E56F19303551CB907"
+				"download" "A2152F4D0B36F5442101A4C7C0071886"
 			}
 			"tornado"
 			{
@@ -613,9 +613,9 @@
 		{
 			"public"
 			{
-				"gid" "7937811853498971837"
-				"size" "11157517722"
-				"download" "10426673904"
+				"gid" "5380039164864755654"
+				"size" "11158501594"
+				"download" "10426824528"
 			}
 		}
 		"encryptedmanifests"
@@ -640,9 +640,9 @@
 			}
 			"development"
 			{
-				"gid" "DEBBF9B92FDBBB56AD2DDE09A41B49CA"
-				"size" "1F72FDBD7FCF60027728F1C1619937D1"
-				"download" "D0B84FBF693A1F0DB71EBC3432D40BBE"
+				"gid" "F65A7B2E9D4DA0173C16A59532E3AB6D"
+				"size" "9FCCA407A76FCAEB2DA624D17B7B2859"
+				"download" "F63BBD904AE672A298EFE42ACFA8B7AB"
 			}
 			"glimmer"
 			{
@@ -664,9 +664,9 @@
 			}
 			"nova"
 			{
-				"gid" "7B953D92A0333E90109EEF4F1090D38D"
-				"size" "3E54E3FCA321DF0B5B1F3580CFD3ADA6"
-				"download" "7E268C55BEFD6544D2F0511A7E37B9A8"
+				"gid" "E88BEA02B72C196E73E720E12994C222"
+				"size" "BF708494664549DF44E3D797A686FA74"
+				"download" "5601FABE7274BB164947C6096D716B0B"
 			}
 			"radiance"
 			{
@@ -717,9 +717,9 @@
 		{
 			"public"
 			{
-				"gid" "7977993762137597301"
-				"size" "11268829927"
-				"download" "10529157104"
+				"gid" "1210013989508430134"
+				"size" "11269824620"
+				"download" "10530521216"
 			}
 		}
 		"encryptedmanifests"
@@ -744,9 +744,9 @@
 			}
 			"nova"
 			{
-				"gid" "FBDBF058B836B454347C1ABA2688A32C"
-				"size" "C57F175C28A7F3A1F67C8D6F61DFB91A"
-				"download" "E02434956FC4E1366D45B64C0ADB8A91"
+				"gid" "00CD994B9148F059946C8544901CD73F"
+				"size" "AD8D40E783A0299F4E8E443E17190C67"
+				"download" "833F0AFCF73E3521DCFD026D82ED5238"
 			}
 			"zenith"
 			{
@@ -805,8 +805,8 @@
 	{
 		"public"
 		{
-			"buildid" "16251032"
-			"timeupdated" "1730377410"
+			"buildid" "16390287"
+			"timeupdated" "1731510739"
 		}
 		"celestial"
 		{
@@ -834,9 +834,9 @@
 		}
 		"development"
 		{
-			"buildid" "16247473"
+			"buildid" "16388066"
 			"pwdrequired" "1"
-			"timeupdated" "1730355031"
+			"timeupdated" "1731478225"
 		}
 		"glimmer"
 		{
@@ -864,9 +864,9 @@
 		}
 		"nova"
 		{
-			"buildid" "16251032"
+			"buildid" "16390287"
 			"pwdrequired" "1"
-			"timeupdated" "1730375581"
+			"timeupdated" "1731492232"
 		}
 		"radiance"
 		{
@@ -894,9 +894,9 @@
 		}
 		"thunderstorm"
 		{
-			"buildid" "16247794"
+			"buildid" "16388774"
 			"pwdrequired" "1"
-			"timeupdated" "1730357375"
+			"timeupdated" "1731483721"
 		}
 		"tornado"
 		{
@@ -951,6 +951,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "25988874"
-"_sha" "91e866b5e837e47e373173096c58f3eab4b4f06c"
+"_change_number" "26176972"
+"_sha" "b26cbf179571db5674103973b1e8b5a221e4f91c"
 "_size" "19917"
