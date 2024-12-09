@@ -164,7 +164,7 @@
 			}
 		}
 	}
-	"store_asset_mtime" "1726717818"
+	"store_asset_mtime" "1729223292"
 	"associations"
 	{
 		"0"
@@ -188,7 +188,6 @@
 	{
 		"0" "1"
 		"1" "23"
-		"2" "70"
 	}
 	"category"
 	{
@@ -220,7 +219,7 @@
 			"full_audio" "true"
 		}
 	}
-	"steam_release_date" "1666478754"
+	"steam_release_date" "1729234963"
 	"community_visible_stats" "1"
 	"community_hub_visible" "1"
 	"gameid" "2015620"
@@ -239,15 +238,15 @@
 		"10" "4726"
 		"11" "4191"
 		"12" "492"
-		"13" "493"
-		"14" "1684"
-		"15" "1685"
-		"16" "15045"
-		"17" "1774"
+		"13" "1684"
+		"14" "1685"
+		"15" "15045"
+		"16" "1774"
+		"17" "493"
 		"18" "4434"
 	}
 	"review_score" "8"
-	"review_percentage" "86"
+	"review_percentage" "87"
 }
 "extended"
 {
@@ -281,15 +280,15 @@
 		{
 			"public"
 			{
-				"gid" "8826516454800378518"
-				"size" "4421095472"
-				"download" "3785899328"
+				"gid" "2995726357072752651"
+				"size" "4445423519"
+				"download" "3805064496"
 			}
 			"networktest"
 			{
-				"gid" "6987984976701800483"
-				"size" "2339597881"
-				"download" "1805598384"
+				"gid" "2995726357072752651"
+				"size" "4445423519"
+				"download" "3805064496"
 			}
 		}
 		"encryptedmanifests"
@@ -302,9 +301,15 @@
 			}
 			"beta"
 			{
-				"gid" "3EF2383179D4FA6BC4440BAF325867F7"
-				"size" "004D1B786B6C1C854FE3677F4C0CB0F3"
-				"download" "31B153A183979E7EB88664387B232670"
+				"gid" "E9195E93BFE1E64BCE18854F1C4B6365"
+				"size" "114C76D6546DEDA5753ABB19A87FF5EE"
+				"download" "7229EA41FBEE5FCB857F5833CD467860"
+			}
+			"beta2"
+			{
+				"gid" "D011AD2D75C5845F9D98A9234F5779EA"
+				"size" "AF57A8600E79753D6D2AB065025F29BF"
+				"download" "A4FEC12F92179111C71E78BB11FC8E43"
 			}
 		}
 	}
@@ -312,8 +317,8 @@
 	{
 		"public"
 		{
-			"buildid" "15737538"
-			"timeupdated" "1726714987"
+			"buildid" "16644200"
+			"timeupdated" "1733455328"
 		}
 		"older"
 		{
@@ -323,15 +328,21 @@
 		}
 		"beta"
 		{
-			"buildid" "15737538"
+			"buildid" "16644200"
 			"pwdrequired" "1"
-			"timeupdated" "1726634845"
+			"timeupdated" "1733453372"
+		}
+		"beta2"
+		{
+			"buildid" "16644200"
+			"pwdrequired" "1"
+			"timeupdated" "1733411481"
 		}
 		"networktest"
 		{
-			"buildid" "15391749"
+			"buildid" "16644200"
 			"description" "Network mode test"
-			"timeupdated" "1723804283"
+			"timeupdated" "1733455350"
 		}
 	}
 }
@@ -341,6 +352,6 @@
 	"maxnumfiles" "10"
 }
 "_missing_token" "False"
-"_change_number" "25290989"
-"_sha" "ce817a142b15dbed3d0fcb07c35c9a1b9be87cd8"
-"_size" "6582"
+"_change_number" "26519490"
+"_sha" "23284d9c3562ce708ce570d6dd168bc48394a5a2"
+"_size" "6842"
