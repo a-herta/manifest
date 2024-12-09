@@ -93,6 +93,56 @@
 			"height_pct" "41.329916356632076"
 		}
 	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"schinese" "library_600x900_schinese.jpg"
+				"english" "library_600x900.jpg"
+				"koreana" "library_600x900_koreana.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_600x900_2x.jpg"
+				"schinese" "library_600x900_schinese_2x.jpg"
+				"koreana" "library_600x900_koreana_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"logo_position"
+			{
+				"pinned_position" "BottomLeft"
+				"width_pct" "27.016792605393547"
+				"height_pct" "41.329916356632076"
+			}
+			"image"
+			{
+				"english" "logo.png"
+				"schinese" "logo_schinese.png"
+				"koreana" "logo_koreana.png"
+			}
+			"image2x"
+			{
+				"english" "logo_2x.png"
+				"schinese" "logo_schinese_2x.png"
+				"koreana" "logo_koreana_2x.png"
+			}
+		}
+	}
 	"store_asset_mtime" "1716209689"
 	"associations"
 	{
@@ -155,6 +205,11 @@
 			"subtitles" "true"
 		}
 		"spanish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"tchinese"
 		{
 			"supported" "true"
 			"subtitles" "true"
@@ -292,9 +347,9 @@
 		{
 			"public"
 			{
-				"gid" "1808881948761206748"
-				"size" "2682589545"
-				"download" "2675959072"
+				"gid" "3282200606953518320"
+				"size" "2682547553"
+				"download" "2675909168"
 			}
 			"old_english"
 			{
@@ -313,9 +368,9 @@
 			}
 			"test"
 			{
-				"gid" "AECC22EA21DA72C90D6CB9E99196DA11"
-				"size" "5BB9B4506DBED990A93296D213FDB8DC"
-				"download" "B229CD2FF61F2750282857BBE7CF45F6"
+				"gid" "0C70C5B60203CB939C69BFACE1D91053"
+				"size" "6E2027708C4E1BED7E3C4E8DAE032DAA"
+				"download" "BCEDA6CD673717096BC5273CC60986A5"
 			}
 			"test2"
 			{
@@ -337,18 +392,18 @@
 		{
 			"public"
 			{
-				"gid" "8919255242428649002"
-				"size" "2030956376"
-				"download" "2023725440"
+				"gid" "6288338700682384115"
+				"size" "2030297484"
+				"download" "2023038608"
 			}
 		}
 		"encryptedmanifests"
 		{
 			"gaiden"
 			{
-				"gid" "F06D5F628BABC9C415CE1FFD5B72D9F5"
-				"size" "80096F68A8A5FC4D8D4A3C743E60A965"
-				"download" "F7A69F2A1D45BB1B0C71E2F930806BEC"
+				"gid" "47197FE4BDF516A3BE142D70FE91CA13"
+				"size" "B5F676DEE841556D255B6B13797B0196"
+				"download" "5515C227307B9583FCFEB77F3E0F4807"
 			}
 			"test2"
 			{
@@ -362,8 +417,8 @@
 	{
 		"public"
 		{
-			"buildid" "14837858"
-			"timeupdated" "1719358110"
+			"buildid" "16656423"
+			"timeupdated" "1733488047"
 		}
 		"old_english"
 		{
@@ -373,15 +428,15 @@
 		}
 		"gaiden"
 		{
-			"buildid" "14837404"
+			"buildid" "16656313"
 			"pwdrequired" "1"
-			"timeupdated" "1719355155"
+			"timeupdated" "1733487643"
 		}
 		"test"
 		{
-			"buildid" "14837377"
+			"buildid" "16341119"
 			"pwdrequired" "1"
-			"timeupdated" "1719355146"
+			"timeupdated" "1731066300"
 		}
 		"test2"
 		{
@@ -425,6 +480,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "24117536"
-"_sha" "4474880aeb8fcb13062c1678c324038e68094ab9"
-"_size" "8319"
+"_change_number" "26525653"
+"_sha" "b3cd867ac9660d42644d13a4fc5d1abfe9281362"
+"_size" "9361"
