@@ -5,9 +5,9 @@
 	"type" "Game"
 	"releasestate" "released"
 	"icon" "a8e80ac779a5223e343f0ea64cf52a7250a8980b"
-	"oslist" "windows"
+	"oslist" "windows,macos"
 	"osarch" ""
-	"osextended" ""
+	"osextended" "macos64,macosapplesilicon"
 	"clienttga" "4275a8cb140d4214ad85d88c4e69ad6c225f0b7e"
 	"name_localized"
 	{
@@ -150,6 +150,16 @@
 			"supported" "true"
 			"subtitles" "true"
 		}
+		"japanese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"koreana"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
 	}
 	"steam_release_date" "1726192809"
 	"community_visible_stats" "1"
@@ -167,8 +177,8 @@
 		"7" "9"
 		"8" "8945"
 		"9" "1084988"
-		"10" "1666"
-		"11" "4726"
+		"10" "4726"
+		"11" "1666"
 		"12" "916648"
 		"13" "4182"
 		"14" "1677"
@@ -204,11 +214,20 @@
 				"oslist" "windows"
 			}
 		}
+		"1"
+		{
+			"executable" "Cat God Ranch.app"
+			"type" "default"
+			"config"
+			{
+				"oslist" "macos"
+			}
+		}
 	}
 }
 "depots"
 {
-	"baselanguages" "english,schinese"
+	"baselanguages" "english,koreana,schinese,tchinese,japanese"
 	"2797341"
 	{
 		"config"
@@ -219,15 +238,15 @@
 		{
 			"public"
 			{
-				"gid" "5171304001894148192"
-				"size" "283270059"
-				"download" "119471600"
+				"gid" "9035304936773814126"
+				"size" "295018385"
+				"download" "129196624"
 			}
 			"beta"
 			{
-				"gid" "5171304001894148192"
-				"size" "283270059"
-				"download" "119471600"
+				"gid" "9035304936773814126"
+				"size" "295018385"
+				"download" "129196624"
 			}
 			"mod_test"
 			{
@@ -236,19 +255,59 @@
 				"download" "119414416"
 			}
 		}
+		"encryptedmanifests"
+		{
+			"alpha"
+			{
+				"gid" "1285D8FDC4E1C42EAFCB003350D60FCB"
+				"size" "D467A8BB33D6D23A6803A8192B21310E"
+				"download" "E1DD264096BF3C1F79C3182C03D4D5DD"
+			}
+		}
+	}
+	"2797342"
+	{
+		"config"
+		{
+			"oslist" "macos"
+		}
+		"manifests"
+		{
+			"public"
+			{
+				"gid" "7888007388503284137"
+				"size" "409775327"
+				"download" "151893328"
+			}
+		}
+		"encryptedmanifests"
+		{
+			"alpha"
+			{
+				"gid" "93431D028EF299EF7CC3C7720851EC58"
+				"size" "B9ABD7FF2F0DC8C5A12E3CC5EE98E381"
+				"download" "18E25985F92BDA23E01FC83192EB2599"
+			}
+		}
 	}
 	"branches"
 	{
 		"public"
 		{
-			"buildid" "16404825"
-			"timeupdated" "1731582759"
+			"buildid" "16554830"
+			"timeupdated" "1732723545"
+		}
+		"alpha"
+		{
+			"buildid" "16552854"
+			"pwdrequired" "1"
+			"timeupdated" "1732713947"
 		}
 		"beta"
 		{
-			"buildid" "16404825"
+			"buildid" "16551988"
 			"description" "Beta Test"
-			"timeupdated" "1731581380"
+			"timeupdated" "1732709552"
 		}
 		"mod_test"
 		{
@@ -281,9 +340,17 @@
 			"useinstead" "WinAppDataLocalLow"
 			"addpath" ""
 		}
+		"1"
+		{
+			"root" "gameinstall"
+			"os" "MacOS"
+			"oscompare" "="
+			"useinstead" "MacAppSupport"
+			"addpath" ""
+		}
 	}
 }
 "_missing_token" "False"
-"_change_number" "26191489"
-"_sha" "57cb528da7836979d10b2b261e93e801812e1833"
-"_size" "4939"
+"_change_number" "26389036"
+"_sha" "12afb94a3b5d0084ba81d54b25a4e5cde01437a6"
+"_size" "6112"
