@@ -1,0 +1,533 @@
+"appid" "2106840"
+"common"
+{
+	"name" "PARANORMASIGHT: The Seven Mysteries of Honjo"
+	"type" "Game"
+	"oslist" "windows"
+	"osarch" "64"
+	"osextended" ""
+	"languages"
+	{
+		"english" "1"
+		"schinese" "1"
+		"tchinese" "1"
+		"japanese" "1"
+	}
+	"clienttga" "7a7b1200cdeff2eab064d0fa2a0d48493dc24397"
+	"linuxclienticon" "f90da5178c631f788c9aafd3cefd4ef27f715ccf"
+	"clienticon" "7ac0c617d8331294c574943edc2e0b060aaaa18a"
+	"icon" "f27d207c7456998c4e0f65320f2bd08fff2d5cd1"
+	"name_localized"
+	{
+		"japanese" "パラノマサイト FILE23 本所七不思議"
+		"schinese" "灵视异闻 FILE23 本所七大不可思议"
+		"tchinese" "靈視異聞 FILE23 本所七大不可思議"
+	}
+	"releasestate" "released"
+	"eulas"
+	{
+		"0"
+		{
+			"id" "2106840_eula_0"
+			"name" "PARANORMASIGHT: The Seven Mysteries of Honjo EULA"
+			"url" "https://store.steampowered.com//eula/2106840_eula_0"
+			"version" "1"
+		}
+	}
+	"content_descriptors"
+	{
+		"0" "2"
+		"1" "5"
+	}
+	"steam_deck_compatibility"
+	{
+		"category" "3"
+		"test_timestamp" "1690848000"
+		"tested_build_id" "11663925"
+		"tests"
+		{
+			"0"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultControllerConfigFullyFunctional"
+			}
+			"1"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_ControllerGlyphsMatchDeckDevice"
+			}
+			"2"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_InterfaceTextIsLegible"
+			}
+			"3"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant"
+			}
+		}
+		"configuration"
+		{
+			"supported_input" "gamepad"
+			"requires_manual_keyboard_invoke" "0"
+			"requires_non_controller_launcher_nav" "0"
+			"primary_player_is_controller_slot_0" "0"
+			"non_deck_display_glyphs" "0"
+			"small_text" "0"
+			"requires_internet_for_setup" "0"
+			"requires_internet_for_singleplayer" "0"
+			"recommended_runtime" "proton-8.0-3"
+			"requires_h264" "0"
+			"gamescope_frame_limiter_not_supported" "0"
+		}
+	}
+	"controller_support" "partial"
+	"small_capsule"
+	{
+		"english" "capsule_231x87.jpg"
+		"japanese" "capsule_231x87_japanese.jpg"
+	}
+	"header_image"
+	{
+		"english" "header.jpg"
+		"japanese" "header_japanese.jpg"
+	}
+	"library_assets"
+	{
+		"library_capsule" "en,ja"
+		"library_hero" "en"
+		"library_logo" "en,ja"
+		"logo_position"
+		{
+			"pinned_position" "BottomLeft"
+			"width_pct" "47.091144149967676"
+			"height_pct" "100"
+		}
+	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"english" "library_600x900.jpg"
+				"japanese" "library_600x900_japanese.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_600x900_2x.jpg"
+				"japanese" "library_600x900_japanese_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"image"
+			{
+				"english" "logo.png"
+				"japanese" "logo_japanese.png"
+			}
+			"image2x"
+			{
+				"english" "logo_2x.png"
+				"japanese" "logo_japanese_2x.png"
+			}
+			"logo_position"
+			{
+				"pinned_position" "BottomLeft"
+				"width_pct" "47.091144149967676"
+				"height_pct" "100"
+			}
+		}
+	}
+	"store_asset_mtime" "1713144235"
+	"associations"
+	{
+		"0"
+		{
+			"type" "developer"
+			"name" "Square Enix"
+		}
+		"1"
+		{
+			"type" "publisher"
+			"name" "Square Enix"
+		}
+	}
+	"primary_genre" "25"
+	"genres"
+	{
+		"0" "25"
+		"1" "3"
+		"2" "28"
+	}
+	"category"
+	{
+		"category_2" "1"
+		"category_18" "1"
+		"category_22" "1"
+		"category_23" "1"
+		"category_45" "1"
+		"category_46" "1"
+		"category_62" "1"
+	}
+	"supported_languages"
+	{
+		"english"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"japanese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"schinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"tchinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+	}
+	"steam_release_date" "1678294756"
+	"community_visible_stats" "1"
+	"community_hub_visible" "1"
+	"gameid" "2106840"
+	"store_tags"
+	{
+		"0" "3799"
+		"1" "21"
+		"2" "599"
+		"3" "4085"
+		"4" "1667"
+		"5" "31275"
+		"6" "5379"
+		"7" "6815"
+		"8" "7743"
+		"9" "10808"
+		"10" "4004"
+		"11" "6971"
+		"12" "1742"
+		"13" "5716"
+		"14" "4182"
+		"15" "122"
+		"16" "8461"
+		"17" "1698"
+		"18" "4434"
+		"19" "4486"
+	}
+	"review_score" "9"
+	"review_percentage" "96"
+}
+"extended"
+{
+	"developer" "Square Enix"
+	"publisher" "Square Enix"
+	"homepage" "https://Paranormasight.com/"
+}
+"config"
+{
+	"installdir" "PARANORMASIGHT"
+	"launch"
+	{
+		"0"
+		{
+			"executable" "PARANORMASIGHT.exe"
+			"config"
+			{
+				"oslist" "windows"
+				"osarch" "64"
+			}
+		}
+	}
+	"steamcontrollertemplateindex" "1"
+	"steamdecktouchscreen" "1"
+	"steamconfigurator3rdpartynative" "65535"
+	"steamcontrollerconfigdetails"
+	{
+		"2882377166"
+		{
+			"controller_type" "controller_xboxone"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2882377723"
+		{
+			"controller_type" "controller_ps4"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2882378271"
+		{
+			"controller_type" "controller_generic"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2882379128"
+		{
+			"controller_type" "controller_switch_pro"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2886642733"
+		{
+			"controller_type" "controller_xboxone"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2886643181"
+		{
+			"controller_type" "controller_ps4"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2886643533"
+		{
+			"controller_type" "controller_generic"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2886643794"
+		{
+			"controller_type" "controller_switch_pro"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"2993884063"
+		{
+			"controller_type" "controller_xboxone"
+			"enabled_branches" "default,hazy_qa,hazy_qa01_rel,hazy_qa02,hazy_qa02_rel,hazy_rel,hazy_tqa_check,xeentest"
+			"use_action_block" "false"
+		}
+		"114"
+		{
+			"controller_type" "controller_steamcontroller_gordon"
+			"enabled_branches" ""
+			"use_action_block" "false"
+		}
+		"3000821249"
+		{
+			"controller_type" "controller_switch_pro"
+			"enabled_branches" "default,hazy_qa,hazy_qa01_rel,hazy_qa02,hazy_qa02_rel,hazy_rel,hazy_tqa_check,xeentest"
+			"use_action_block" "false"
+		}
+		"3000821777"
+		{
+			"controller_type" "controller_ps4"
+			"enabled_branches" "default,hazy_qa,hazy_qa01_rel,hazy_qa02,hazy_qa02_rel,hazy_rel,hazy_tqa_check,xeentest"
+			"use_action_block" "false"
+		}
+		"3000822537"
+		{
+			"controller_type" "controller_generic"
+			"enabled_branches" "default,hazy_qa,hazy_qa01_rel,hazy_qa02,hazy_qa02_rel,hazy_rel,hazy_tqa_check,xeentest"
+			"use_action_block" "false"
+		}
+	}
+}
+"depots"
+{
+	"baselanguages" "english,schinese,tchinese,japanese"
+	"2106841"
+	{
+		"config"
+		{
+			"oslist" "windows"
+			"osarch" "64"
+		}
+		"manifests"
+		{
+			"public"
+			{
+				"gid" "6216826419419223046"
+				"size" "973612262"
+				"download" "620563568"
+			}
+		}
+		"encryptedmanifests"
+		{
+			"fordevteam"
+			{
+				"gid" "3BF45A2D494215FF1B231B7AED254B11"
+				"size" "8F6C1A1E6CE42BF396C6E60A5AABB495"
+				"download" "4E7BB97FFFD0E136602F4465F31DF078"
+			}
+			"hazy_qa"
+			{
+				"gid" "E87A02B0DF1693D742CCA4568E94448A"
+				"size" "0C6402633ADF5045559F2A24088D8001"
+				"download" "47173D4218142D33BF0A8BF36E8D7C95"
+			}
+			"hazy_qa01_rel"
+			{
+				"gid" "8C007C78599FD3DFFCC8F589ACE76DB1"
+				"size" "AC96160529FBC23D8D843FD372E3309A"
+				"download" "CE113B9FA63E241CA3BB8F633CC49838"
+			}
+			"hazy_qa02"
+			{
+				"gid" "1D78F635D5D067A32FBADFFBBAE9FD01"
+				"size" "420027833B8748F91F9CEE4793B90E7E"
+				"download" "2196333C86F4D6DACCD3B0C5F4516678"
+			}
+			"hazy_qa02_rel"
+			{
+				"gid" "2D046224C6E62B19BC13CBB45730201C"
+				"size" "17EEE13F7E3458BEFA8BF8846147DC5A"
+				"download" "4745F3B5ECFD5E11A0F31C557D85BD9C"
+			}
+			"hazy_tqa_check"
+			{
+				"gid" "B4E19D409A0E3B4F26FDF37AB0AEE876"
+				"size" "BD9E7441453F696D6F08D78257EB621B"
+				"download" "7D0C37D22E9F20BF533ADC7A0FC92BF5"
+			}
+			"hazy_ver1.0_dev"
+			{
+				"gid" "A7A32F006289A828A5F1320DD029254D"
+				"size" "6CDA41FAC85A1DC49099C339E562DDD9"
+				"download" "66BADE3A980FC99EFC35A75330AB6C96"
+			}
+			"hazy_ver1.1_dev"
+			{
+				"gid" "67CCB9CEDADA2BDDD968209A4E650402"
+				"size" "FE6528FEC7A97C9293C35E824638C3D1"
+				"download" "666C23EC7B884A1180A53E3228F99FE2"
+			}
+			"hazy_ver1.1_rel"
+			{
+				"gid" "483693C7CC31461B595607F028C02D66"
+				"size" "DB8D1E896DD986B9F74E05E29AEE9918"
+				"download" "910812AAFB5585DB4D55F27104B340B1"
+			}
+			"kawatest"
+			{
+				"gid" "4AF7A31CC9603007C1638B0AF9A49AC2"
+				"size" "55CBE9B5E949DDBE03889C1443AB476A"
+				"download" "A1F6213182078710CED70842EF257E81"
+			}
+			"promotion"
+			{
+				"gid" "D15680411E4BAF72F5FBF76B04BB0B05"
+				"size" "0877A2214C953D564144DC85678C543A"
+				"download" "E2BD88DBEB437129E0AF7B43F58895FB"
+			}
+			"xeentest"
+			{
+				"gid" "0EC3D4B3411640D1EE94D839E9A2BE99"
+				"size" "1BA355DF299B440F68BBF21ED95F6529"
+				"download" "441641CBF27691E0444C4F831D16A8D3"
+			}
+		}
+	}
+	"branches"
+	{
+		"public"
+		{
+			"buildid" "13774120"
+			"timeupdated" "1714100379"
+		}
+		"fordevteam"
+		{
+			"buildid" "13749174"
+			"pwdrequired" "1"
+			"timeupdated" "1710487704"
+		}
+		"hazy_qa"
+		{
+			"buildid" "13752556"
+			"pwdrequired" "1"
+			"timeupdated" "1710508513"
+		}
+		"hazy_qa01_rel"
+		{
+			"buildid" "13752600"
+			"pwdrequired" "1"
+			"timeupdated" "1710508529"
+		}
+		"hazy_qa02"
+		{
+			"buildid" "13774111"
+			"pwdrequired" "1"
+			"timeupdated" "1710767632"
+		}
+		"hazy_qa02_rel"
+		{
+			"buildid" "13774120"
+			"pwdrequired" "1"
+			"timeupdated" "1710767641"
+		}
+		"hazy_tqa_check"
+		{
+			"buildid" "13749174"
+			"pwdrequired" "1"
+			"timeupdated" "1710488540"
+		}
+		"hazy_ver1.0_dev"
+		{
+			"buildid" "10212657"
+			"pwdrequired" "1"
+			"timeupdated" "1687229687"
+		}
+		"hazy_ver1.1_dev"
+		{
+			"buildid" "11659734"
+			"pwdrequired" "1"
+			"timeupdated" "1706492396"
+		}
+		"hazy_ver1.1_rel"
+		{
+			"buildid" "11663925"
+			"pwdrequired" "1"
+			"timeupdated" "1706492372"
+		}
+		"kawatest"
+		{
+			"buildid" "9906032"
+			"pwdrequired" "1"
+			"timeupdated" "1668049402"
+		}
+		"promotion"
+		{
+			"buildid" "13774120"
+			"pwdrequired" "1"
+			"timeupdated" "1712828180"
+		}
+		"xeentest"
+		{
+			"buildid" "13392709"
+			"pwdrequired" "1"
+			"timeupdated" "1707312640"
+		}
+	}
+}
+"ufs"
+{
+	"quota" "10485760"
+	"maxnumfiles" "5"
+	"savefiles"
+	{
+		"0"
+		{
+			"root" "WinMyDocuments"
+			"path" "My Games/PARANORMASIGHT/Steam/{64BitSteamID}"
+			"pattern" "*.bytes"
+		}
+	}
+}
