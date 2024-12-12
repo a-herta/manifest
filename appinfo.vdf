@@ -1,0 +1,620 @@
+"appid" "2461850"
+"common"
+{
+	"name" "Senua’s Saga: Hellblade II"
+	"type" "Game"
+	"icon" "f70eeb6c1dbafe03301c6ddaa3da5907755e4834"
+	"clienttga" "151db112e65c708fb24218b947398d34b660902c"
+	"clienticon" "998a2b03e37cc4ab9a70bbd5de6189463cfef1c9"
+	"releasestate" "released"
+	"oslist" "windows"
+	"osarch" "64"
+	"osextended" ""
+	"languages"
+	{
+		"english" "1"
+		"german" "1"
+		"french" "1"
+		"italian" "1"
+		"koreana" "1"
+		"spanish" "1"
+		"schinese" "1"
+		"tchinese" "1"
+		"russian" "1"
+		"japanese" "1"
+		"portuguese" "1"
+		"polish" "1"
+		"danish" "1"
+		"dutch" "1"
+		"finnish" "1"
+		"norwegian" "1"
+		"swedish" "1"
+		"hungarian" "1"
+		"czech" "1"
+		"turkish" "1"
+		"arabic" "1"
+		"brazilian" "1"
+		"greek" "1"
+		"ukrainian" "1"
+		"latam" "1"
+	}
+	"content_descriptors"
+	{
+		"0" "1"
+		"1" "2"
+		"2" "5"
+	}
+	"steam_deck_compatibility"
+	{
+		"category" "1"
+		"test_timestamp" "1721865600"
+		"tested_build_id" "14640645"
+		"tests"
+		{
+			"0"
+			{
+				"display" "2"
+				"token" "#SteamDeckVerified_TestResult_UnsupportedGraphicsPerformance"
+			}
+		}
+		"configuration"
+		{
+			"supported_input" "gamepad"
+			"requires_manual_keyboard_invoke" "0"
+			"requires_non_controller_launcher_nav" "0"
+			"primary_player_is_controller_slot_0" "0"
+			"non_deck_display_glyphs" "0"
+			"small_text" "0"
+			"requires_internet_for_setup" "0"
+			"requires_internet_for_singleplayer" "0"
+			"recommended_runtime" "proton-9.0-2RC"
+			"requires_h264" "0"
+			"gamescope_frame_limiter_not_supported" "0"
+			"hdr_support" "0"
+		}
+	}
+	"controllertagwizard" "1"
+	"controller_support" "full"
+	"small_capsule"
+	{
+		"english" "capsule_231x87.jpg"
+	}
+	"header_image"
+	{
+		"english" "header.jpg"
+	}
+	"library_assets"
+	{
+		"library_capsule" "en"
+		"library_hero" "en"
+		"library_logo" "en"
+		"library_header" "en"
+		"logo_position"
+		{
+			"pinned_position" "BottomLeft"
+			"width_pct" "50.814314577855484"
+			"height_pct" "46.96876875772641"
+		}
+	}
+	"store_asset_mtime" "1718357175"
+	"associations"
+	{
+		"0"
+		{
+			"type" "developer"
+			"name" "Ninja Theory"
+		}
+		"1"
+		{
+			"type" "publisher"
+			"name" "Xbox Game Studios"
+		}
+		"2"
+		{
+			"type" "franchise"
+			"name" "Ninja Theory"
+		}
+		"3"
+		{
+			"type" "franchise"
+			"name" "Hellblade Franchise"
+		}
+	}
+	"primary_genre" "1"
+	"genres"
+	{
+		"0" "1"
+		"1" "25"
+	}
+	"category"
+	{
+		"category_2" "1"
+		"category_28" "1"
+		"category_22" "1"
+		"category_13" "1"
+		"category_23" "1"
+		"category_61" "1"
+		"category_45" "1"
+		"category_46" "1"
+		"category_62" "1"
+	}
+	"supported_languages"
+	{
+		"english"
+		{
+			"supported" "true"
+			"full_audio" "true"
+			"subtitles" "true"
+		}
+		"french"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"italian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"german"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"spanish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"arabic"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"czech"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"danish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"dutch"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"finnish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"greek"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"hungarian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"japanese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"koreana"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"norwegian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"polish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"brazilian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"portuguese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"russian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"schinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"latam"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"swedish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"tchinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"turkish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"ukrainian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"hebrew"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"icelandic"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+	}
+	"steam_release_date" "1716278299"
+	"community_visible_stats" "1"
+	"community_hub_visible" "1"
+	"gameid" "2461850"
+	"store_tags"
+	{
+		"0" "4106"
+		"1" "1721"
+		"2" "1742"
+		"3" "7208"
+		"4" "4145"
+		"5" "16094"
+		"6" "4342"
+		"7" "19"
+		"8" "21"
+		"9" "4166"
+		"10" "4182"
+		"11" "1697"
+		"12" "1667"
+		"13" "5186"
+		"14" "4604"
+		"15" "4608"
+		"16" "5900"
+		"17" "11634"
+		"18" "4175"
+		"19" "3993"
+	}
+	"review_score" "8"
+	"review_percentage" "87"
+}
+"extended"
+{
+	"developer" "Ninja Theory"
+	"publisher" "Xbox Game Studios"
+}
+"config"
+{
+	"installdir" "Senua\'s Saga Hellblade II"
+	"launch"
+	{
+		"0"
+		{
+			"executable" "Hellblade2.exe"
+			"type" "default"
+			"config"
+			{
+				"oslist" "windows"
+			}
+		}
+	}
+}
+"depots"
+{
+	"228989"
+	{
+		"config"
+		{
+			"oslist" "windows"
+		}
+		"depotfromapp" "228980"
+		"sharedinstall" "1"
+	}
+	"228990"
+	{
+		"config"
+		{
+			"oslist" "windows"
+		}
+		"depotfromapp" "228980"
+		"sharedinstall" "1"
+	}
+	"2461851"
+	{
+		"manifests"
+		{
+			"public"
+			{
+				"gid" "8763532073516055148"
+				"size" "53092554658"
+				"download" "46944434096"
+			}
+		}
+		"encryptedmanifests"
+		{
+			"amd_shipping"
+			{
+				"gid" "28A6511F0E7FE16B10B1B310F7D0CDE2"
+				"size" "EB323A8711E3E1EE379627517D82CA48"
+				"download" "8724B67CB20DD1AAC5317459EC087B40"
+			}
+			"amd_testlab"
+			{
+				"gid" "4D5E657C90AC5635B54780837E516450"
+				"size" "CEB188E785BFF510120117C66A0B1462"
+				"download" "65CB73E72FDCFBF9AB577397F12E5D14"
+			}
+			"certbuild_01_20240422"
+			{
+				"gid" "856FCEA2C5D71B0FFCD55B763B095A41"
+				"size" "C13505E232C0BB08882CBB4F21A9FCDD"
+				"download" "DF91D455AC28D1951C31B3C5ABF23C1F"
+			}
+			"certbuild_02_20240429"
+			{
+				"gid" "456F728F8F65F42E2BEDE8A4E2C64BC0"
+				"size" "6FF36BCDC7D860C4E665115F2F6A0944"
+				"download" "CB4E82A9AB87B92F50D4EEE5AABB2712"
+			}
+			"certbuild_02_20240503"
+			{
+				"gid" "273B7A1A9A2BDE6CC3792847066EEEAD"
+				"size" "8E259A2A9AE151267C0C2E6B70773D3D"
+				"download" "DE47D2A16A06EADE60FF98EFE67A7A34"
+			}
+			"certbuild_03_20240510_cu1"
+			{
+				"gid" "26FC7CABEA727C3117AB9523564E4D8A"
+				"size" "2A927DD4C95855B207944869CFC9E346"
+				"download" "05A89DA429E75532A9119AD9B4C065A8"
+			}
+			"certbuild_03_20240515_cu1"
+			{
+				"gid" "50BA712C5133CB42626E856C7119C67F"
+				"size" "91366BBCFC921BAE8E182A0491FB53EF"
+				"download" "0D6E0239354D623529FC8D326B91162F"
+			}
+			"intel_testlab"
+			{
+				"gid" "8F83E8DADB321EE0237068CD15AD3AD4"
+				"size" "89352C6A82DC452A81B5716116B96D03"
+				"download" "16D56C31413FB60D86FF7170A247453F"
+			}
+			"ms_localisation"
+			{
+				"gid" "AE156380DB427A99DA543C7C8367CB41"
+				"size" "A37F8796D6DCD7ADE153B0D73CCF921C"
+				"download" "E4571571242CFF3214D5821B23E5F883"
+			}
+			"ninja_internal"
+			{
+				"gid" "37AD86B367AB468EE209AEA15DF3B9DB"
+				"size" "19EDD82C9FC5AA0054C1725E12645B1D"
+				"download" "03DDD27C56882CDB58B08EFEE16BC68D"
+			}
+			"ninja_marketing"
+			{
+				"gid" "5B78D420F67946C6076A296FBD1358B4"
+				"size" "3384DA3E9053A7C40C93D285004115F5"
+				"download" "42F0ABE1B0687405B0F71B064F60A91E"
+			}
+			"ninja_misctest"
+			{
+				"gid" "16323FE8E93F17905D774D63CC5F749A"
+				"size" "4CF0634FA4D56ADC47E4A561F93623A2"
+				"download" "B09DC577CA5785CCA392F22BB855B458"
+			}
+			"ninja_temptest"
+			{
+				"gid" "45F16EE70D9AE4EDB9B9175CDD476728"
+				"size" "9259EA14135DF599E93D7CC39F9EFC2F"
+				"download" "6AA83B9D255D1F4672E902CB1F804410"
+			}
+			"nvidia_performancetuning"
+			{
+				"gid" "8E561E08F02DE47B9DC28B8B6FBEE677"
+				"size" "D3137983814F3327557023327226CD6C"
+				"download" "0041874C0AC52AB1C979EBA2C1D2905A"
+			}
+			"nvidia_testlab"
+			{
+				"gid" "102D9E03D12EBA0CDAAD99EEC15B81A4"
+				"size" "141820C1161AA63B89665400C113B16F"
+				"download" "D49D847ABDBF3AD3FD07B4BDD61EA012"
+			}
+			"qa_lionbridge"
+			{
+				"gid" "9CE92825E472AAE40B28EF868FEC05EA"
+				"size" "D8F0017051F02108E1416F98172CF94C"
+				"download" "D62F621FF3AE4D8F3A47D19F2CEF96E9"
+			}
+			"qa_lionbridge_cert"
+			{
+				"gid" "15FD41ABEEA9C2F9AA8694007CF13E64"
+				"size" "E31BC7B8675536604930544862E6AB3A"
+				"download" "6046CE7563D13565A7E13E71C4663AD8"
+			}
+			"qa_lionbridge_misctest"
+			{
+				"gid" "D06062782308EF3DC90E3F34B8731521"
+				"size" "67EE8AE3CC00A8E1649C86F83D5648D6"
+				"download" "9484011ECE852F959B6551AC39EBF57A"
+			}
+			"qa_lionbridge_shipping"
+			{
+				"gid" "0A08896D566E93F356D7A197AB33A5DE"
+				"size" "AB2A36A6BF583302171639215A24E005"
+				"download" "5D9C96AF5A5C3C06F426D9D6E857D0EB"
+			}
+		}
+	}
+	"branches"
+	{
+		"public"
+		{
+			"buildid" "14640645"
+			"timeupdated" "1717779106"
+		}
+		"amd_shipping"
+		{
+			"buildid" "14332446"
+			"pwdrequired" "1"
+			"timeupdated" "1715382084"
+		}
+		"amd_testlab"
+		{
+			"buildid" "14331860"
+			"pwdrequired" "1"
+			"timeupdated" "1715377741"
+		}
+		"certbuild_01_20240422"
+		{
+			"buildid" "14115968"
+			"pwdrequired" "1"
+			"timeupdated" "1714503121"
+		}
+		"certbuild_02_20240429"
+		{
+			"buildid" "14189817"
+			"pwdrequired" "1"
+			"timeupdated" "1714503207"
+		}
+		"certbuild_02_20240503"
+		{
+			"buildid" "14259675"
+			"pwdrequired" "1"
+			"timeupdated" "1714768845"
+		}
+		"certbuild_03_20240510_cu1"
+		{
+			"buildid" "14322760"
+			"pwdrequired" "1"
+			"timeupdated" "1715337463"
+		}
+		"certbuild_03_20240515_cu1"
+		{
+			"buildid" "14373869"
+			"pwdrequired" "1"
+			"timeupdated" "1715786420"
+		}
+		"intel_testlab"
+		{
+			"buildid" "14332959"
+			"pwdrequired" "1"
+			"timeupdated" "1715386648"
+		}
+		"ms_localisation"
+		{
+			"buildid" "14458770"
+			"pwdrequired" "1"
+			"timeupdated" "1716401847"
+		}
+		"ninja_internal"
+		{
+			"buildid" "14566579"
+			"pwdrequired" "1"
+			"timeupdated" "1717194034"
+		}
+		"ninja_marketing"
+		{
+			"buildid" "14261110"
+			"pwdrequired" "1"
+			"timeupdated" "1714914483"
+		}
+		"ninja_misctest"
+		{
+			"buildid" "14640645"
+			"pwdrequired" "1"
+			"timeupdated" "1717770038"
+		}
+		"ninja_temptest"
+		{
+			"buildid" "14583747"
+			"pwdrequired" "1"
+			"timeupdated" "1717410442"
+		}
+		"nvidia_performancetuning"
+		{
+			"buildid" "14380814"
+			"pwdrequired" "1"
+			"timeupdated" "1715805498"
+		}
+		"nvidia_testlab"
+		{
+			"buildid" "14381385"
+			"pwdrequired" "1"
+			"timeupdated" "1715809588"
+		}
+		"qa_lionbridge"
+		{
+			"buildid" "14671206"
+			"pwdrequired" "1"
+			"timeupdated" "1718066757"
+		}
+		"qa_lionbridge_cert"
+		{
+			"buildid" "14640645"
+			"pwdrequired" "1"
+			"timeupdated" "1717769915"
+		}
+		"qa_lionbridge_misctest"
+		{
+			"buildid" "14640645"
+			"pwdrequired" "1"
+			"timeupdated" "1717770003"
+		}
+		"qa_lionbridge_shipping"
+		{
+			"buildid" "14671595"
+			"pwdrequired" "1"
+			"timeupdated" "1718070228"
+		}
+	}
+}
+"ufs"
+{
+	"quota" "2097152"
+	"maxnumfiles" "10"
+	"savefiles"
+	{
+		"0"
+		{
+			"root" "WinAppDataLocal"
+			"path" "Hellblade2\\Saved\\SaveGames"
+			"pattern" "NTSaveGameSlot*.sav"
+			"platforms"
+			{
+				"1" "Windows"
+			}
+		}
+	}
+}
