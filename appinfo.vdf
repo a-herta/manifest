@@ -1,0 +1,539 @@
+"appid" "1811950"
+"common"
+{
+	"name" "The Legend of Heroes: Kuro no Kiseki"
+	"type" "Game"
+	"oslist" "windows"
+	"osarch" "64"
+	"osextended" ""
+	"clienticon" "c47d3e8467fb72689a301c1775c5a79dde4adb78"
+	"clienttga" "41e71b302d6c0d199b3a9774a2d154b96c0e8b65"
+	"icon" "2640aa05523a2a42dc47d468dcb7b5faa42d20b7"
+	"releasestate" "released"
+	"name_localized"
+	{
+		"japanese" "英雄伝説 黎の軌跡"
+		"tchinese" "英雄傳說 黎之軌跡"
+		"schinese" "英雄传说 黎之轨迹"
+		"koreana" "영웅전설 여의 궤적"
+		"english" "The Legend of Heroes: Kuro no Kiseki"
+	}
+	"languages"
+	{
+		"english" "1"
+		"koreana" "1"
+		"schinese" "1"
+		"tchinese" "1"
+		"japanese" "1"
+	}
+	"steam_deck_compatibility"
+	{
+		"category" "2"
+		"test_timestamp" "1663372800"
+		"tested_build_id" "9228150"
+		"tests"
+		{
+			"0"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_LauncherInteractionIssues"
+			}
+			"1"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultControllerConfigFullyFunctional"
+			}
+			"2"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_ControllerGlyphsMatchDeckDevice"
+			}
+			"3"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_InterfaceTextIsLegible"
+			}
+			"4"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant"
+			}
+		}
+		"configuration"
+		{
+			"supported_input" "gamepad"
+			"requires_manual_keyboard_invoke" "0"
+			"requires_non_controller_launcher_nav" "1"
+			"primary_player_is_controller_slot_0" "0"
+			"non_deck_display_glyphs" "0"
+			"small_text" "0"
+			"requires_internet_for_setup" "0"
+			"requires_internet_for_singleplayer" "0"
+			"recommended_runtime" "proton-7.0-4"
+			"requires_h264" "0"
+			"gamescope_frame_limiter_not_supported" "0"
+		}
+	}
+	"controllertagwizard" "1"
+	"controller_support" "partial"
+	"small_capsule"
+	{
+		"english" "capsule_231x87.jpg"
+		"koreana" "capsule_231x87_koreana.jpg"
+	}
+	"header_image"
+	{
+		"english" "header.jpg"
+		"koreana" "header_koreana.jpg"
+	}
+	"library_assets"
+	{
+		"library_capsule" "en,ko"
+		"library_hero" "en"
+		"library_logo" "en,ko"
+		"logo_position"
+		{
+			"pinned_position" "BottomLeft"
+			"width_pct" "50"
+			"height_pct" "50"
+		}
+	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"english" "library_600x900.jpg"
+				"koreana" "library_600x900_koreana.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_600x900_2x.jpg"
+				"koreana" "library_600x900_koreana_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"image"
+			{
+				"english" "logo.png"
+				"koreana" "logo_koreana.png"
+			}
+			"image2x"
+			{
+				"english" "logo_2x.png"
+				"koreana" "logo_koreana_2x.png"
+			}
+			"logo_position"
+			{
+				"pinned_position" "BottomLeft"
+				"width_pct" "50"
+				"height_pct" "50"
+			}
+		}
+	}
+	"store_asset_mtime" "1662366846"
+	"associations"
+	{
+		"0"
+		{
+			"type" "developer"
+			"name" "Nihon Falcom"
+		}
+		"1"
+		{
+			"type" "publisher"
+			"name" "Clouded Leopard Entertainment"
+		}
+		"2"
+		{
+			"type" "franchise"
+			"name" "The Legend of Heroes"
+		}
+		"3"
+		{
+			"type" "franchise"
+			"name" "Sen no Kiseki"
+		}
+		"4"
+		{
+			"type" "franchise"
+			"name" "Zero no Kiseki"
+		}
+		"5"
+		{
+			"type" "franchise"
+			"name" "Ao no Kiseki"
+		}
+		"6"
+		{
+			"type" "franchise"
+			"name" "Hajimari no Kiseki"
+		}
+	}
+	"primary_genre" "3"
+	"genres"
+	{
+		"0" "3"
+	}
+	"category"
+	{
+		"category_2" "1"
+		"category_22" "1"
+		"category_23" "1"
+		"category_18" "1"
+		"category_55" "1"
+		"category_60" "1"
+		"category_62" "1"
+	}
+	"supported_languages"
+	{
+		"tchinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"japanese"
+		{
+			"full_audio" "true"
+		}
+		"koreana"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+	}
+	"steam_release_date" "1658934000"
+	"community_visible_stats" "1"
+	"community_hub_visible" "1"
+	"gameid" "1811950"
+	"store_tags"
+	{
+		"0" "122"
+		"1" "4434"
+		"2" "11014"
+		"3" "10695"
+		"4" "3799"
+		"5" "4191"
+		"6" "4726"
+		"7" "4085"
+		"8" "1684"
+		"9" "4947"
+		"10" "51306"
+		"11" "4325"
+		"12" "5608"
+		"13" "14139"
+		"14" "5094"
+		"15" "1742"
+		"16" "4182"
+		"17" "1677"
+		"18" "8461"
+		"19" "5230"
+	}
+	"review_score" "8"
+	"review_percentage" "92"
+}
+"extended"
+{
+	"developer" "Nihon Falcom"
+	"publisher" "Clouded Leopard Entertainment"
+	"listofdlc" "2024280,2024290,2024310,2024360,2024420,2024430,2024440,2024450,2024470,2024480,2024490,2024500,2024510,2024520,2024530,2024550,2024570,2024580,2024590,2024610,2024620,2024630,2024640,2024650,2024660,2024670,2024680,2024690,2024710,2024720,2024730,2024740,2024750,2024760,2024770,2025450,2025451,2025452,2025453,2025454,2025470,2025471,2025472,2025473,2025474,2025475,2025476,2025477,2025478,2025479,2025480,2025481,2025482,2025500,2025501,2025502,2025503,2025504,2025505,2025506,2025507,2025508,2025509,2025580"
+	"dlcavailableonstore" "1"
+}
+"config"
+{
+	"installdir" "THE LEGEND OF HEROES KURO NO KISEKI"
+	"steamconfigurator3rdpartynative" "65535"
+	"launch"
+	{
+		"0"
+		{
+			"executable" "ed9.exe"
+			"type" "default"
+			"config"
+			{
+				"oslist" "windows"
+			}
+		}
+		"1"
+		{
+			"executable" "launcher/Launcher.exe"
+			"type" "config"
+			"config"
+			{
+				"oslist" "windows"
+			}
+		}
+	}
+	"steamcontrollertemplateindex" "3"
+	"steamdecktouchscreen" "1"
+}
+"depots"
+{
+	"228988"
+	{
+		"config"
+		{
+			"oslist" "windows"
+		}
+		"depotfromapp" "228980"
+		"sharedinstall" "1"
+	}
+	"228990"
+	{
+		"config"
+		{
+			"oslist" "windows"
+		}
+		"depotfromapp" "228980"
+		"sharedinstall" "1"
+	}
+	"229006"
+	{
+		"config"
+		{
+			"oslist" "windows"
+		}
+		"depotfromapp" "228980"
+		"sharedinstall" "1"
+	}
+	"1811951"
+	{
+		"manifests"
+		{
+			"public"
+			{
+				"gid" "4799275239733841473"
+				"size" "11705696106"
+				"download" "11346954928"
+			}
+		}
+		"encryptedmanifests"
+		{
+			"1.0.0"
+			{
+				"gid" "A342FB09A3B9F06EE52BABF60250EBAD"
+				"size" "AF8963A333EAFF85810BB3C9A2FC0087"
+				"download" "3F9D60919E8AB2FB34D91BC82C1BC2BB"
+			}
+			"1.0.1"
+			{
+				"gid" "B04B72EB80D92E2CF8316D8568823FF8"
+				"size" "DBDF7784EC6704F275C229293257F850"
+				"download" "4D63AC23A9B58C36DCD9C611895DF575"
+			}
+			"1.0.2"
+			{
+				"gid" "A2422CC91D33AEAEAD8EF2BC64B79A30"
+				"size" "FFB8AF990F49C4FBE590F17FCF1DDF66"
+				"download" "93E2A8F68F04CDDB3A9E6ABBA34BEF43"
+			}
+			"1.0.3"
+			{
+				"gid" "5ADB3D359999416C18C7C393BDFB2BB8"
+				"size" "7F6E86D6F611B72266317D5379E558EF"
+				"download" "9CAB179106673AFB8600D1487FB77250"
+			}
+			"1.1.0"
+			{
+				"gid" "57749E8BAC4B02D4451CA0125C8EF103"
+				"size" "1793E936D903303AF06DEF5D23E6CD17"
+				"download" "84BCD6CF1112A5D8096775D5F7D3A196"
+			}
+			"1.1.1"
+			{
+				"gid" "623321EF89039907D69E7910C8744609"
+				"size" "ABE9CD48A53DD38D484423093EE9F6C3"
+				"download" "6ED3AB18DEAE7261ED4D75BF3BAB55AA"
+			}
+			"1.1.2"
+			{
+				"gid" "A745C385F7117FCE8C90CDB70FA4D095"
+				"size" "ADED3611C1404EF7B6CB66840A0379CB"
+				"download" "327CD98FA7A2D1A0A11B5C0D02512BF7"
+			}
+			"1.1.3"
+			{
+				"gid" "E16F5FBEF18914F0B3CA79735458F491"
+				"size" "628483986676AB551B86BA3EEDEFDEB8"
+				"download" "D0D7D9A227086FAD8A3F524B99391175"
+			}
+			"beta"
+			{
+				"gid" "5DC7EF9FF19528F00E746753C9378F44"
+				"size" "72FA2D5E5ADAE44B951AF68A78253102"
+				"download" "C6F1C49D55E1C2620ADB506019B146E9"
+			}
+			"beta_staging"
+			{
+				"gid" "682A5469ED156FC150949ADC560E66B0"
+				"size" "1BB78C4B5A1B6FE6FB359A167D5C598D"
+				"download" "E0E3EAC772DA82D6C2D516803F34B8D9"
+			}
+			"daily"
+			{
+				"gid" "BB1F1A64C5DDF60DFA1875AF65F57CCB"
+				"size" "12698E30DD003D3327FBF432A481AFB3"
+				"download" "13948A6B7B4081B86BA3459A5652688E"
+			}
+			"qadebug"
+			{
+				"gid" "CB46F9516A1C72BA14385258BF98F794"
+				"size" "164CDD9B9409CD073D32E6F3553B6CA1"
+				"download" "B5B1220AE5D1211774207665C6956288"
+			}
+			"qadebug_staging"
+			{
+				"gid" "C0C0BC363EF8EC2FE56D3827F0AD6E70"
+				"size" "1DC09159A83C0F0FE351A86C0F0D45EF"
+				"download" "B2E46FC6AA344DA584FC8831FD338F73"
+			}
+			"test"
+			{
+				"gid" "DB90EE01E7A447D00601463584ED4255"
+				"size" "66FA5969CA8D641010407587D4065942"
+				"download" "11823F73CB1C32EAE8AA75A09E96FBCE"
+			}
+			"test_staging"
+			{
+				"gid" "2109BDC8C9AF924916E0938635299ED6"
+				"size" "F02DEC60CAB4B0DF536DBD943424087C"
+				"download" "C42B734006C87025DED29182DA5AADB5"
+			}
+		}
+	}
+	"baselanguages" "koreana,tchinese"
+	"branches"
+	{
+		"public"
+		{
+			"buildid" "16257982"
+			"timeupdated" "1730415228"
+		}
+		"1.0.0"
+		{
+			"buildid" "9168881"
+			"pwdrequired" "1"
+			"timeupdated" "1659341519"
+		}
+		"1.0.1"
+		{
+			"buildid" "9214645"
+			"pwdrequired" "1"
+			"timeupdated" "1659341550"
+		}
+		"1.0.2"
+		{
+			"buildid" "9228150"
+			"pwdrequired" "1"
+			"timeupdated" "1661606962"
+		}
+		"1.0.3"
+		{
+			"buildid" "9473672"
+			"pwdrequired" "1"
+			"timeupdated" "1663644772"
+		}
+		"1.1.0"
+		{
+			"buildid" "10607350"
+			"pwdrequired" "1"
+			"timeupdated" "1680198594"
+		}
+		"1.1.1"
+		{
+			"buildid" "16047035"
+			"pwdrequired" "1"
+			"timeupdated" "1728970576"
+		}
+		"1.1.2"
+		{
+			"buildid" "16246409"
+			"pwdrequired" "1"
+			"timeupdated" "1730347311"
+		}
+		"1.1.3"
+		{
+			"buildid" "16257982"
+			"pwdrequired" "1"
+			"timeupdated" "1730415101"
+		}
+		"beta"
+		{
+			"buildid" "16257982"
+			"pwdrequired" "1"
+			"timeupdated" "1730414634"
+		}
+		"beta_staging"
+		{
+			"buildid" "10921500"
+			"pwdrequired" "1"
+			"timeupdated" "1680568948"
+		}
+		"daily"
+		{
+			"buildid" "10607206"
+			"pwdrequired" "1"
+			"timeupdated" "1677035736"
+		}
+		"qadebug"
+		{
+			"buildid" "16047015"
+			"pwdrequired" "1"
+			"timeupdated" "1728969545"
+		}
+		"qadebug_staging"
+		{
+			"buildid" "10921442"
+			"pwdrequired" "1"
+			"timeupdated" "1680568924"
+		}
+		"test"
+		{
+			"buildid" "10607350"
+			"pwdrequired" "1"
+			"timeupdated" "1730195241"
+		}
+		"test_staging"
+		{
+			"buildid" "10493152"
+			"pwdrequired" "1"
+			"timeupdated" "1675738195"
+		}
+	}
+}
+"ufs"
+{
+	"quota" "1000000000"
+	"maxnumfiles" "1000"
+	"savefiles"
+	{
+		"0"
+		{
+			"root" "WinSavedGames"
+			"path" "CLE/Kuro_no_Kiseki/savedata"
+			"pattern" "*"
+			"platforms"
+			{
+				"1" "Windows"
+			}
+			"recursive" "1"
+		}
+	}
+}
+"_missing_token" "False"
+"_change_number" "25998055"
+"_sha" "f92bd6fbfa3dcb0abbf60a9eee261c39a83532c4"
+"_size" "10892"
