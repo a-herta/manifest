@@ -185,7 +185,7 @@
 		"19" "4231"
 	}
 	"review_score" "8"
-	"review_percentage" "89"
+	"review_percentage" "90"
 }
 "extended"
 {
@@ -232,30 +232,9 @@
 		{
 			"public"
 			{
-				"gid" "6860900717943288826"
-				"size" "1805639647"
-				"download" "1308559024"
-			}
-		}
-		"encryptedmanifests"
-		{
-			"feature_test"
-			{
-				"gid" "F26BBB98C1BFAE1C4D2D4E24D146CF2B"
-				"size" "B5D2FEEBBC2BC642658B6B74E96C882D"
-				"download" "F004CBFE4CF9CB2942C6390C377F58FE"
-			}
-			"develop"
-			{
-				"gid" "78BC51777C6E04B1532BF509E3B9B89B"
-				"size" "2A0E130571FD37ED85BF4AC49EB102D5"
-				"download" "BFFC21E22DBDFB1A58D141E574C9124B"
-			}
-			"staging"
-			{
-				"gid" "15E023A4F03BF27604C86139A888FF3C"
-				"size" "1ED10EED21E0B66A4F77FCEE6B71CADC"
-				"download" "54BDA54588307E674D19F592832CFF96"
+				"gid" "5543956795872655076"
+				"size" "1805639659"
+				"download" "1308560032"
 			}
 		}
 	}
@@ -263,28 +242,11 @@
 	{
 		"public"
 		{
-			"buildid" "16625273"
-			"timeupdated" "1733368366"
-		}
-		"feature_test"
-		{
-			"buildid" "13155418"
-			"pwdrequired" "1"
-			"timeupdated" "1706070982"
-		}
-		"develop"
-		{
-			"buildid" "15610119"
-			"pwdrequired" "1"
-			"timeupdated" "1725590937"
-		}
-		"staging"
-		{
-			"buildid" "16625273"
-			"pwdrequired" "1"
-			"timeupdated" "1733296490"
+			"buildid" "16783518"
+			"timeupdated" "1734525042"
 		}
 	}
+	"privatebranches" "1"
 }
 "ufs"
 {
@@ -305,6 +267,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "26500413"
-"_sha" "75d19033a1f01802fd8ffb0332cc068027aeab99"
-"_size" "5128"
+"_change_number" "26694838"
+"_sha" "92de60081d5aeb8a6287091d4d21aae51f9dad08"
+"_size" "4278"
