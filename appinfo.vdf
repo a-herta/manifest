@@ -75,9 +75,9 @@
 	}
 	"header_image"
 	{
-		"tchinese" "header_tchinese.jpg"
-		"schinese" "header_schinese.jpg"
 		"english" "header.jpg"
+		"schinese" "header_schinese.jpg"
+		"tchinese" "header_tchinese.jpg"
 	}
 	"library_assets"
 	{
@@ -151,7 +151,7 @@
 			}
 		}
 	}
-	"store_asset_mtime" "1732965068"
+	"store_asset_mtime" "1733920959"
 	"associations"
 	{
 		"0"
@@ -263,42 +263,42 @@
 		{
 			"public"
 			{
-				"gid" "4193548200263345686"
-				"size" "2703457410"
-				"download" "2624729136"
+				"gid" "2146761639200081596"
+				"size" "2682957622"
+				"download" "2602539072"
 			}
 			"test"
 			{
-				"gid" "4193548200263345686"
-				"size" "2703457410"
-				"download" "2624729136"
+				"gid" "2146761639200081596"
+				"size" "2682957622"
+				"download" "2602539072"
 			}
 		}
 		"encryptedmanifests"
 		{
 			"gamepulse"
 			{
-				"gid" "29E7D2463008150B1A4CAD1923C5754E"
-				"size" "D0CFA8DDF592773E9D9769C2BB5C6EB8"
-				"download" "3D703A7A62C25DC33EB52A705684DE92"
+				"gid" "4B5ACCB5817E65389DC8229AF7A882DE"
+				"size" "9412F6E7E69B1E583639F9EFDB3D6FF9"
+				"download" "0C9A77D539E299575DEFD1BD0C5EEBCC"
 			}
 			"heromode"
 			{
-				"gid" "717F5A5435DB30AC65BCB10D6FF4D126"
-				"size" "77B76FFA0CC22E66B1EDA8686345CBAE"
-				"download" "90B7229091FA06AC9428AC14085A4683"
+				"gid" "C535EB18BA4AE6DD0196880930ACBAC8"
+				"size" "94058D0FBAB058FDEF63C82B3CFEE694"
+				"download" "0F50405E0BB4C9662E37BF3ECA821818"
 			}
 			"privatetest"
 			{
-				"gid" "55B2079C9830D6E18BB2FD1A657806BF"
-				"size" "A5CAA84E5C710EC657F0A893F144FCCD"
-				"download" "DCF116CA0DA35B792BEA286A7902F6A9"
+				"gid" "1AB58421BCC7785C590F559C316EF7A7"
+				"size" "3B99E05C97424218CD602AC3E452D854"
+				"download" "31A0DF0DD26CC9E3BBA888979D75FCE3"
 			}
 			"reimutest"
 			{
-				"gid" "9717657B67ADF16C690349DF2D54BF6F"
-				"size" "A6685EAFAEBEE37FB53211DCD0B9EB58"
-				"download" "ADEF7764D72FA6F2086058E30D166E95"
+				"gid" "CBD5D2400BFD36E8D91F5C170FBA90C2"
+				"size" "FAC5929B5C62B4175D1C64D3166442FF"
+				"download" "812A2DCE86A934C93C7C49502CC5B049"
 			}
 		}
 	}
@@ -306,38 +306,38 @@
 	{
 		"public"
 		{
-			"buildid" "16677140"
-			"timeupdated" "1733730310"
+			"buildid" "16815337"
+			"timeupdated" "1734705686"
 		}
 		"gamepulse"
 		{
-			"buildid" "16677140"
+			"buildid" "16815337"
 			"pwdrequired" "1"
-			"timeupdated" "1733730322"
+			"timeupdated" "1734705701"
 		}
 		"heromode"
 		{
-			"buildid" "16677140"
+			"buildid" "16815337"
 			"pwdrequired" "1"
-			"timeupdated" "1733730264"
+			"timeupdated" "1734705723"
 		}
 		"privatetest"
 		{
-			"buildid" "16677140"
+			"buildid" "16815337"
 			"pwdrequired" "1"
-			"timeupdated" "1733730336"
+			"timeupdated" "1734705733"
 		}
 		"reimutest"
 		{
-			"buildid" "16677140"
+			"buildid" "16815337"
 			"pwdrequired" "1"
-			"timeupdated" "1733730353"
+			"timeupdated" "1734705711"
 		}
 		"test"
 		{
-			"buildid" "16677140"
+			"buildid" "16815337"
 			"description" "October Update"
-			"timeupdated" "1733730365"
+			"timeupdated" "1734705743"
 		}
 	}
 }
@@ -367,6 +367,6 @@
 	"sync_while_suspended" "1"
 }
 "_missing_token" "False"
-"_change_number" "26553580"
-"_sha" "1f97a69428c87f38db8cca1512f0a8dc5d49e244"
+"_change_number" "26734731"
+"_sha" "7107c273fe93b763dfdde1d1363997dbddb42fe3"
 "_size" "7221"
