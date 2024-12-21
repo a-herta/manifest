@@ -1,92 +1,217 @@
-"appid" "2426930"
+"appid" "2291680"
 "common"
 {
-	"name" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-	"type" "DLC"
-	"parent" "1902690"
+	"name" "The Arrogant Kaiju Princess and The Detective Servant"
+	"type" "Game"
 	"releasestate" "released"
+	"icon" "d6724952181be4e087bdafc59765e8f254d81241"
+	"clienticon" "d93e8c0f6b44e11ddc00613c4e06069004074a82"
+	"clienttga" "e74e0bee3748602458e264a3b6d829529b819ea5"
+	"clienticns" "c7c01ef1bf611b13308e849e8d8123d03ef1e49e"
 	"name_localized"
 	{
-		"koreana" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-		"schinese" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-		"tchinese" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-		"japanese" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
+		"koreana" "오만한 괴수 공주와 명탐정 사역마"
+		"japanese" "傲慢な怪獣姫＆名探偵使い魔"
+		"english" "The Arrogant Kaiju Princess and The Detective Servant"
+		"tchinese" "傲慢的怪獸公主與名偵探使魔"
+		"schinese" "傲慢的怪兽公主与名侦探使魔"
+		"russian" "Высокомерная Принцесса Кайджу и Слуга-детектив"
+		"ukrainian" "Гордовита Принцеса Кайджу та Слуга-детектив"
 	}
 	"oslist" "windows"
-	"osarch" "64"
+	"osarch" ""
 	"osextended" ""
+	"languages"
+	{
+		"english" "1"
+		"koreana" "1"
+		"schinese" "1"
+		"tchinese" "1"
+		"russian" "1"
+		"japanese" "1"
+		"ukrainian" "1"
+	}
 	"content_descriptors"
 	{
 		"0" "1"
-		"1" "2"
-		"2" "5"
+		"1" "3"
+		"2" "4"
+		"3" "5"
 	}
-	"has_adult_content" "1"
-	"has_adult_content_sex" "1"
-	"has_adult_content_violence" "1"
-	"controllertagwizard" "1"
-	"controller_support" "partial"
+	"restricted_countries" "CN,DE"
+	"steam_deck_compatibility"
+	{
+		"category" "2"
+		"test_timestamp" "1704758400"
+		"tested_build_id" "13077137"
+		"tests"
+		{
+			"0"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_ControllerGlyphsDoNotMatchDeckDevice"
+			}
+			"1"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_InterfaceTextIsNotLegible"
+			}
+			"2"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_NativeResolutionNotSupported"
+			}
+			"3"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultControllerConfigFullyFunctional"
+			}
+			"4"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant"
+			}
+		}
+		"configuration"
+		{
+			"supported_input" "other"
+			"requires_manual_keyboard_invoke" "0"
+			"requires_non_controller_launcher_nav" "0"
+			"primary_player_is_controller_slot_0" "0"
+			"non_deck_display_glyphs" "1"
+			"small_text" "1"
+			"requires_internet_for_setup" "0"
+			"requires_internet_for_singleplayer" "0"
+			"recommended_runtime" "proton-stable"
+			"requires_h264" "0"
+			"gamescope_frame_limiter_not_supported" "0"
+			"hdr_support" "0"
+		}
+	}
 	"small_capsule"
 	{
 		"english" "capsule_231x87.jpg"
 		"japanese" "capsule_231x87_japanese.jpg"
 		"tchinese" "capsule_231x87_tchinese.jpg"
-		"schinese" "capsule_231x87_schinese.jpg"
-		"koreana" "capsule_231x87_koreana.jpg"
 	}
 	"header_image"
 	{
 		"english" "header.jpg"
 		"japanese" "header_japanese.jpg"
 		"tchinese" "header_tchinese.jpg"
-		"schinese" "header_schinese.jpg"
-		"koreana" "header_koreana.jpg"
 	}
-	"store_asset_mtime" "1688021555"
+	"library_assets"
+	{
+		"library_capsule" "en,ja,zh-tw"
+		"library_hero" "en,ja,zh-tw"
+		"library_logo" "en,zh-tw,ja"
+		"logo_position"
+		{
+			"pinned_position" "BottomLeft"
+			"width_pct" "50"
+			"height_pct" "50"
+		}
+	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"english" "library_600x900.jpg"
+				"japanese" "library_600x900_japanese.jpg"
+				"tchinese" "library_600x900_tchinese.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_600x900_2x.jpg"
+				"japanese" "library_600x900_japanese_2x.jpg"
+				"tchinese" "library_600x900_tchinese_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+				"japanese" "library_hero_japanese.jpg"
+				"tchinese" "library_hero_tchinese.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+				"japanese" "library_hero_japanese_2x.jpg"
+				"tchinese" "library_hero_tchinese_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"image"
+			{
+				"english" "logo.png"
+				"tchinese" "logo_tchinese.png"
+				"japanese" "logo_japanese.png"
+			}
+			"image2x"
+			{
+				"english" "logo_2x.png"
+				"tchinese" "logo_tchinese_2x.png"
+				"japanese" "logo_japanese_2x.png"
+			}
+			"logo_position"
+			{
+				"pinned_position" "BottomLeft"
+				"width_pct" "50"
+				"height_pct" "50"
+			}
+		}
+	}
+	"store_asset_mtime" "1719456041"
 	"associations"
 	{
 		"0"
 		{
 			"type" "developer"
-			"name" "KOEI TECMO GAMES CO., LTD."
+			"name" "ARTcelerator"
 		}
 		"1"
 		{
+			"type" "developer"
+			"name" "PantyParrot"
+		}
+		"2"
+		{
 			"type" "publisher"
-			"name" "KOEI TECMO GAMES CO., LTD."
+			"name" "Mango Party"
+		}
+		"3"
+		{
+			"type" "publisher"
+			"name" "Mango Party News"
+		}
+		"4"
+		{
+			"type" "franchise"
+			"name" "Mango Party"
 		}
 	}
-	"primary_genre" "1"
+	"primary_genre" "23"
 	"genres"
 	{
-		"0" "1"
-		"1" "3"
+		"0" "4"
+		"1" "23"
+		"2" "3"
 	}
 	"category"
 	{
 		"category_2" "1"
 		"category_22" "1"
-		"category_33" "1"
 		"category_23" "1"
-		"category_18" "1"
-		"category_55" "1"
-		"category_56" "1"
-		"category_57" "1"
-		"category_58" "1"
-		"category_60" "1"
+		"category_29" "1"
+		"category_62" "1"
 	}
 	"supported_languages"
 	{
-		"english"
-		{
-			"supported" "true"
-			"subtitles" "true"
-		}
-		"schinese"
-		{
-			"supported" "true"
-			"subtitles" "true"
-		}
 		"tchinese"
 		{
 			"supported" "true"
@@ -98,79 +223,122 @@
 			"full_audio" "true"
 			"subtitles" "true"
 		}
+		"schinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
 		"koreana"
 		{
 			"supported" "true"
 			"subtitles" "true"
 		}
+		"english"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"russian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"ukrainian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
 	}
-	"steam_release_date" "1695949202"
-	"gameid" "2426930"
+	"steam_release_date" "1703124169"
+	"community_visible_stats" "1"
+	"community_hub_visible" "1"
+	"gameid" "2291680"
 	"store_tags"
 	{
-		"0" "122"
-		"1" "19"
-		"2" "4434"
-		"3" "4231"
-		"4" "4085"
-		"5" "4777"
-		"6" "1742"
-		"7" "3987"
-		"8" "4057"
-		"9" "5984"
-		"10" "6971"
-		"11" "4252"
+		"0" "12095"
+		"1" "6650"
+		"2" "9130"
+		"3" "24904"
+		"4" "5611"
+		"5" "4085"
+		"6" "122"
+		"7" "597"
+		"8" "1742"
+		"9" "4434"
+		"10" "4947"
+		"11" "1741"
 		"12" "4182"
-		"13" "4667"
-		"14" "4345"
-		"15" "1646"
-		"16" "323922"
-		"17" "1684"
-		"18" "3799"
-		"19" "4726"
+		"13" "492"
+		"14" "1684"
+		"15" "14139"
+		"16" "3799"
+		"17" "4747"
+		"18" "7208"
+		"19" "9551"
 	}
-	"review_score" "3"
-	"review_percentage" "9"
+	"review_score" "9"
+	"review_percentage" "97"
 }
 "extended"
 {
-	"dlcforappid" "1902690"
-	"mustownapptopurchase" "1902690"
-	"developer" "KOEI TECMO GAMES CO., LTD."
-	"publisher" "KOEI TECMO GAMES CO., LTD."
-	"homepage" "https://www.koeitecmoamerica.com/fate-sr/"
+	"developer" "ARTcelerator"
+	"publisher" "Mango Party"
+	"listofdlc" "2714820"
 	"dlcavailableonstore" "1"
+}
+"config"
+{
+	"installdir" "傲慢的怪獸公主與名偵探使魔"
+	"launch"
+	{
+		"0"
+		{
+			"executable" "The Detective Servant.exe"
+		}
+	}
 }
 "depots"
 {
-	"2426930"
+	"baselanguages" "english,koreana,schinese,tchinese,japanese"
+	"hasdepotsindlc" "1"
+	"2291681"
 	{
-		"config"
-		{
-			"oslist" "windows"
-			"osarch" "64"
-		}
 		"manifests"
 		{
 			"public"
 			{
-				"gid" "2098950453280292557"
-				"size" "322338799"
-				"download" "318566176"
+				"gid" "1607335706865648388"
+				"size" "4329462047"
+				"download" "1142958720"
 			}
 		}
-		"dlcappid" "2426930"
 	}
 	"branches"
 	{
 		"public"
 		{
-			"buildid" "11788784"
-			"timeupdated" "1690345694"
+			"buildid" "16756262"
+			"timeupdated" "1734337812"
+		}
+	}
+	"privatebranches" "1"
+}
+"ufs"
+{
+	"quota" "100000000"
+	"maxnumfiles" "100"
+	"savefiles"
+	{
+		"0"
+		{
+			"root" "gameinstall"
+			"path" "The Detective Servant_Data/StreamingAssets/Formal/"
+			"pattern" "*"
+			"recursive" "1"
 		}
 	}
 }
 "_missing_token" "False"
-"_change_number" "21720267"
-"_sha" "16f08679d623aa75efe593bcb56b1f38b65f2179"
-"_size" "3201"
+"_change_number" "26657447"
+"_sha" "244c7fc76cc85f7ac045cf852a1aed447572fec5"
+"_size" "6699"
