@@ -24,14 +24,13 @@
 	"controllertagwizard" "1"
 	"small_capsule"
 	{
-		"schinese" "a53cd97dc20cfef7fb62dc743505fa7b8e64a636/capsule_231x87_schinese.jpg"
-		"english" "a6ca5b64943b2285400524799e03f2e4a42c2ff8/capsule_231x87.jpg"
+		"schinese" "c889abf250c58e330e9f2823f02426172f6eb478/capsule_231x87_schinese.jpg"
+		"english" "991e1bf40c98b4e3102567b9aae3f4504f577274/capsule_231x87.jpg"
 	}
 	"header_image"
 	{
 		"english" "header.jpg"
 		"schinese" "header_schinese.jpg"
-		"tchinese" "header_tchinese.jpg"
 	}
 	"library_assets"
 	{
@@ -52,13 +51,13 @@
 		{
 			"image"
 			{
-				"english" "library_600x900.jpg"
-				"schinese" "library_600x900_schinese.jpg"
+				"english" "f8c44dc83f1d7b3b74465d7d909c7b99b4bb3640/library_600x900.jpg"
+				"schinese" "552b4b1cc6282815f242a6e57eda2c5ace1d7a19/library_600x900_schinese.jpg"
 			}
 			"image2x"
 			{
-				"english" "library_600x900_2x.jpg"
-				"schinese" "library_600x900_schinese_2x.jpg"
+				"english" "f8c44dc83f1d7b3b74465d7d909c7b99b4bb3640/library_600x900_2x.jpg"
+				"schinese" "552b4b1cc6282815f242a6e57eda2c5ace1d7a19/library_600x900_schinese_2x.jpg"
 			}
 		}
 		"library_hero"
@@ -95,12 +94,12 @@
 		{
 			"image"
 			{
-				"english" "library_header.jpg"
-				"schinese" "library_header_schinese.jpg"
+				"english" "7e6b62ee86c5e83d15e279727fe7beaf18e3c0de/library_header.jpg"
+				"schinese" "89c3c31fb25f419bb0489ee03723826d4dc04183/library_header_schinese.jpg"
 			}
 		}
 	}
-	"store_asset_mtime" "1730831227"
+	"store_asset_mtime" "1734637074"
 	"associations"
 	{
 		"0"
@@ -160,6 +159,31 @@
 			"supported" "true"
 			"subtitles" "true"
 		}
+		"french"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"german"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"spanish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"brazilian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"russian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
 	}
 	"steam_release_date" "1726192809"
 	"community_visible_stats" "1"
@@ -188,8 +212,8 @@
 		"18" "6426"
 		"19" "599"
 	}
-	"review_score" "8"
-	"review_percentage" "94"
+	"review_score" "9"
+	"review_percentage" "95"
 }
 "extended"
 {
@@ -238,30 +262,21 @@
 		{
 			"public"
 			{
-				"gid" "9035304936773814126"
-				"size" "295018385"
-				"download" "129196624"
+				"gid" "2714390766431663363"
+				"size" "295969029"
+				"download" "129864240"
 			}
 			"beta"
 			{
-				"gid" "9035304936773814126"
-				"size" "295018385"
-				"download" "129196624"
+				"gid" "2714390766431663363"
+				"size" "295969029"
+				"download" "129864240"
 			}
 			"mod_test"
 			{
 				"gid" "7981475495848573595"
 				"size" "280917388"
 				"download" "119414416"
-			}
-		}
-		"encryptedmanifests"
-		{
-			"alpha"
-			{
-				"gid" "1285D8FDC4E1C42EAFCB003350D60FCB"
-				"size" "D467A8BB33D6D23A6803A8192B21310E"
-				"download" "E1DD264096BF3C1F79C3182C03D4D5DD"
 			}
 		}
 	}
@@ -275,18 +290,15 @@
 		{
 			"public"
 			{
-				"gid" "7888007388503284137"
-				"size" "409775327"
-				"download" "151893328"
+				"gid" "1655833958961610589"
+				"size" "410884548"
+				"download" "152609344"
 			}
-		}
-		"encryptedmanifests"
-		{
-			"alpha"
+			"beta"
 			{
-				"gid" "93431D028EF299EF7CC3C7720851EC58"
-				"size" "B9ABD7FF2F0DC8C5A12E3CC5EE98E381"
-				"download" "18E25985F92BDA23E01FC83192EB2599"
+				"gid" "1655833958961610589"
+				"size" "410884548"
+				"download" "152609344"
 			}
 		}
 	}
@@ -294,20 +306,14 @@
 	{
 		"public"
 		{
-			"buildid" "16554830"
-			"timeupdated" "1732723545"
-		}
-		"alpha"
-		{
-			"buildid" "16552854"
-			"pwdrequired" "1"
-			"timeupdated" "1732713947"
+			"buildid" "16802123"
+			"timeupdated" "1734626600"
 		}
 		"beta"
 		{
-			"buildid" "16551988"
+			"buildid" "16802123"
 			"description" "Beta Test"
-			"timeupdated" "1732709552"
+			"timeupdated" "1734619571"
 		}
 		"mod_test"
 		{
@@ -316,6 +322,7 @@
 			"timeupdated" "1728120683"
 		}
 	}
+	"privatebranches" "1"
 }
 "ufs"
 {
@@ -351,6 +358,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "26389036"
-"_sha" "12afb94a3b5d0084ba81d54b25a4e5cde01437a6"
-"_size" "6112"
+"_change_number" "26720235"
+"_sha" "0a086fc28a17b53f5cd1f7ad07aadc43c85daa08"
+"_size" "6300"
