@@ -1,83 +1,203 @@
-"appid" "2426930"
+"appid" "2135150"
 "common"
 {
-	"name" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-	"type" "DLC"
-	"parent" "1902690"
-	"releasestate" "released"
-	"name_localized"
-	{
-		"koreana" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-		"schinese" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-		"tchinese" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-		"japanese" "Fate/Samurai Remnant Digital Artbook & Soundtrack"
-	}
+	"name" "Elin"
+	"type" "Game"
 	"oslist" "windows"
 	"osarch" "64"
 	"osextended" ""
+	"icon" "10700d3554487fe6dee9e921394247bee413527b"
+	"clienticon" "78a8a7527747dc68367e82b11aceef0df620ecdb"
+	"clienttga" "f58d092c38e2be7b84a9b0863c2215a6b8ee6d12"
+	"releasestate" "released"
+	"languages"
+	{
+		"english" "1"
+		"japanese" "1"
+	}
 	"content_descriptors"
 	{
 		"0" "1"
 		"1" "2"
 		"2" "5"
 	}
-	"has_adult_content" "1"
-	"has_adult_content_sex" "1"
-	"has_adult_content_violence" "1"
+	"steam_deck_compatibility"
+	{
+		"category" "2"
+		"test_timestamp" "1732233600"
+		"tested_build_id" "16338996"
+		"tests"
+		{
+			"0"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_DefaultControllerConfigNotFullyFunctional"
+			}
+			"1"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_ControllerGlyphsDoNotMatchDeckDevice"
+			}
+			"2"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_TextInputDoesNotAutomaticallyInvokesKeyboard"
+			}
+			"3"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_NativeResolutionNotDefault"
+			}
+			"4"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_InterfaceTextIsLegible"
+			}
+			"5"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant"
+			}
+		}
+		"configuration"
+		{
+			"supported_input" "other"
+			"requires_manual_keyboard_invoke" "1"
+			"requires_non_controller_launcher_nav" "0"
+			"primary_player_is_controller_slot_0" "0"
+			"non_deck_display_glyphs" "1"
+			"small_text" "0"
+			"requires_internet_for_setup" "0"
+			"requires_internet_for_singleplayer" "0"
+			"recommended_runtime" "proton-stable"
+			"requires_h264" "0"
+			"gamescope_frame_limiter_not_supported" "0"
+			"hdr_support" "0"
+		}
+	}
 	"controllertagwizard" "1"
-	"controller_support" "partial"
 	"small_capsule"
 	{
 		"english" "capsule_231x87.jpg"
-		"japanese" "capsule_231x87_japanese.jpg"
-		"tchinese" "capsule_231x87_tchinese.jpg"
-		"schinese" "capsule_231x87_schinese.jpg"
-		"koreana" "capsule_231x87_koreana.jpg"
 	}
 	"header_image"
 	{
 		"english" "header.jpg"
-		"japanese" "header_japanese.jpg"
-		"tchinese" "header_tchinese.jpg"
-		"schinese" "header_schinese.jpg"
-		"koreana" "header_koreana.jpg"
 	}
-	"store_asset_mtime" "1688021555"
+	"library_assets"
+	{
+		"library_capsule" "en"
+		"library_hero" "en"
+		"library_logo" "en"
+		"library_header" "en"
+		"logo_position"
+		{
+			"pinned_position" "UpperCenter"
+			"width_pct" "48.93939393939394"
+			"height_pct" "64.64995778252725"
+		}
+	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"english" "library_600x900.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_600x900_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"image"
+			{
+				"english" "logo.png"
+			}
+			"image2x"
+			{
+				"english" "logo_2x.png"
+			}
+			"logo_position"
+			{
+				"pinned_position" "UpperCenter"
+				"width_pct" "48.93939393939394"
+				"height_pct" "64.64995778252725"
+			}
+		}
+		"library_header"
+		{
+			"image"
+			{
+				"english" "dc11ff552b7e61337424d3020eee9e5afcf6cd82/library_header.jpg"
+			}
+			"image2x"
+			{
+				"english" "dc11ff552b7e61337424d3020eee9e5afcf6cd82/library_header_2x.jpg"
+			}
+		}
+	}
+	"store_asset_mtime" "1734443438"
 	"associations"
 	{
 		"0"
 		{
 			"type" "developer"
-			"name" "KOEI TECMO GAMES CO., LTD."
+			"name" "Lafrontier"
 		}
 		"1"
 		{
 			"type" "publisher"
-			"name" "KOEI TECMO GAMES CO., LTD."
+			"name" "Lafrontier"
+		}
+		"2"
+		{
+			"type" "franchise"
+			"name" "Eternal League Of Nefia"
+		}
+		"3"
+		{
+			"type" "franchise"
+			"name" "Elona"
 		}
 	}
-	"primary_genre" "1"
+	"primary_genre" "3"
 	"genres"
 	{
-		"0" "1"
+		"0" "23"
 		"1" "3"
+		"2" "28"
+		"3" "2"
+		"4" "70"
 	}
 	"category"
 	{
 		"category_2" "1"
-		"category_22" "1"
-		"category_33" "1"
-		"category_23" "1"
-		"category_18" "1"
-		"category_55" "1"
-		"category_56" "1"
-		"category_57" "1"
-		"category_58" "1"
-		"category_60" "1"
+		"category_1" "1"
+		"category_30" "1"
+		"category_62" "1"
 	}
 	"supported_languages"
 	{
 		"english"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"japanese"
 		{
 			"supported" "true"
 			"subtitles" "true"
@@ -87,63 +207,67 @@
 			"supported" "true"
 			"subtitles" "true"
 		}
-		"tchinese"
-		{
-			"supported" "true"
-			"subtitles" "true"
-		}
-		"japanese"
-		{
-			"supported" "true"
-			"full_audio" "true"
-			"subtitles" "true"
-		}
-		"koreana"
-		{
-			"supported" "true"
-			"subtitles" "true"
-		}
 	}
-	"steam_release_date" "1695949202"
-	"gameid" "2426930"
+	"steam_release_date" "1730444401"
+	"workshop_visible" "1"
+	"community_hub_visible" "1"
+	"gameid" "2135150"
 	"store_tags"
 	{
-		"0" "122"
-		"1" "19"
-		"2" "4434"
-		"3" "4231"
-		"4" "4085"
-		"5" "4777"
-		"6" "1742"
-		"7" "3987"
-		"8" "4057"
-		"9" "5984"
-		"10" "6971"
-		"11" "4252"
-		"12" "4182"
-		"13" "4667"
-		"14" "4345"
-		"15" "1646"
-		"16" "323922"
-		"17" "1684"
-		"18" "3799"
-		"19" "4726"
+		"0" "4747"
+		"1" "1695"
+		"2" "1716"
+		"3" "454187"
+		"4" "4434"
+		"5" "122"
+		"6" "3964"
+		"7" "4182"
+		"8" "3871"
+		"9" "1720"
+		"10" "3834"
+		"11" "4026"
+		"12" "6869"
+		"13" "3859"
+		"14" "5125"
+		"15" "4236"
+		"16" "198631"
+		"17" "3810"
+		"18" "1759"
+		"19" "5652"
 	}
-	"review_score" "3"
-	"review_percentage" "9"
+	"review_score" "8"
+	"review_percentage" "94"
 }
 "extended"
 {
-	"dlcforappid" "1902690"
-	"mustownapptopurchase" "1902690"
-	"developer" "KOEI TECMO GAMES CO., LTD."
-	"publisher" "KOEI TECMO GAMES CO., LTD."
-	"homepage" "https://www.koeitecmoamerica.com/fate-sr/"
-	"dlcavailableonstore" "1"
+	"developer" "Lafrontier"
+	"publisher" "Lafrontier"
+}
+"config"
+{
+	"installdir" "Elin"
+	"launch"
+	{
+		"0"
+		{
+			"executable" "Elin.exe"
+			"type" "default"
+			"config"
+			{
+				"oslist" "windows"
+				"osarch" "64"
+			}
+		}
+	}
+	"steamcontrollertemplateindex" "6"
+	"steamdecktouchscreen" "1"
 }
 "depots"
 {
-	"2426930"
+	"baselanguages" "english,schinese,japanese"
+	"workshopdepot" "2135150"
+	"hasdepotsindlc" "0"
+	"2135153"
 	{
 		"config"
 		{
@@ -154,23 +278,87 @@
 		{
 			"public"
 			{
-				"gid" "2098950453280292557"
-				"size" "322338799"
-				"download" "318566176"
+				"gid" "8223384736966347518"
+				"size" "2871391989"
+				"download" "1040329776"
+			}
+			"nightly"
+			{
+				"gid" "8223384736966347518"
+				"size" "2871391989"
+				"download" "1040329776"
 			}
 		}
-		"dlcappid" "2426930"
 	}
 	"branches"
 	{
 		"public"
 		{
-			"buildid" "11788784"
-			"timeupdated" "1690345694"
+			"buildid" "16812418"
+			"timeupdated" "1734688910"
+		}
+		"nightly"
+		{
+			"buildid" "16812418"
+			"description" "Unstable Nightly Version"
+			"timeupdated" "1734688888"
+		}
+	}
+	"privatebranches" "1"
+}
+"ufs"
+{
+	"quota" "10000000000"
+	"maxnumfiles" "10000"
+	"savefiles"
+	{
+		"0"
+		{
+			"root" "WinAppDataLocalLow"
+			"path" "Lafrontier/Elin/Cloud Save"
+			"pattern" "cloud.zip"
+			"platforms"
+			{
+				"1" "Windows"
+			}
+			"recursive" "1"
+		}
+		"1"
+		{
+			"root" "WinAppDataLocalLow"
+			"path" "Lafrontier/Elin/Cloud Save"
+			"pattern" "index.txt"
+			"platforms"
+			{
+				"1" "Windows"
+			}
+			"recursive" "1"
+		}
+		"2"
+		{
+			"root" "WinAppDataLocalLow"
+			"path" "Lafrontier/Elin/Cloud Backup"
+			"pattern" "cloud.zip"
+			"platforms"
+			{
+				"1" "Windows"
+			}
+			"recursive" "1"
+		}
+		"3"
+		{
+			"root" "WinAppDataLocalLow"
+			"path" "Lafrontier/Elin/Cloud Backup"
+			"pattern" "index.txt"
+			"platforms"
+			{
+				"1" "Windows"
+			}
+			"recursive" "1"
 		}
 	}
 }
 "_missing_token" "False"
-"_change_number" "21720267"
-"_sha" "16f08679d623aa75efe593bcb56b1f38b65f2179"
-"_size" "3201"
+"_change_number" "26730634"
+"_sha" "12927694181713a94da3ff29a95d5e7df65c262f"
+"_size" "6270"
