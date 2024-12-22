@@ -207,6 +207,7 @@ class MainApp:
         return curr_repo
 
     def start(self, repo: str, branch: str, path: Path, is_dlc=False):
+        self.depots.append((int(branch), None))
         branch_res = self.api_request(
             f"https://api.github.com/repos/{repo}/branches/{branch}"
         )
@@ -217,7 +218,6 @@ class MainApp:
         tree_res = self.api_request(tree_url)
         if not tree_res or "tree" not in tree_res:
             return
-        self.depots.append((int(branch), None))
         with pool.ThreadPool() as tpool:
             tasks = [
                 tpool.apply_async(self.manifest, (repo, branch, tree["path"], path))
