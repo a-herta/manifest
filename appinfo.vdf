@@ -59,8 +59,8 @@
 		"logo_position"
 		{
 			"pinned_position" "CenterCenter"
-			"width_pct" "100"
-			"height_pct" "100"
+			"width_pct" "21.82030338389734"
+			"height_pct" "98.48017098076468"
 		}
 	}
 	"library_assets_full"
@@ -98,8 +98,8 @@
 			"logo_position"
 			{
 				"pinned_position" "CenterCenter"
-				"width_pct" "100"
-				"height_pct" "100"
+				"width_pct" "21.82030338389734"
+				"height_pct" "98.48017098076468"
 			}
 			"image"
 			{
@@ -230,8 +230,8 @@
 		"9" "4085"
 		"10" "4562"
 		"11" "32322"
-		"12" "5984"
-		"13" "5611"
+		"12" "5611"
+		"13" "5984"
 		"14" "9"
 		"15" "4325"
 		"16" "3993"
@@ -277,15 +277,27 @@
 		{
 			"public"
 			{
-				"gid" "3839782905486292326"
-				"size" "4142945040"
-				"download" "3503944864"
+				"gid" "7979384062751592402"
+				"size" "4142945202"
+				"download" "3503944896"
+			}
+			"el_donw_version"
+			{
+				"gid" "2569994090886434108"
+				"size" "4124613567"
+				"download" "3498502464"
 			}
 			"test"
 			{
-				"gid" "3969359381653590957"
-				"size" "4142945040"
-				"download" "3503944864"
+				"gid" "1818072307090685877"
+				"size" "4142945128"
+				"download" "3503944912"
+			}
+			"use_ia32"
+			{
+				"gid" "6554589438640570702"
+				"size" "4114082876"
+				"download" "3498989072"
 			}
 		}
 	}
@@ -294,14 +306,26 @@
 	{
 		"public"
 		{
-			"buildid" "16821735"
-			"timeupdated" "1734755533"
+			"buildid" "16835480"
+			"timeupdated" "1734960407"
+		}
+		"el_donw_version"
+		{
+			"buildid" "16836120"
+			"description" "降低版本測試"
+			"timeupdated" "1734967962"
 		}
 		"test"
 		{
-			"buildid" "16821814"
+			"buildid" "16833150"
 			"description" "test"
-			"timeupdated" "1734756060"
+			"timeupdated" "1734938300"
+		}
+		"use_ia32"
+		{
+			"buildid" "16828963"
+			"description" "test ia32 disable gpu"
+			"timeupdated" "1734874819"
 		}
 	}
 }
@@ -320,6 +344,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "26743288"
-"_sha" "8eb0998c7c6261a31b0e2982ed76a74c8b8c8f30"
-"_size" "6140"
+"_change_number" "26764041"
+"_sha" "10c6f0c61834d0d8384aaab47144cdbfe2a53b46"
+"_size" "6691"
