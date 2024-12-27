@@ -23,6 +23,7 @@
 	{
 		"english" "header.jpg"
 	}
+	"store_screenshot" "ss_3ea195bfd10dfeb0e27a0419b8bcf95e9564d3a2.jpg"
 	"store_asset_mtime" "1705494227"
 	"associations"
 	{
@@ -49,7 +50,7 @@
 	{
 	}
 	"review_score" "5"
-	"review_percentage" "51"
+	"review_percentage" "55"
 }
 "extended"
 {
@@ -70,18 +71,9 @@
 		{
 			"public"
 			{
-				"gid" "3910305600748165279"
-				"size" "147503148"
-				"download" "133128880"
-			}
-		}
-		"encryptedmanifests"
-		{
-			"private"
-			{
-				"gid" "210C3176B5948F31A565C080045BE15B"
-				"size" "6C44DCBFBEB5E58DB4A1A1833A852D7B"
-				"download" "07577334147F81A70718E1D2B966A829"
+				"gid" "6472366291146846212"
+				"size" "171334476"
+				"download" "157044112"
 			}
 		}
 	}
@@ -95,18 +87,9 @@
 		{
 			"public"
 			{
-				"gid" "6217814804045301252"
-				"size" "739906974"
-				"download" "715290784"
-			}
-		}
-		"encryptedmanifests"
-		{
-			"private"
-			{
-				"gid" "FBC78E85003EA3FABEB499A7E46365C4"
-				"size" "C1FAD592DB14D1CE4E53C500185F4D35"
-				"download" "CC6851C6838F7A7078EBD450E48B7245"
+				"gid" "4099416431916212746"
+				"size" "873967820"
+				"download" "846197264"
 			}
 		}
 	}
@@ -114,16 +97,11 @@
 	{
 		"public"
 		{
-			"buildid" "14840834"
-			"timeupdated" "1719457119"
-		}
-		"private"
-		{
-			"buildid" "14840834"
-			"pwdrequired" "1"
-			"timeupdated" "1719382894"
+			"buildid" "16832197"
+			"timeupdated" "1734926373"
 		}
 	}
+	"privatebranches" "1"
 }
 "albummetadata"
 {
@@ -328,6 +306,38 @@
 			"m" "1"
 			"s" "30"
 		}
+		"24"
+		{
+			"discnumber" "1"
+			"tracknumber" "25"
+			"originalname" "Introduction Bjorn"
+			"m" "0"
+			"s" "30"
+		}
+		"25"
+		{
+			"discnumber" "1"
+			"tracknumber" "26"
+			"originalname" "Metal Menace"
+			"m" "2"
+			"s" "40"
+		}
+		"26"
+		{
+			"discnumber" "1"
+			"tracknumber" "27"
+			"originalname" "Roaring Threat"
+			"m" "2"
+			"s" "20"
+		}
+		"27"
+		{
+			"discnumber" "1"
+			"tracknumber" "28"
+			"originalname" "Discomfort from Abyss"
+			"m" "2"
+			"s" "14"
+		}
 	}
 	"metadata"
 	{
@@ -466,6 +476,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "24136656"
-"_sha" "a00aa55d3ebf0c8486200fb7b90b6c73ba20ca1a"
-"_size" "7865"
+"_change_number" "26758623"
+"_sha" "30d1e33ae45b0b5c385b23c1d5f0fb11808436fc"
+"_size" "7965"
