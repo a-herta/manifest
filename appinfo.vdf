@@ -31,12 +31,56 @@
 		"0" "2"
 		"1" "5"
 	}
+	"steam_deck_compatibility"
+	{
+		"category" "2"
+		"test_timestamp" "1734998400"
+		"tested_build_id" "16702566"
+		"tests"
+		{
+			"0"
+			{
+				"display" "3"
+				"token" "#SteamDeckVerified_TestResult_ControllerGlyphsDoNotMatchDeckDevice"
+			}
+			"1"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultControllerConfigFullyFunctional"
+			}
+			"2"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_InterfaceTextIsLegible"
+			}
+			"3"
+			{
+				"display" "4"
+				"token" "#SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant"
+			}
+		}
+		"configuration"
+		{
+			"supported_input" "gamepad"
+			"requires_manual_keyboard_invoke" "0"
+			"requires_non_controller_launcher_nav" "0"
+			"primary_player_is_controller_slot_0" "0"
+			"non_deck_display_glyphs" "1"
+			"small_text" "0"
+			"requires_internet_for_setup" "0"
+			"requires_internet_for_singleplayer" "0"
+			"recommended_runtime" "proton-9.0-4RC"
+			"requires_h264" "0"
+			"gamescope_frame_limiter_not_supported" "0"
+			"hdr_support" "0"
+		}
+	}
 	"controllertagwizard" "1"
 	"small_capsule"
 	{
 		"english" "capsule_231x87.jpg"
 		"schinese" "capsule_231x87_schinese.jpg"
-		"japanese" "b21a81696d8a600d09289cf92100487739eca9d6/capsule_231x87_japanese.jpg"
+		"japanese" "26205ffb38e31782ed354fe6081c115299ca34ac/capsule_231x87_japanese.jpg"
 	}
 	"header_image"
 	{
@@ -111,7 +155,7 @@
 			}
 		}
 	}
-	"store_asset_mtime" "1733897934"
+	"store_asset_mtime" "1733985758"
 	"associations"
 	{
 		"0"
@@ -188,6 +232,52 @@
 			"supported" "true"
 			"subtitles" "true"
 		}
+		"italian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"spanish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"ukrainian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"turkish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"polish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"brazilian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+			"full_audio" "true"
+		}
+		"portuguese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"latam"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"vietnamese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
 	}
 	"steam_release_date" "1733889557"
 	"community_visible_stats" "1"
@@ -195,29 +285,29 @@
 	"gameid" "2527500"
 	"store_tags"
 	{
-		"0" "1742"
-		"1" "1721"
-		"2" "4726"
+		"0" "1721"
+		"1" "4726"
+		"2" "1742"
 		"3" "3839"
-		"4" "4191"
-		"5" "4064"
-		"6" "21"
-		"7" "4182"
-		"8" "1667"
-		"9" "4166"
-		"10" "599"
-		"11" "4106"
-		"12" "3871"
-		"13" "15172"
-		"14" "122"
-		"15" "5984"
-		"16" "10235"
-		"17" "5673"
-		"18" "1664"
+		"4" "1667"
+		"5" "4182"
+		"6" "4191"
+		"7" "4166"
+		"8" "4064"
+		"9" "21"
+		"10" "15172"
+		"11" "5984"
+		"12" "599"
+		"13" "122"
+		"14" "1664"
+		"15" "10235"
+		"16" "3871"
+		"17" "4106"
+		"18" "5673"
 		"19" "1738"
 	}
-	"review_score" "8"
-	"review_percentage" "99"
+	"review_score" "9"
+	"review_percentage" "98"
 }
 "extended"
 {
@@ -244,9 +334,9 @@
 		{
 			"public"
 			{
-				"gid" "2651971051393432762"
-				"size" "2605131258"
-				"download" "771994000"
+				"gid" "8152220797438511588"
+				"size" "2803105944"
+				"download" "918587712"
 			}
 		}
 	}
@@ -254,8 +344,8 @@
 	{
 		"public"
 		{
-			"buildid" "16702566"
-			"timeupdated" "1733887865"
+			"buildid" "16849983"
+			"timeupdated" "1735146324"
 		}
 	}
 	"privatebranches" "1"
@@ -266,6 +356,6 @@
 	"maxnumfiles" "0"
 }
 "_missing_token" "False"
-"_change_number" "26592424"
-"_sha" "a667179463f4054a6f19b0cf7cab976361185eb3"
-"_size" "4536"
+"_change_number" "26782721"
+"_sha" "96b926943620aea34e238f6320139e7a22b56e8c"
+"_size" "6310"
