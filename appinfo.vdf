@@ -263,42 +263,42 @@
 		{
 			"public"
 			{
-				"gid" "2146761639200081596"
-				"size" "2682957622"
-				"download" "2602539072"
+				"gid" "4778052233373735926"
+				"size" "2682956749"
+				"download" "2602537616"
 			}
 			"test"
 			{
-				"gid" "2146761639200081596"
-				"size" "2682957622"
-				"download" "2602539072"
+				"gid" "4778052233373735926"
+				"size" "2682956749"
+				"download" "2602537616"
 			}
 		}
 		"encryptedmanifests"
 		{
 			"gamepulse"
 			{
-				"gid" "4B5ACCB5817E65389DC8229AF7A882DE"
-				"size" "9412F6E7E69B1E583639F9EFDB3D6FF9"
-				"download" "0C9A77D539E299575DEFD1BD0C5EEBCC"
+				"gid" "CD5FF4907C4F28B024C4139DC5674E6F"
+				"size" "5067498DE45AE144D5561FB02B46B638"
+				"download" "46DBFE73FCCFDA3E040D7E20395D1856"
 			}
 			"heromode"
 			{
-				"gid" "C535EB18BA4AE6DD0196880930ACBAC8"
-				"size" "94058D0FBAB058FDEF63C82B3CFEE694"
-				"download" "0F50405E0BB4C9662E37BF3ECA821818"
+				"gid" "517831B1B0709F2836D2DB5D76126C2A"
+				"size" "70183FEA24730A204C047213435F357E"
+				"download" "91C8901B3DFFEF0FDF543F5A0ED624C1"
 			}
 			"privatetest"
 			{
-				"gid" "1AB58421BCC7785C590F559C316EF7A7"
-				"size" "3B99E05C97424218CD602AC3E452D854"
-				"download" "31A0DF0DD26CC9E3BBA888979D75FCE3"
+				"gid" "22A77B4135C30CBC5EF5295E39E19936"
+				"size" "2E92239CF3C3AD8B9C0F5E1300B50F41"
+				"download" "197AB10AF32CBB51C57357D360A7D903"
 			}
 			"reimutest"
 			{
-				"gid" "CBD5D2400BFD36E8D91F5C170FBA90C2"
-				"size" "FAC5929B5C62B4175D1C64D3166442FF"
-				"download" "812A2DCE86A934C93C7C49502CC5B049"
+				"gid" "49BF873348E9D158FB27A272813BFFA8"
+				"size" "0CD1AED5AF7D8B815A4D61DD0A498682"
+				"download" "E113CBCD06185779BC44F6EAEDCC32B7"
 			}
 		}
 	}
@@ -306,38 +306,38 @@
 	{
 		"public"
 		{
-			"buildid" "16815337"
-			"timeupdated" "1734705686"
+			"buildid" "16824480"
+			"timeupdated" "1734796448"
 		}
 		"gamepulse"
 		{
-			"buildid" "16815337"
+			"buildid" "16824480"
 			"pwdrequired" "1"
-			"timeupdated" "1734705701"
+			"timeupdated" "1734796458"
 		}
 		"heromode"
 		{
-			"buildid" "16815337"
+			"buildid" "16824480"
 			"pwdrequired" "1"
-			"timeupdated" "1734705723"
+			"timeupdated" "1734796466"
 		}
 		"privatetest"
 		{
-			"buildid" "16815337"
+			"buildid" "16824480"
 			"pwdrequired" "1"
-			"timeupdated" "1734705733"
+			"timeupdated" "1734796475"
 		}
 		"reimutest"
 		{
-			"buildid" "16815337"
+			"buildid" "16824480"
 			"pwdrequired" "1"
-			"timeupdated" "1734705711"
+			"timeupdated" "1734796484"
 		}
 		"test"
 		{
-			"buildid" "16815337"
+			"buildid" "16824480"
 			"description" "October Update"
-			"timeupdated" "1734705743"
+			"timeupdated" "1734796493"
 		}
 	}
 }
@@ -367,6 +367,6 @@
 	"sync_while_suspended" "1"
 }
 "_missing_token" "False"
-"_change_number" "26734731"
-"_sha" "7107c273fe93b763dfdde1d1363997dbddb42fe3"
+"_change_number" "26747006"
+"_sha" "c78e9d3d3e4791ea25100dfc2c5a2609230f69fe"
 "_size" "7221"
