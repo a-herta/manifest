@@ -110,6 +110,7 @@
 		"english" "header.jpg"
 		"schinese" "header_schinese.jpg"
 		"tchinese" "header_tchinese.jpg"
+		"japanese" "header_japanese.jpg"
 	}
 	"library_assets"
 	{
@@ -189,7 +190,7 @@
 			}
 		}
 	}
-	"store_asset_mtime" "1728458550"
+	"store_asset_mtime" "1734923117"
 	"associations"
 	{
 		"0"
@@ -378,24 +379,24 @@
 		{
 			"public"
 			{
-				"gid" "8455286032961126286"
-				"size" "23197032155"
-				"download" "18730199520"
+				"gid" "6644048754737958588"
+				"size" "28004416565"
+				"download" "22685808288"
 			}
 		}
 		"encryptedmanifests"
 		{
 			"experimental"
 			{
-				"gid" "0BD3B47830517243173ED77A31958D65"
-				"size" "013D8E26FDC7BBE9A496BDF7662AC95B"
-				"download" "342AAD99027A55C4DE5950396316E5DB"
+				"gid" "06596076C37F4671673C5CFF2EDA0ECF"
+				"size" "9D4EB81BDCB7838BF0FCE6C8FBC85D2B"
+				"download" "8ECE41D7B87764D580856068E480F0C0"
 			}
 			"experimental_development"
 			{
-				"gid" "BBC2AC75B67B403A5F97869584833D42"
-				"size" "0BD6658A22EBC70F8544D5C047D6A60D"
-				"download" "8DF3A7F996EEFC44B3E7F288FB6B45D9"
+				"gid" "B21DD2112A0CE654414C69F9F363B2DC"
+				"size" "493E4C28F3559A6FF2F7789069AF042D"
+				"download" "77E76540D574D52287CDE9B79A0A3775"
 			}
 			"main_test"
 			{
@@ -403,89 +404,71 @@
 				"size" "2B772DE37C9A71E4ED326A83B29046DB"
 				"download" "803AAA9C67BD73B063DB87DA8CD48595"
 			}
-			"microsoft"
-			{
-				"gid" "77BCE3D514F1D77F6D50FFCD7C68B6F8"
-				"size" "83674E00D00E52E8015B78FDFF4550C8"
-				"download" "31F73F723743D65632BA60668A747196"
-			}
 			"external_shipping"
 			{
-				"gid" "5D9682EF5873AB7A2E267E5EFC8532FE"
-				"size" "7422B1C4D7495F57DD8CB6E768069E15"
-				"download" "5B5E3A249CF8A2C18184EAD3ECB946E0"
+				"gid" "1F66CCF4DD154FD25345620B2FB323FF"
+				"size" "2428FBE005C9924EA66B13FE3EB59A4A"
+				"download" "8AD4133D580DAF223007522C802A34CB"
 			}
 			"main_development"
 			{
-				"gid" "4869106E75E7BCDAFFA5DDDFFD29FECF"
-				"size" "BBF313E33F6B5230827267BE50A9FD17"
-				"download" "051AC3D5703D721B5105DD11329CC128"
+				"gid" "FDD78E4F2F7E701975A8BAAF8480D8BA"
+				"size" "3129A3B8465ADC87B9BD6236B6D4E39D"
+				"download" "29F98A0EBBA3CF83028ECBD6745D0D7A"
 			}
 			"main_shipping"
 			{
-				"gid" "8942E7D7917705C578AFB813EC35BAD8"
-				"size" "7936BB04ECC3F38D1EDA8CF2728664BA"
-				"download" "9C7533EEC4F7F6A31814058FA6335DA0"
-			}
-			"master_development"
-			{
-				"gid" "BAB08A07D56B4CBBDE83FA101400F2BE"
-				"size" "94151B630700205D42AB5FFDA5ADDB19"
-				"download" "5807EB60FACC8CEABC7E94F3B056C775"
-			}
-			"master_shipping"
-			{
-				"gid" "6320A1FB43C6588F5879A8D37777FAC8"
-				"size" "E47EBBA85D01F893335DBE3F7DD7EBFD"
-				"download" "DD68E0F6CF086A8C306928C75E44853A"
+				"gid" "56AEB4D791C3951104FAB5280BF99411"
+				"size" "0B4E0EF3B2F39519CDE433636202A6D7"
+				"download" "7DB9930CA635F7272BC7FAE8402F6AD7"
 			}
 			"network_development"
 			{
-				"gid" "08F674BDAEFAAD546A247773E4766467"
-				"size" "BF91ECCF065F064CEB46D9AA5F0CDD16"
-				"download" "232E8D3E6A6A9778079C1C312CE3D3D1"
+				"gid" "4DBB6F982217A049DC101162385B44A2"
+				"size" "A754C401B4B4BABDCD915061F52CD52F"
+				"download" "59763C2787B7C74383E232461C48B4C2"
 			}
 			"network_shipping"
 			{
-				"gid" "F56F7407F0633B2C83E0DE27443AC086"
-				"size" "F2C0DA9C1EB9D9407A85909841C10DEE"
-				"download" "F75A074FFD198DA5C05CCCCB6219BBA2"
+				"gid" "EC9A8810291A75DDB55119AE0C76A7EF"
+				"size" "C386B084E538C2DF7C1FD4CC9D12F9CA"
+				"download" "83066C21FAD22514D402CDF4756794B7"
 			}
 			"network2_development"
 			{
-				"gid" "08981FE53FF57333790C63CF7EF8B69F"
-				"size" "14B875C93BBF8122A802BEA3061A6DF8"
-				"download" "F504FBFF6B28DCF0FEB9CD3904668062"
+				"gid" "5DA6D51980EDECA08064C0E21838EE84"
+				"size" "863BA7808865B562BE4AC09948C7A5F8"
+				"download" "3833972DBEE27F98A444B14ACCF506D7"
 			}
 			"network2_shipping"
 			{
-				"gid" "E85697586D3B9784E6A202034E2D4B3D"
-				"size" "2E1863F3E12EEC298559E2CE35257BA3"
-				"download" "04F38E485FD06F5336AC08C6E08018E0"
+				"gid" "D7863E4E06578A57812DA103E5E0858C"
+				"size" "C0F17BE4080A693DFF2C26BFE9EF0E8E"
+				"download" "43553285EF5C76C842ED4571CCE2BA8F"
 			}
 			"private_development"
 			{
-				"gid" "7EDC795D7D5BB9316A191D8DCE93F35B"
-				"size" "F066AE66C6AF576D5BBE257D64A82EE9"
-				"download" "41A93A6DAE8F9FB81884D36AA7E64606"
+				"gid" "5A8C949D6A9C43385695A858481CAAA3"
+				"size" "142BE9FBE3FF4805992F369E3ACB5825"
+				"download" "98CBA2FEB6BC790F47EA3CC4582C5316"
 			}
 			"private_shipping"
 			{
-				"gid" "41D60776E85A233A223C6CBEFB0BFFB7"
-				"size" "22A5386C3B74A65A3072DE8169662AD9"
-				"download" "48BA8C4542F66552F3C5105C5A51E15E"
+				"gid" "1B19D8BBA776F30029ADCD6118E2348A"
+				"size" "93EFC89E6F39BBEF5C92C2C48D7D2F75"
+				"download" "8D2EE30017083CEEFCB83C6C4B25A03E"
 			}
 			"qa_development"
 			{
-				"gid" "F59B54A177C0229A2BBCF33F2F2A2DD8"
-				"size" "4712A5CEE35F23D2833CCADB0C72E9C5"
-				"download" "D5912F9CB9F792EDE682452978CCE3FA"
+				"gid" "F8190C4B82C440470E5CD1596C22D40D"
+				"size" "F35819992FBC299F09756FD45BC4E71A"
+				"download" "439B9EE9541862B17A805E5E4AB43A8C"
 			}
 			"qa_shipping"
 			{
-				"gid" "5E223972778189DD7EE3D5738FDDA335"
-				"size" "754CFD24025C5D34ED76DC9E910EA3A6"
-				"download" "54A05DFA2899BEF73B833AD993769A7E"
+				"gid" "E96F0C000E85B125C2717526721510D9"
+				"size" "333D26C5F58DC36ACF31F83BDAF59832"
+				"download" "900A831F423EE7BD6AADE56FD15030C8"
 			}
 			"v0.1.5"
 			{
@@ -511,6 +494,18 @@
 				"size" "8E8617FD47379F351C5D27B1BCBC829C"
 				"download" "1FFDD382548C5E33F883EF10A9B7A3FA"
 			}
+			"v0.3.12"
+			{
+				"gid" "1768D83848946C6C09428D8163216D81"
+				"size" "DB4046ECD5BA5A2535F4AB36DBB5B2A3"
+				"download" "CA96C8E8F402574A75FD5DEBA13229CD"
+			}
+			"v0.3.12_development"
+			{
+				"gid" "16D5A98A64C83D1BBA4E4DFA5327454B"
+				"size" "63721EA2A7BF659592F4205241076E0F"
+				"download" "980D9F41826C7566DD105D6D847FF9ED"
+			}
 			"v0.3_trial"
 			{
 				"gid" "E670CBBDBEABD6F3101EC65E76AEBC28"
@@ -524,20 +519,20 @@
 	{
 		"public"
 		{
-			"buildid" "16610016"
-			"timeupdated" "1733212884"
+			"buildid" "16843582"
+			"timeupdated" "1735182161"
 		}
 		"experimental"
 		{
-			"buildid" "16611152"
+			"buildid" "16808562"
 			"pwdrequired" "1"
-			"timeupdated" "1733216503"
+			"timeupdated" "1734663668"
 		}
 		"experimental_development"
 		{
-			"buildid" "16610979"
+			"buildid" "16807994"
 			"pwdrequired" "1"
-			"timeupdated" "1733216627"
+			"timeupdated" "1734663749"
 		}
 		"main_test"
 		{
@@ -545,89 +540,71 @@
 			"pwdrequired" "1"
 			"timeupdated" "1731331041"
 		}
-		"microsoft"
-		{
-			"buildid" "13908495"
-			"pwdrequired" "1"
-			"timeupdated" "1711945133"
-		}
 		"external_shipping"
 		{
-			"buildid" "14177342"
+			"buildid" "16232804"
 			"pwdrequired" "1"
-			"timeupdated" "1714104625"
+			"timeupdated" "1733736762"
 		}
 		"main_development"
 		{
-			"buildid" "16607784"
+			"buildid" "16850787"
 			"pwdrequired" "1"
-			"timeupdated" "1733185527"
+			"timeupdated" "1735162104"
 		}
 		"main_shipping"
 		{
-			"buildid" "16606103"
+			"buildid" "16850770"
 			"pwdrequired" "1"
-			"timeupdated" "1733174311"
-		}
-		"master_development"
-		{
-			"buildid" "13197643"
-			"pwdrequired" "1"
-			"timeupdated" "1716799699"
-		}
-		"master_shipping"
-		{
-			"buildid" "13146942"
-			"pwdrequired" "1"
-			"timeupdated" "1704980470"
+			"timeupdated" "1735161771"
 		}
 		"network_development"
 		{
-			"buildid" "16609368"
+			"buildid" "16835093"
 			"pwdrequired" "1"
-			"timeupdated" "1733196972"
+			"timeupdated" "1734956582"
 		}
 		"network_shipping"
 		{
-			"buildid" "16610016"
+			"buildid" "16834821"
 			"pwdrequired" "1"
-			"timeupdated" "1733202474"
+			"timeupdated" "1734953952"
 		}
 		"network2_development"
 		{
-			"buildid" "15149759"
+			"buildid" "16583833"
 			"pwdrequired" "1"
-			"timeupdated" "1721907691"
+			"timeupdated" "1734922479"
 		}
 		"network2_shipping"
 		{
-			"buildid" "15158700"
+			"buildid" "16582930"
 			"pwdrequired" "1"
-			"timeupdated" "1721968094"
+			"timeupdated" "1734922508"
 		}
 		"private_development"
 		{
-			"buildid" "16610979"
+			"buildid" "16843876"
 			"pwdrequired" "1"
-			"timeupdated" "1733209985"
+			"timeupdated" "1735053610"
 		}
 		"private_shipping"
 		{
-			"buildid" "16611152"
+			"buildid" "16843582"
 			"pwdrequired" "1"
-			"timeupdated" "1733211292"
+			"timeupdated" "1735050565"
 		}
 		"qa_development"
 		{
-			"buildid" "16609368"
+			"buildid" "16835093"
 			"pwdrequired" "1"
-			"timeupdated" "1733213054"
+			"timeupdated" "1734957168"
 		}
 		"qa_shipping"
 		{
-			"buildid" "16610016"
+			"buildid" "16834821"
 			"pwdrequired" "1"
-			"timeupdated" "1733213037"
+			"timeupdated" "1734957186"
 		}
 		"v0.1.5"
 		{
@@ -653,6 +630,18 @@
 			"pwdrequired" "1"
 			"timeupdated" "1719974942"
 		}
+		"v0.3.12"
+		{
+			"buildid" "16610016"
+			"pwdrequired" "1"
+			"timeupdated" "1734921350"
+		}
+		"v0.3.12_development"
+		{
+			"buildid" "16609368"
+			"pwdrequired" "1"
+			"timeupdated" "1734921379"
+		}
 		"v0.3_trial"
 		{
 			"buildid" "16250297"
@@ -663,7 +652,7 @@
 }
 "ufs"
 {
-	"quota" "1000000000"
+	"quota" "10000000000"
 	"maxnumfiles" "10000"
 	"savefiles"
 	{
@@ -681,6 +670,6 @@
 	}
 }
 "_missing_token" "False"
-"_change_number" "26466855"
-"_sha" "93371133f70fd267d3e4917afb839c7cefb23732"
-"_size" "14433"
+"_change_number" "26785153"
+"_sha" "8f8215f7d333fb139a92fc0ef2b86aa285d0eb72"
+"_size" "14176"
