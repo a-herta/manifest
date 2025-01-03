@@ -258,7 +258,7 @@ class MainApp:
                 info_res = self.raw_content(url)
                 appinfo_config = vdf.loads(info_res.decode())
                 appinfo_dict: dict[str, str] = appinfo_config["common"]
-                appname = re.sub(r"\W+", " ", appinfo_dict["name"])
+                appname = appinfo_dict["name"]
                 self.appinfo.append(appname)
             if path.endswith(".vdf") and path in ["config.vdf", "Key.vdf"]:
                 key_res = self.raw_content(url)
