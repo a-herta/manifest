@@ -311,7 +311,7 @@ class MainApp:
             )
         lua_filename = f"{self.appinfo[0]}.lua"
         lua_filepath = path / "config" / "stplug-in" / lua_filename
-        with open(lua_filepath, "w") as f:
+        with open(lua_filepath, 'w', encoding='utf-8') as f:
             f.write(lua_content)
         lua_packpath = path / "config" / "stplug-in" / "luapacka.exe"
         result = subprocess.run(
