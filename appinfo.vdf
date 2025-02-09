@@ -1,0 +1,368 @@
+"appid" "2797340"
+"common"
+{
+	"name" "Cat God Ranch"
+	"type" "Game"
+	"releasestate" "released"
+	"icon" "a8e80ac779a5223e343f0ea64cf52a7250a8980b"
+	"oslist" "windows,macos"
+	"osarch" ""
+	"osextended" "macos64,macosapplesilicon"
+	"clienttga" "4275a8cb140d4214ad85d88c4e69ad6c225f0b7e"
+	"name_localized"
+	{
+		"english" "Cat God Ranch"
+		"schinese" "猫神牧场"
+	}
+	"clienticon" "133d1720180f7f4b1ad7d65f9d7175118616cfc3"
+	"languages"
+	{
+		"english" "1"
+		"schinese" "1"
+		"tchinese" "1"
+	}
+	"controllertagwizard" "1"
+	"small_capsule"
+	{
+		"schinese" "c889abf250c58e330e9f2823f02426172f6eb478/capsule_231x87_schinese.jpg"
+		"english" "991e1bf40c98b4e3102567b9aae3f4504f577274/capsule_231x87.jpg"
+	}
+	"header_image"
+	{
+		"english" "header.jpg"
+		"schinese" "header_schinese.jpg"
+	}
+	"library_assets"
+	{
+		"library_capsule" "en,zh-cn"
+		"library_hero" "en"
+		"library_logo" "zh-cn,en"
+		"library_header" "en,zh-cn"
+		"logo_position"
+		{
+			"pinned_position" "UpperCenter"
+			"width_pct" "32.6843522838663"
+			"height_pct" "73.09883769171955"
+		}
+	}
+	"library_assets_full"
+	{
+		"library_capsule"
+		{
+			"image"
+			{
+				"english" "f8c44dc83f1d7b3b74465d7d909c7b99b4bb3640/library_600x900.jpg"
+				"schinese" "552b4b1cc6282815f242a6e57eda2c5ace1d7a19/library_600x900_schinese.jpg"
+			}
+			"image2x"
+			{
+				"english" "f8c44dc83f1d7b3b74465d7d909c7b99b4bb3640/library_600x900_2x.jpg"
+				"schinese" "552b4b1cc6282815f242a6e57eda2c5ace1d7a19/library_600x900_schinese_2x.jpg"
+			}
+		}
+		"library_hero"
+		{
+			"image"
+			{
+				"english" "library_hero.jpg"
+			}
+			"image2x"
+			{
+				"english" "library_hero_2x.jpg"
+			}
+		}
+		"library_logo"
+		{
+			"logo_position"
+			{
+				"pinned_position" "UpperCenter"
+				"width_pct" "32.6843522838663"
+				"height_pct" "73.09883769171955"
+			}
+			"image"
+			{
+				"schinese" "logo_schinese.png"
+				"english" "logo.png"
+			}
+			"image2x"
+			{
+				"schinese" "logo_schinese_2x.png"
+				"english" "logo_2x.png"
+			}
+		}
+		"library_header"
+		{
+			"image"
+			{
+				"english" "e0c5f1827e46f3ffb042431ec8775eda5af13d46/library_header.jpg"
+				"schinese" "9e6111725178da53e6de14bf91fca99f6e9667f1/library_header_schinese.jpg"
+			}
+			"image2x"
+			{
+				"english" "e0c5f1827e46f3ffb042431ec8775eda5af13d46/library_header_2x.jpg"
+				"schinese" "9e6111725178da53e6de14bf91fca99f6e9667f1/library_header_schinese_2x.jpg"
+			}
+		}
+	}
+	"store_asset_mtime" "1734697859"
+	"associations"
+	{
+		"0"
+		{
+			"type" "developer"
+			"name" "CrazyPotato Studio"
+		}
+		"1"
+		{
+			"type" "publisher"
+			"name" "CrazyPotato Studio"
+		}
+	}
+	"primary_genre" "2"
+	"genres"
+	{
+		"0" "4"
+		"1" "23"
+		"2" "3"
+		"3" "28"
+		"4" "2"
+	}
+	"category"
+	{
+		"category_2" "1"
+		"category_22" "1"
+		"category_23" "1"
+		"category_25" "1"
+		"category_41" "1"
+		"category_42" "1"
+		"category_62" "1"
+	}
+	"supported_languages"
+	{
+		"english"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"schinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"tchinese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"japanese"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"koreana"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"french"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"german"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"spanish"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"brazilian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+		"russian"
+		{
+			"supported" "true"
+			"subtitles" "true"
+		}
+	}
+	"steam_release_date" "1726192809"
+	"community_visible_stats" "1"
+	"community_hub_visible" "1"
+	"gameid" "2797340"
+	"store_tags"
+	{
+		"0" "791774"
+		"1" "1091588"
+		"2" "32322"
+		"3" "597"
+		"4" "1716"
+		"5" "4711"
+		"6" "3959"
+		"7" "4520"
+		"8" "14139"
+		"9" "9"
+		"10" "4325"
+		"11" "1084988"
+		"12" "916648"
+		"13" "17894"
+		"14" "1666"
+		"15" "6426"
+		"16" "1677"
+		"17" "4726"
+		"18" "3871"
+		"19" "4182"
+	}
+	"review_score" "9"
+	"review_percentage" "95"
+}
+"extended"
+{
+	"developer" "CrazyPotato Studio"
+	"publisher" "CrazyPotato Studio"
+	"homepage" "https://www.youtube.com/watch\?v=evAkuQEGU8M"
+}
+"config"
+{
+	"installdir" "Cat God Ranch"
+	"steamcontrollertemplateindex" "6"
+	"steamcontrollertouchtemplateindex" "8"
+	"steamdecktouchscreen" "1"
+	"launch"
+	{
+		"0"
+		{
+			"executable" "CatGodRanch.exe"
+			"type" "default"
+			"config"
+			{
+				"oslist" "windows"
+			}
+		}
+		"1"
+		{
+			"executable" "Cat God Ranch.app"
+			"type" "default"
+			"config"
+			{
+				"oslist" "macos"
+			}
+		}
+	}
+}
+"depots"
+{
+	"baselanguages" "english,koreana,schinese,tchinese,japanese"
+	"2797341"
+	{
+		"config"
+		{
+			"oslist" "windows"
+		}
+		"manifests"
+		{
+			"public"
+			{
+				"gid" "6557520466184588390"
+				"size" "292064582"
+				"download" "129171712"
+			}
+			"beta"
+			{
+				"gid" "6557520466184588390"
+				"size" "292064582"
+				"download" "129171712"
+			}
+			"mod_test"
+			{
+				"gid" "7981475495848573595"
+				"size" "280917388"
+				"download" "119414416"
+			}
+		}
+	}
+	"2797342"
+	{
+		"config"
+		{
+			"oslist" "macos"
+		}
+		"manifests"
+		{
+			"public"
+			{
+				"gid" "5070125966017309120"
+				"size" "407661558"
+				"download" "151976272"
+			}
+			"beta"
+			{
+				"gid" "5070125966017309120"
+				"size" "407661558"
+				"download" "151976272"
+			}
+		}
+	}
+	"branches"
+	{
+		"public"
+		{
+			"buildid" "17159834"
+			"timeupdated" "1738081043"
+		}
+		"beta"
+		{
+			"buildid" "17159834"
+			"description" "Beta Test"
+			"timeupdated" "1738078770"
+		}
+		"mod_test"
+		{
+			"buildid" "15938842"
+			"description" "Mod Test"
+			"timeupdated" "1728120683"
+		}
+	}
+	"privatebranches" "1"
+}
+"ufs"
+{
+	"quota" "10000000"
+	"maxnumfiles" "10"
+	"savefiles"
+	{
+		"0"
+		{
+			"root" "gameinstall"
+			"path" "CapoCapo/CatGodRanch"
+			"pattern" "SaveFile.es3"
+		}
+	}
+	"rootoverrides"
+	{
+		"0"
+		{
+			"root" "gameinstall"
+			"os" "Windows"
+			"oscompare" "="
+			"useinstead" "WinAppDataLocalLow"
+			"addpath" ""
+		}
+		"1"
+		{
+			"root" "gameinstall"
+			"os" "MacOS"
+			"oscompare" "="
+			"useinstead" "MacAppSupport"
+			"addpath" ""
+		}
+	}
+}
+"_missing_token" "False"
+"_change_number" "27203753"
+"_sha" "4adeed9150eeda5c6226dc6f83f6ab40b8230756"
+"_size" "6502"
