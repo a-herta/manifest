@@ -1,0 +1,6 @@
+httpx
+vdf
+colorama
+colorlog
+retrying
+gitpython
