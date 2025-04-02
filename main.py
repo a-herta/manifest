@@ -67,7 +67,7 @@ class MainApp:
         logger = logging.getLogger(__name__)
         handler = logging.StreamHandler()
         formatter = ColoredFormatter(
-            "%(log_color)s %(asctime)s [%(levelname)s] %(message)s"
+            "%(log_color)s %(asctime)s [%(levelname)s] [%(thread)d] %(message)s"
         )
         handler.setFormatter(formatter)
         level = logging.DEBUG if self.args.debug else logging.INFO
@@ -78,8 +78,7 @@ class MainApp:
     def get_repos(self):
         repo_list = [
             "a-herta/manifest",
-            "Auiowu/ManifestAutoUpdate",
-            "tymolu233/ManifestAutoUpdate",
+            "SteamAutoCracks/ManifestHub"
         ]
         repo = self.args.repo
         if repo:
@@ -100,6 +99,7 @@ class MainApp:
         for idx, game in enumerate(games, 1):
             self.logr.info(f"🔄️ {idx}.[{game['appid']}] {get_name(game)}")
         if len(games) != 1:
+            time.sleep(1)
 
             def retry_input():
                 input_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S,%f")[:-3]
@@ -164,8 +164,10 @@ class MainApp:
             if "steam.exe" in os.listdir(steam_path):
                 self.logr.info(f"🚩 检测到Steam: {steam_path}")
                 return steam_path
+            return None
         except Exception as e:
             self.logr.error(e)
+            return None
 
     def check_lua_path(self, path: Path):
         try:
@@ -173,17 +175,25 @@ class MainApp:
             if "luapacka.exe" in os.listdir(lua_path):
                 self.logr.info(f"🚩 检测到Luapacka: {lua_path}")
                 return lua_path
+            return None
         except Exception as e:
             self.logr.error(e)
+            return None
 
     def check_api_limit(self):
-        limit_res = self.api_request("https://api.github.com/rate_limit")
-        reset = limit_res["rate"]["reset"]
-        remaining = limit_res["rate"]["remaining"]
-        self.logr.info(f"🙌 剩余请求次数: {remaining}")
-        reset_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(reset))
-        if remaining == 0:
-            return reset_time
+        try:
+            api_url = os.getenv("GITHUB_API_URL") or "https://api.github.com/rate_limit"
+            limit_res = self.api_request(api_url)
+            reset = limit_res["rate"]["reset"]
+            remaining = limit_res["rate"]["remaining"]
+            self.logr.info(f"🙌 剩余请求次数: {remaining}")
+            reset_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(reset))
+            if remaining == 0:
+                return reset_time
+            return None
+        except Exception as e:
+            self.logr.error(f"⛔ 检查API限制时出现异常: {e}")
+            return None
 
     def check_game_list(self, name: str):
         game_res = self.api_request(f"https://steamui.com/loadGames.php?search={name}")
@@ -237,49 +247,48 @@ class MainApp:
     def manifest(self, repo: str, branch: str, path: str, steam_path: Path):
         try:
             url = f"https://raw.githubusercontent.com/{repo}/{branch}/{path}"
+            with self.lock:
+                self.logr.debug(f"📄 处理文件: {path}")
+
             if path.endswith(".manifest"):
                 self.manifests.append(path)
                 depot_cache = steam_path / "config" / "depotcache"
-                with self.lock:
-                    if not depot_cache.exists():
-                        depot_cache.mkdir(parents=True, exist_ok=True)
+                depot_cache.mkdir(parents=True, exist_ok=True)
                 save_path = depot_cache / path
                 if save_path.exists():
-                    with self.lock:
-                        self.logr.warning(f"👋 清单已存在: {path}")
+                    self.logr.warning(f"👋 清单已存在: {path}")
                     return
                 manifest_res = self.raw_content(url)
-                with self.lock:
+                if manifest_res is not None:
+                    save_path.write_bytes(manifest_res)
                     self.logr.info(f"💾 清单已下载: {path}")
-                with save_path.open("wb") as f:
-                    f.write(manifest_res)
-            if path.endswith(".vdf") and path in ["appinfo.vdf"]:
-                info_res = self.raw_content(url)
-                appinfo_config = vdf.loads(info_res.decode())
-                appinfo_dict: dict[str, str] = appinfo_config["common"]
-                appname = appinfo_dict["name"]
-                self.appinfo.append(appname)
-            if path.endswith(".vdf") and path in ["config.vdf", "Key.vdf"]:
-                key_res = self.raw_content(url)
-                depot_config = vdf.loads(key_res.decode())
-                depot_dict: dict = depot_config["depots"]
-                self.depots.extend(
-                    (int(k), v["DecryptionKey"]) for k, v in depot_dict.items()
-                )
-                with self.lock:
+
+            elif path.endswith(".vdf"):
+                if path in ["appinfo.vdf"]:
+                    info_res = self.raw_content(url)
+                    appinfo_config = vdf.loads(info_res.decode())
+                    appinfo_dict: dict[str, str] = appinfo_config["common"]
+                    appname = appinfo_dict["name"]
+                    self.appinfo.append(appname)
+                elif path in ["key.vdf", "Key.vdf"]:
+                    key_res = self.raw_content(url)
+                    depot_config = vdf.loads(key_res.decode())
+                    depot_dict: dict = depot_config["depots"]
+                    self.depots.extend((int(k), v["DecryptionKey"]) for k, v in depot_dict.items())
                     self.logr.info(f"🔍 检索到密钥信息: {depot_dict}...")
-            if path.endswith(".json") and path in ["config.json"]:
+
+            elif path.endswith(".json") and path in ["config.json"]:
                 config_res = self.api_request(url)
-                dlcs: list[int | str] = config_res["dlcs"]
-                ddlc: list[int | str] = config_res["packagedlcs"]
-                if dlcs and len(dlcs) > 0:
-                    with self.lock:
-                        self.logr.info(f"🔍 检索到DLC信息: {dlcs}...")
+                dlcs: list[int | str] = config_res.get("dlcs", [])
+                ddlc: list[int | str] = config_res.get("packagedlcs", [])
+                if dlcs:
+                    self.logr.info(f"🔍 检索到DLC信息: {dlcs}...")
                     self.depots.extend((k, None) for k in dlcs)
-                if ddlc and len(ddlc) > 0:
-                    with self.lock:
-                        self.logr.info(f"🔍 检索到独立DLC: {ddlc}...")
-                    [self.start(repo, dlc, steam_path, True) for dlc in ddlc]
+                if ddlc:
+                    self.logr.info(f"🔍 检索到独立DLC: {ddlc}...")
+                    for dlc in ddlc:
+                        self.start(repo, dlc, steam_path, True)
+
         except Exception as e:
             self.logr.error(f"⛔ 出现异常: {e}")
             raise
@@ -287,7 +296,9 @@ class MainApp:
     def set_appinfo(self, path: Path):
         depot_list = sorted(set(self.depots), key=lambda x: x[0])
         depot_list = remove_duplicates(depot_list)
-        lua_content = f"-- {self.appinfo[1]}\n"
+        lua_content = ""
+        if len(self.appinfo) > 1:
+            lua_content = f"-- {self.appinfo[1]}\n"
         lua_content += "".join(
             (
                 f'addappid({depot_id}, 1, "{depot_key}")\n'
@@ -334,6 +345,7 @@ class MainApp:
                 with self.lock:
                     self.logr.debug(f"📥 成功结果: {json}")
                 return json
+            return None
 
     @retry(wait_fixed=5000, stop_max_attempt_number=10)
     def raw_content(self, url: str):
@@ -343,9 +355,10 @@ class MainApp:
             result = client.get(url, follow_redirects=True)
             if result.status_code == 200:
                 return result.content
+            return None
 
 
 if __name__ == "__main__":
-    version = "3.3.1"
+    version = "3.4.0"
     show_banner()
     MainApp().run()
