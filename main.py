@@ -134,10 +134,6 @@ class MainApp:
         if not steam_path:
             self.logr.error(f"⛔ Steam路径不存在")
             return
-        lua_path = self.check_lua_path(steam_path)
-        if not lua_path:
-            self.logr.error(f"⛔ Luapacka路径不存在")
-            return
         reset_time = self.check_api_limit()
         if reset_time:
             self.logr.error(f"⛔ 请求次数已用尽, 重置时间: {reset_time}")
@@ -164,17 +160,6 @@ class MainApp:
             if "steam.exe" in os.listdir(steam_path):
                 self.logr.info(f"🚩 检测到Steam: {steam_path}")
                 return steam_path
-            return None
-        except Exception as e:
-            self.logr.error(e)
-            return None
-
-    def check_lua_path(self, path: Path):
-        try:
-            lua_path = path / "config" / "stplug-in"
-            if "luapacka.exe" in os.listdir(lua_path):
-                self.logr.info(f"🚩 检测到Luapacka: {lua_path}")
-                return lua_path
             return None
         except Exception as e:
             self.logr.error(e)
@@ -320,17 +305,12 @@ class MainApp:
                 for depot_id, manifest_id in manifest_list
             )
         lua_filename = f"{self.appinfo[0]}.lua"
-        lua_filepath = path / "config" / "stplug-in" / lua_filename
+        lua_path = path / "config" / "stplug-in"
+        lua_path.mkdir(parents=True, exist_ok=True)
+        lua_filepath = lua_path / lua_filename
         with open(lua_filepath, 'w', encoding='utf-8') as f:
             f.write(lua_content)
-        lua_packpath = path / "config" / "stplug-in" / "luapacka.exe"
-        result = subprocess.run(
-            [str(lua_packpath), str(lua_filepath)], stdout=subprocess.PIPE
-        )
-        if not self.args.debug:
-            os.remove(lua_filepath)
-        output = result.stdout.decode("utf-8").removesuffix("\r\n")
-        self.logr.info(f"💎 解锁信息已保存: {output}")
+        self.logr.info(f"💎 解锁信息已保存: {lua_filepath}")
 
     @retry(wait_fixed=5000, stop_max_attempt_number=10)
     def api_request(self, url: str):
@@ -359,6 +339,6 @@ class MainApp:
 
 
 if __name__ == "__main__":
-    version = "3.4.0"
+    version = "3.5.0"
     show_banner()
     MainApp().run()
