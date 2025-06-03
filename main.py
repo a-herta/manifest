@@ -86,7 +86,8 @@ class MainApp:
         return repo_list
 
     def get_app_id(self, name: str):
-        games: list = self.check_game_list(name)
+        game_list: list = self.check_game_list(name)
+        games = [game for game in game_list if game.get('type') not in ('Demo', 'Beta')]
         if not games:
             self.logr.error(f"⛔ 未检索到游戏信息, 请重试")
             time.sleep(1)
@@ -97,7 +98,7 @@ class MainApp:
             return data["schinese_name"] if data["schinese_name"] else data["name"]
 
         for idx, game in enumerate(games, 1):
-            self.logr.info(f"🔄️ {idx}.[{game['appid']}] {get_name(game)}")
+            self.logr.info(f"🔄️ {idx}.[{game['appid']}] [{game['type']}] {get_name(game)}")
         if len(games) != 1:
             time.sleep(1)
 
