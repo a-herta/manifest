@@ -1,29 +1,29 @@
-"""
-常量配置模块
-"""
+"""常量配置模块"""
+
+from typing import Final
 
 # 版本信息
-VERSION = "3.5.0"
+VERSION: Final[str] = "3.5.0"
 
 # 网络配置
-TIMEOUT = 30
-RETRY_TIMES = 10
-RETRY_INTERVAL = 5000
-MAX_WORKERS = 4  # 线程池最大工作线程数
+TIMEOUT: Final[int] = 30
+RETRY_TIMES: Final[int] = 10
+RETRY_INTERVAL: Final[int] = 5000
+MAX_WORKERS: Final[int] = 4  # 线程池最大工作线程数
 
 
-# URL配置
 class URLs:
     """URL常量管理"""
+
     # GitHub相关
-    GITHUB_API = "https://api.github.com"
-    GITHUB_RAW = "https://raw.githubusercontent.com"
-    GITHUB_RATE_LIMIT = f"{GITHUB_API}/rate_limit"
+    GITHUB_API: Final[str] = "https://api.github.com"
+    GITHUB_RAW: Final[str] = "https://raw.githubusercontent.com"
+    GITHUB_RATE_LIMIT: Final[str] = f"{GITHUB_API}/rate_limit"
 
     # Steam相关
-    STEAM_STORE = "https://store.steampowered.com/api"
-    STEAM_SEARCH = f"{STEAM_STORE}/storesearch"
-    STEAM_APP_DETAILS = f"{STEAM_STORE}/appdetails"
+    STEAM_STORE: Final[str] = "https://store.steampowered.com/api"
+    STEAM_SEARCH: Final[str] = f"{STEAM_STORE}/storesearch"
+    STEAM_APP_DETAILS: Final[str] = f"{STEAM_STORE}/appdetails"
 
     @staticmethod
     def github_branch(repo: str, branch: str) -> str:
@@ -47,36 +47,36 @@ class URLs:
 
 
 # HTTP请求头
-HTTP_HEADERS = {
+HTTP_HEADERS: Final[dict[str, str]] = {
     "Accept": "application/json",
-    "User-Agent": f"GitHubManifest/{VERSION}"
+    "User-Agent": f"GitHubManifest/{VERSION}",
 }
 
 # 仓库配置
-DEFAULT_REPOS = [
+DEFAULT_REPOS: Final[list[str]] = [
     "a-herta/manifest",
-    "SteamAutoCracks/ManifestHub"
+    "SteamAutoCracks/ManifestHub",
 ]
 
 
-# 文件相关
 class Files:
     """文件相关常量"""
-    MANIFEST_SUFFIX = ".manifest"
-    CONFIG_JSON = "config.json"
-    APPINFO_VDF = "appinfo.vdf"
-    KEY_VDF = "key.vdf"
-    STEAM_EXE = "steam.exe"
+
+    MANIFEST_SUFFIX: Final[str] = ".manifest"
+    CONFIG_JSON: Final[str] = "config.json"
+    APPINFO_VDF: Final[str] = "appinfo.vdf"
+    KEY_VDF: Final[str] = "key.vdf"
+    STEAM_EXE: Final[str] = "steam.exe"
 
 
-# Steam相关
 class Steam:
     """Steam相关常量"""
-    REG_PATH = r"Software\Valve\Steam"
-    REG_KEY = "SteamPath"
-    PLUGIN_DIR = r"config\stplug-in"
-    DEPOT_CACHE = r"config\depotcache"
+
+    REG_PATH: Final[str] = r"Software\Valve\Steam"
+    REG_KEY: Final[str] = "SteamPath"
+    PLUGIN_DIR: Final[str] = r"config\stplug-in"
+    DEPOT_CACHE: Final[str] = r"config\depotcache"
 
 
 # 日志格式
-LOG_FORMAT = "%(log_color)s %(asctime)s [%(levelname)s] [%(thread)d] %(message)s"
+LOG_FORMAT: Final[str] = "%(log_color)s %(asctime)s [%(levelname)s] [%(thread)d] %(message)s"

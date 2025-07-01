@@ -1,33 +1,69 @@
+"""Steam 应用信息提取工具，用于生成仓库内容的统计信息"""
+
 import datetime
 import os
 import re
-import vdf
+from typing import Dict, List, Optional, Any
 
-from git import Repo, GitCommandError, Actor
+import vdf
+from git import Actor, GitCommandError, Repo
+
 from repo import sync_remote_branches
 
 
-def is_chinese(text):
+def is_chinese(text: str) -> bool:
+    """检查文本是否包含中文字符
+
+    Args:
+        text: 待检查的文本
+
+    Returns:
+        bool: 是否包含中文字符
+    """
     return bool(re.search(r'[\u4e00-\u9fff]', text))
 
 
-def is_japanese(text):
+def is_japanese(text: str) -> bool:
+    """检查文本是否包含日文字符
+
+    Args:
+        text: 待检查的文本
+
+    Returns:
+        bool: 是否包含日文字符
+    """
     return bool(re.search(r'[\u3040-\u30ff]', text))
 
 
-def append_names(english, chinese, japanese):
-    names = []
+def append_names(english: Optional[str], chinese: Optional[str], japanese: Optional[str]) -> str:
+    """拼接多语言名称
+
+    Args:
+        english: 英文名称
+        chinese: 中文名称
+        japanese: 日文名称
+
+    Returns:
+        str: 合并后的多语言名称，使用<br/>分隔
+    """
+    names: List[str] = []
     if english and english not in names:
         names.append(english)
     if chinese and chinese not in names:
         names.append(chinese)
     if japanese and japanese not in names:
         names.append(japanese)
-    final_name = '  <br/>'.join(names)
-    return final_name
+    return '  <br/>'.join(names)
 
 
-def process_branch(repo, branch, results):
+def process_branch(repo: Repo, branch: str, results: Dict[str, Dict[str, Any]]) -> None:
+    """处理单个分支的信息
+
+    Args:
+        repo: Git仓库实例
+        branch: 分支名称
+        results: 用于存储结果的字典
+    """
     try:
         repo.git.checkout('-f', branch)
         print(f'切换到分支 {branch}')
@@ -47,22 +83,23 @@ def process_branch(repo, branch, results):
         print(f'解析 {vdf_path} 失败: {e}')
         return
 
-    common = data.get('common', {})
-    depots = data.get('depots', {})
-    appid = data.get('appid', '')
-    type_ = common.get('type', '')
+    common: Dict[str, Any] = data.get('common', {})
+    depots: Dict[str, Any] = data.get('depots', {})
+    appid: str = data.get('appid', '')
+    type_: str = common.get('type', '')
 
     if not appid or not type_:
         print(f'分支 {branch} 缺少 appid 或 type 字段')
         return
 
-    name = common.get('name', '')
-    name_localized = common.get('name_localized', {})
+    name: str = common.get('name', '')
+    name_localized: Dict[str, str] = common.get('name_localized', {})
 
-    english = name_localized.get('english', '')
-    schinese = name_localized.get('schinese', '')
-    tchinese = name_localized.get('tchinese', '')
-    japanese = name_localized.get('japanese', '')
+    english: str = name_localized.get('english', '')
+    schinese: str = name_localized.get('schinese', '')
+    tchinese: str = name_localized.get('tchinese', '')
+    japanese: str = name_localized.get('japanese', '')
+
     if is_chinese(name):
         chinese_name = schinese or tchinese or name
         final_name = append_names(english, chinese_name, japanese)
@@ -90,16 +127,33 @@ def process_branch(repo, branch, results):
     }
 
 
-def generate_readme(results):
+def generate_readme(results: Dict[str, Dict[str, Any]]) -> List[str]:
+    """生成README文件内容
+
+    Args:
+        results: 包含应用信息的字典
+
+    Returns:
+        List[str]: README文件的行内容列表
+    """
     sorted_results = sorted(results.values(), key=lambda x: int(x['APPID']))
-    table = ['| APPID | 名称 | 成就 | 类型 | 更新时间 |', '|-------|------|------|------|----------|']
+    table = [
+        '| APPID | 名称 | 成就 | 类型 | 更新时间 |',
+        '|-------|------|------|------|----------|'
+    ]
+
     for item in sorted_results:
-        db_info = f'[{item['APPID']}](https://steamdb.info/app/{item['APPID']})'
-        stat_info = f'[✅](https://github.com/a-herta/manifest/blob/{item['APPID']}/{item['成就']})' if \
-            item['成就'] else ''
+        db_info = f"[{item['APPID']}](https://steamdb.info/app/{item['APPID']})"
+        stat_info = (
+            f"[✅](https://github.com/a-herta/manifest/blob/{item['APPID']}/{item['成就']})"
+            if item['成就']
+            else ''
+        )
         table.append(
-            f'| {db_info} | {item['名称']} | {stat_info} | {item['类型']} | {item['更新时间']} |')
-    return '\n'.join(table)
+            f"| {db_info} | {item['名称']} | {stat_info} | {item['类型']} | {item['更新时间']} |"
+        )
+
+    return table
 
 
 def commit_push(repo):

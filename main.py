@@ -8,7 +8,7 @@ from argparse import ArgumentParser, Namespace
 from datetime import datetime
 from multiprocessing import Lock, pool
 from pathlib import Path
-from typing import List, Tuple, Optional, Dict, Any
+from typing import Any, Dict, List, Optional, Tuple
 
 import httpx
 import vdf
@@ -16,8 +16,19 @@ from colorama import Fore, init
 from colorlog import ColoredFormatter
 from retrying import retry
 
-from constants import VERSION, URLs, Files, Steam, HTTP_HEADERS, DEFAULT_REPOS
-from constants import TIMEOUT, RETRY_TIMES, RETRY_INTERVAL, MAX_WORKERS, LOG_FORMAT
+from constants import (
+    DEFAULT_REPOS,
+    Files,
+    HTTP_HEADERS,
+    LOG_FORMAT,
+    MAX_WORKERS,
+    RETRY_INTERVAL,
+    RETRY_TIMES,
+    Steam,
+    TIMEOUT,
+    URLs,
+    VERSION,
+)
 
 # Initialize colorama
 init(autoreset=True)

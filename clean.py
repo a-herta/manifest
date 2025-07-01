@@ -1,11 +1,21 @@
+"""Git仓库清理工具，用于重置分支历史并推送到远程仓库"""
+
 import os
 import sys
+from typing import Dict
 
-from git import Repo, GitCommandError
+from git import GitCommandError, Repo
+
 from repo import sync_remote_branches
 
 
-def process_branch(repo, branch):
+def process_branch(repo: Repo, branch: str) -> None:
+    """处理单个Git分支，重置其历史
+
+    Args:
+        repo: Git仓库实例
+        branch: 分支名称
+    """
     try:
         repo.git.checkout('-f', branch)
         print(f'切换到分支 {branch}')
@@ -19,7 +29,7 @@ def process_branch(repo, branch):
     original_date = repo.git.log('-1', '--format=%aI', 'HEAD').strip()
 
     # 创建新提交
-    env = {
+    env: Dict[str, str] = {
         'GIT_AUTHOR_NAME': original_author.split('<')[0].strip(),
         'GIT_AUTHOR_EMAIL': original_author.split('<')[1].strip('> '),
         'GIT_AUTHOR_DATE': original_date,
@@ -32,7 +42,8 @@ def process_branch(repo, branch):
     repo.git.reset('--hard', new_commit)
 
 
-def main():
+def main() -> None:
+    """主函数，处理仓库中的所有分支"""
     # 打开本地仓库
     repo_path = os.getcwd()
     repo = Repo(repo_path)
