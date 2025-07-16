@@ -534,7 +534,7 @@ class MainApp:
                         self.logger.warning(f"⚠️ 已达到请求限制，将在 {wait_time:.0f} 秒后重试")
                     raise Exception("已达到请求频率限制")
                 elif result.status_code == 404:
-                    self.logger.warning(f"⚠️ 未找到资源: {url}")
+                    self.logger.debug(f"⚠️ 未找到资源: {url}")
                     return None
 
                 result.raise_for_status()

@@ -38,12 +38,12 @@ class URLs:
     @staticmethod
     def steam_search(term: str) -> str:
         """获取Steam搜索URL"""
-        return f"{URLs.STEAM_SEARCH}/?cc=cn&l=zh&term={term}"
+        return f"{URLs.STEAM_SEARCH}/?cc=jp&l=zh&term={term}"
 
     @staticmethod
     def steam_app_details(appid: str) -> str:
         """获取Steam应用详情URL"""
-        return f"{URLs.STEAM_APP_DETAILS}?cc=cn&l=zh&appids={appid}"
+        return f"{URLs.STEAM_APP_DETAILS}?cc=jp&l=zh&appids={appid}"
 
 
 # HTTP请求头
