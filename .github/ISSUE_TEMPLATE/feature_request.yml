@@ -1,0 +1,158 @@
+name: 🚀 Feature Request
+description: Suggest a new feature or enhancement for Steam Manifest Tool
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 Feature Request
+        
+        Thank you for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched existing issues to ensure this feature hasn't been requested before
+          required: true
+        - label: I have checked the roadmap and documentation
+          required: true
+        - label: This feature would benefit multiple users, not just my specific use case
+          required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📋 Feature Summary
+      description: A brief summary of the feature you'd like to see
+      placeholder: Provide a concise summary of the requested feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problem Statement
+      description: What problem does this feature solve?
+      placeholder: |
+        Describe the problem or limitation you're facing:
+        - What is currently difficult or impossible to do?
+        - How does this impact your workflow?
+        - What workarounds are you currently using?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe your ideal solution
+      placeholder: |
+        Describe how you envision this feature working:
+        - What should the user interface look like?
+        - How should it behave?
+        - What options/configurations should be available?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternative Solutions
+      description: Have you considered any alternative approaches?
+      placeholder: |
+        Describe any alternative solutions you've considered:
+        - Different implementation approaches
+        - Existing tools or workflows that partially solve this
+        - Why those alternatives don't fully meet your needs
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 📊 Priority Level
+      description: How important is this feature to you?
+      options:
+        - "Low - Nice to have"
+        - "Medium - Would improve workflow"
+        - "High - Significantly needed"
+        - "Critical - Blocking important use cases"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: 🛠️ Estimated Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - "Simple - Minor change or addition"
+        - "Moderate - Requires some new functionality"
+        - "Complex - Significant changes needed"
+        - "Major - Fundamental changes to architecture"
+        - "I'm not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: 📝 Use Cases
+      description: Provide specific examples of how this feature would be used
+      placeholder: |
+        Example scenarios where this feature would be helpful:
+        1. When doing X, users could...
+        2. For Y workflow, this would enable...
+        3. In situation Z, this would solve...
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: 🎨 Mockups/Examples
+      description: Any mockups, screenshots, or examples that illustrate your idea
+      placeholder: |
+        - Link to mockups or wireframes
+        - Screenshots from other tools that have similar features
+        - Code examples showing desired API/interface
+        - Command-line examples
+
+  - type: checkboxes
+    id: implementation
+    attributes:
+      label: 🏗️ Implementation Considerations
+      description: What aspects should be considered during implementation?
+      options:
+        - label: Backward compatibility is important
+        - label: Performance impact should be minimal
+        - label: Should work across all supported platforms
+        - label: Needs comprehensive documentation
+        - label: Should include tests
+        - label: May require configuration options
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      description: Would you like to contribute to implementing this feature?
+      options:
+        - label: I would like to implement this feature myself
+        - label: I can help with design and planning
+        - label: I can provide testing and feedback
+        - label: I can help with documentation
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📎 Additional Context
+      description: Any other information that would be helpful
+      placeholder: |
+        - Links to relevant resources or documentation
+        - Similar features in other tools
+        - Technical constraints or requirements
+        - Timeline considerations
