@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steam-manifest-tool"
+version = "3.5.0"
+authors = [
+    {name = "Steam Manifest Team", email = "dev@steammanifest.tool"},
+]
+description = "A modern tool for fetching and managing Steam game manifest files"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "vdf>=3.4",
+    "colorama>=0.4.6",
+    "colorlog>=6.7.0",
+    "retrying>=1.3.4",
+    "gitpython>=3.1.30",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/steam-manifest/tool"
+"Bug Reports" = "https://github.com/steam-manifest/tool/issues"
+"Source" = "https://github.com/steam-manifest/tool"
+
+[project.scripts]
+steam-manifest = "src.steam_manifest.cli.main:main"
+steam-extract = "src.steam_manifest.tools.extractor:extract_repository_info"
+steam-clean = "src.steam_manifest.tools.cleaner:clean_repository_history"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.pylint]
+max-line-length = 88

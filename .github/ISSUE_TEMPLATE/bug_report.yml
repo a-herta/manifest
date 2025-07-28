@@ -1,0 +1,120 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with Steam Manifest Tool
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        
+        Thank you for taking the time to report a bug! Please fill out the information below to help us understand and reproduce the issue.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched existing issues to ensure this bug hasn't been reported before
+          required: true
+        - label: I have read the documentation
+          required: true
+        - label: I am using the latest version of Steam Manifest Tool
+          required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 🔍 Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe what happened and what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Run command '...'
+        2. Enter input '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Expected Behavior
+      description: What should have happened?
+      placeholder: Describe the expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment Information
+      description: Please provide details about your environment
+      placeholder: |
+        - OS: [e.g., Windows 11, Ubuntu 22.04, macOS 13]
+        - Python Version: [e.g., 3.11.5]
+        - Steam Manifest Tool Version: [e.g., v3.5.0]
+        - Installation Method: [e.g., executable, pip install, source]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📋 Error Logs/Output
+      description: Please include any relevant error messages or log output
+      placeholder: Paste error messages or log output here
+      render: text
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📎 Additional Context
+      description: Add any other context about the problem here
+      placeholder: |
+        - Screenshots (if applicable)
+        - Related configuration files
+        - Any workarounds you've found
+        - Impact on your workflow
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Severity Level
+      description: How severe is this bug?
+      options:
+        - "Low - Minor inconvenience"
+        - "Medium - Affects functionality but has workaround"
+        - "High - Blocks important functionality"
+        - "Critical - Application unusable"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      description: Would you like to contribute to fixing this bug?
+      options:
+        - label: I would like to work on fixing this bug
+        - label: I can provide additional testing if needed
+        - label: I can help with documentation updates

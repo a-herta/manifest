@@ -1,41 +1,202 @@
-name: Build
+name: 🏗️ Build & Release
 
 on:
   push:
-    paths: [ "main.py" ]
-    branches: [ "main" ]
+    branches: [ main ]
+    paths: 
+      - "src/**"
+      - "main.py"
+      - "requirements.txt"
+      - "pyproject.toml"
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type'
+        required: true
+        default: 'development'
+        type: choice
+        options:
+        - development
+        - release
+
+env:
+  PYTHON_VERSION: "3.11"
+  APP_NAME: "steam-manifest-tool"
 
 jobs:
-  build:
+  # 🏗️ 构建可执行文件
+  build-executable:
+    name: 🏗️ Build Executable
     runs-on: ${{ matrix.os }}
-    environment: build
     strategy:
       matrix:
-        os: [ "ubuntu-latest", "windows-latest" ]
-        python: [ "3.12" ]
+        include:
+          - os: ubuntu-latest
+            platform: linux
+            extension: ""
+            icon: ""
+          - os: windows-latest
+            platform: windows
+            extension: ".exe"
+            icon: "-i main.ico"
+          - os: macos-latest
+            platform: macos
+            extension: ""
+            icon: ""
 
     steps:
-      - name: Checkout
+      - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python }}
-          cache: "pip"
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller
           pip install -r requirements.txt
+          pip install pyinstaller
 
-      - name: Build app
+      - name: 🏗️ Build executable
         run: |
-          pyinstaller -F -i main.ico main.py
+          pyinstaller --onefile \
+            --name ${{ env.APP_NAME }}-${{ matrix.platform }} \
+            ${{ matrix.icon }} \
+            --distpath dist/${{ matrix.platform }} \
+            --workpath build/${{ matrix.platform }} \
+            --specpath build \
+            main.py
 
-      - name: Upload artifact
+      - name: 📦 Package executable (Linux/macOS)
+        if: matrix.platform != 'windows'
+        run: |
+          cd dist/${{ matrix.platform }}
+          tar -czf ${{ env.APP_NAME }}-${{ matrix.platform }}.tar.gz ${{ env.APP_NAME }}-${{ matrix.platform }}
+
+      - name: 📦 Package executable (Windows)
+        if: matrix.platform == 'windows'
+        run: |
+          cd dist/${{ matrix.platform }}
+          7z a ${{ env.APP_NAME }}-${{ matrix.platform }}.zip ${{ env.APP_NAME }}-${{ matrix.platform }}.exe
+
+      - name: 📊 Upload executable
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.os }}
-          path: dist/*
+          name: executable-${{ matrix.platform }}
+          path: |
+            dist/${{ matrix.platform }}/*.tar.gz
+            dist/${{ matrix.platform }}/*.zip
+            dist/${{ matrix.platform }}/${{ env.APP_NAME }}-${{ matrix.platform }}*
+
+      - name: 🧪 Test executable
+        run: |
+          cd dist/${{ matrix.platform }}
+          ./${{ env.APP_NAME }}-${{ matrix.platform }}${{ matrix.extension }} --version
+
+  # 📦 构建 Python 包
+  build-package:
+    name: 📦 Build Python Package
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 📦 Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine wheel
+
+      - name: 🏗️ Build package
+        run: python -m build
+
+      - name: 🔍 Check package
+        run: twine check dist/*
+
+      - name: 📊 Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package
+          path: dist/
+
+  # 🚀 发布到 GitHub Releases
+  create-release:
+    name: 🚀 Create Release
+    needs: [build-executable, build-package]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && github.event.inputs.build_type == 'release')
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📥 Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+
+      - name: 📋 Display structure
+        run: ls -la artifacts/
+
+      - name: 🚀 Create Release
+        uses: softprops/action-gh-release@v1
+        if: github.event_name == 'release'
+        with:
+          files: |
+            artifacts/executable-*/*
+            artifacts/python-package/*
+          body: |
+            ## 🎉 Steam Manifest Tool Release
+            
+            ### 📦 Downloads
+            - **Windows**: `steam-manifest-tool-windows.zip`
+            - **Linux**: `steam-manifest-tool-linux.tar.gz` 
+            - **macOS**: `steam-manifest-tool-macos.tar.gz`
+            - **Python Package**: `steam_manifest_tool-*.whl` / `steam-manifest-tool-*.tar.gz`
+            
+            ### 🚀 Installation
+            ```bash
+            # Install from PyPI (when published)
+            pip install steam-manifest-tool
+            
+            # Or download and run executable directly
+            ./steam-manifest-tool --help
+            ```
+            
+            ### 📝 Changes
+            See [CHANGELOG.md](CHANGELOG.md) for detailed changes.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # 📊 构建总结
+  build-summary:
+    name: 📊 Build Summary
+    needs: [build-executable, build-package]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: 📊 Build Status
+        run: |
+          echo "## 🏗️ Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "| Platform | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Executable Build | ${{ needs.build-executable.result == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Package Build | ${{ needs.build-package.result == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ needs.build-executable.result }}" == "success" && "${{ needs.build-package.result }}" == "success" ]]; then
+            echo "🎉 All builds completed successfully!"
+          else
+            echo "❌ Some builds failed. Check the logs above."
+            exit 1
+          fi
