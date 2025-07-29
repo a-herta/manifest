@@ -1,277 +1,41 @@
-name: 🚀 Release
+name: 🚀 PyPI Release
 
 on:
   push:
     tags:
-      - 'v*.*.*'
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Release version (e.g., v1.0.0)'
-        required: true
-        type: string
-      prerelease:
-        description: 'Mark as pre-release'
-        required: false
-        default: false
-        type: boolean
-
-env:
-  PYTHON_VERSION: "3.11"
+      - 'v*'
 
 jobs:
-  # 🏷️ 验证版本标签
-  validate-version:
-    name: 🏷️ Validate Version
-    runs-on: ubuntu-latest
-    outputs:
-      version: ${{ steps.get_version.outputs.version }}
-      is_prerelease: ${{ steps.check_prerelease.outputs.is_prerelease }}
-    
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🏷️ Get version from tag/input
-        id: get_version
-        run: |
-          if [[ "${{ github.event_name }}" == "push" ]]; then
-            VERSION=${GITHUB_REF#refs/tags/}
-          else
-            VERSION="${{ github.event.inputs.version }}"
-          fi
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "📦 Release version: $VERSION"
-
-      - name: 🔍 Check if pre-release
-        id: check_prerelease
-        run: |
-          VERSION="${{ steps.get_version.outputs.version }}"
-          if [[ "$VERSION" =~ (alpha|beta|rc|pre) ]] || [[ "${{ github.event.inputs.prerelease }}" == "true" ]]; then
-            echo "is_prerelease=true" >> $GITHUB_OUTPUT
-            echo "🧪 This is a pre-release"
-          else
-            echo "is_prerelease=false" >> $GITHUB_OUTPUT
-            echo "✅ This is a stable release"
-          fi
-
-      - name: 📋 Update version in files
-        run: |
-          VERSION="${{ steps.get_version.outputs.version }}"
-          VERSION_NUM=${VERSION#v}  # Remove 'v' prefix
-          
-          # Update version in pyproject.toml
-          sed -i "s/version = \".*\"/version = \"$VERSION_NUM\"/" pyproject.toml
-          
-          # Update version in src/steam_manifest/__init__.py
-          sed -i "s/__version__ = \".*\"/__version__ = \"$VERSION_NUM\"/" src/steam_manifest/__init__.py
-          
-          # Update version in src/steam_manifest/core/config.py
-          sed -i "s/VERSION: Final\\[str\\] = \".*\"/VERSION: Final[str] = \"$VERSION_NUM\"/" src/steam_manifest/core/config.py
-
-      - name: 📊 Upload version artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: version-files
-          path: |
-            pyproject.toml
-            src/steam_manifest/__init__.py
-            src/steam_manifest/core/config.py
-
-  # 🧪 运行完整测试套件
-  test-suite:
-    name: 🧪 Full Test Suite
-    needs: validate-version
-    uses: ./.github/workflows/ci.yml
-
-  # 🏗️ 构建所有平台的发布版本
-  build-release:
-    name: 🏗️ Build Release Assets
-    needs: [validate-version, test-suite]
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🐍 Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: 📦 Install build tools
-        run: |
-          python -m pip install --upgrade pip
-          pip install build twine wheel pyinstaller
-          pip install -r requirements.txt
-
-      - name: 🏗️ Build executables for all platforms
-        run: |
-          # Build for current platform
-          pyinstaller --onefile --name steam-manifest-tool main.py
-          
-      - name: 🏗️ Build Python package
-        run: python -m build
-
-      - name: 📊 Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-assets
-          path: |
-            dist/
-            build/
-
-  # 📝 生成发布说明
-  generate-changelog:
-    name: 📝 Generate Changelog
-    needs: validate-version
-    runs-on: ubuntu-latest
-    outputs:
-      changelog: ${{ steps.changelog.outputs.changelog }}
-    
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 📝 Generate changelog
-        id: changelog
-        run: |
-          VERSION="${{ needs.validate-version.outputs.version }}"
-          
-          # Get the previous tag
-          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-          
-          echo "## 🎉 Release $VERSION" > RELEASE_NOTES.md
-          echo "" >> RELEASE_NOTES.md
-          echo "**Release Date:** $(date -u '+%Y-%m-%d')" >> RELEASE_NOTES.md
-          echo "" >> RELEASE_NOTES.md
-          
-          if [[ -n "$PREV_TAG" ]]; then
-            echo "### 📋 Changes since $PREV_TAG" >> RELEASE_NOTES.md
-            echo "" >> RELEASE_NOTES.md
-            
-            # Get commits since last tag
-            git log --pretty=format:"- %s (%h)" $PREV_TAG..HEAD >> RELEASE_NOTES.md
-            echo "" >> RELEASE_NOTES.md
-          fi
-          
-          echo "" >> RELEASE_NOTES.md
-          echo "### 📦 Installation" >> RELEASE_NOTES.md
-          echo "" >> RELEASE_NOTES.md
-          echo "#### Executable Downloads" >> RELEASE_NOTES.md
-          echo "- **Windows**: \`steam-manifest-tool-windows.zip\`" >> RELEASE_NOTES.md
-          echo "- **Linux**: \`steam-manifest-tool-linux.tar.gz\`" >> RELEASE_NOTES.md
-          echo "- **macOS**: \`steam-manifest-tool-macos.tar.gz\`" >> RELEASE_NOTES.md
-          echo "" >> RELEASE_NOTES.md
-          echo "#### Python Package" >> RELEASE_NOTES.md
-          echo "\`\`\`bash" >> RELEASE_NOTES.md
-          echo "pip install steam-manifest-tool==${VERSION#v}" >> RELEASE_NOTES.md
-          echo "\`\`\`" >> RELEASE_NOTES.md
-          echo "" >> RELEASE_NOTES.md
-          echo "### 🚀 Usage" >> RELEASE_NOTES.md
-          echo "\`\`\`bash" >> RELEASE_NOTES.md
-          echo "# Run the tool" >> RELEASE_NOTES.md
-          echo "python main.py --help" >> RELEASE_NOTES.md
-          echo "" >> RELEASE_NOTES.md
-          echo "# Or use the executable directly" >> RELEASE_NOTES.md
-          echo "./steam-manifest-tool --help" >> RELEASE_NOTES.md
-          echo "\`\`\`" >> RELEASE_NOTES.md
-          
-          # Set output for use in release step
-          {
-            echo 'changelog<<EOF'
-            cat RELEASE_NOTES.md
-            echo EOF
-          } >> $GITHUB_OUTPUT
-
-      - name: 📊 Upload changelog
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-notes
-          path: RELEASE_NOTES.md
-
-  # 🚀 创建 GitHub Release
-  create-github-release:
-    name: 🚀 Create GitHub Release
-    needs: [validate-version, test-suite, build-release, generate-changelog]
+  pypi-release:
+    name: 📦 Publish to PyPI
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+      id-token: write
+
     steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
+    - name: 📦 Checkout code
+      uses: actions/checkout@v4
 
-      - name: 📥 Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: release-assets/
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
 
-      - name: 📋 List release assets
-        run: |
-          echo "📦 Release assets:"
-          find release-assets/ -type f -name "*" | sort
+    - name: 📋 Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[dev]
 
-      - name: 🚀 Create Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ needs.validate-version.outputs.version }}
-          name: "Release ${{ needs.validate-version.outputs.version }}"
-          body: ${{ needs.generate-changelog.outputs.changelog }}
-          prerelease: ${{ needs.validate-version.outputs.is_prerelease == 'true' }}
-          files: |
-            release-assets/executable-*/*
-            release-assets/python-package/*
-          generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: 🏗️ Build package
+      run: python -m build
 
-  # 📦 发布到 PyPI (如果配置了)
-  publish-pypi:
-    name: 📦 Publish to PyPI
-    needs: [validate-version, create-github-release]
-    runs-on: ubuntu-latest
-    if: needs.validate-version.outputs.is_prerelease == 'false'
-    environment: pypi
-    
-    steps:
-      - name: 📥 Download package artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: python-package
-          path: dist/
+    - name: 🧪 Test package installation
+      run: |
+        pip install dist/*.whl
+        steam-manifest --help
 
-      - name: 📦 Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          skip-existing: true
-        continue-on-error: true
-
-  # 📊 发布总结
-  release-summary:
-    name: 📊 Release Summary
-    needs: [validate-version, create-github-release, publish-pypi]
-    runs-on: ubuntu-latest
-    if: always()
-    
-    steps:
-      - name: 📊 Release Status
-        run: |
-          echo "## 🚀 Release Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Component | Status |" >> $GITHUB_STEP_SUMMARY
-          echo "|-----------|--------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Version | ${{ needs.validate-version.outputs.version }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Type | ${{ needs.validate-version.outputs.is_prerelease == 'true' && '🧪 Pre-release' || '✅ Stable' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| GitHub Release | ${{ needs.create-github-release.result == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| PyPI Publish | ${{ needs.publish-pypi.result == 'success' && '✅ Success' || (needs.publish-pypi.result == 'skipped' && '⏭️ Skipped' || '❌ Failed') }} |" >> $GITHUB_STEP_SUMMARY
-          
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 🔗 Links" >> $GITHUB_STEP_SUMMARY
-          echo "- [GitHub Release](https://github.com/${{ github.repository }}/releases/tag/${{ needs.validate-version.outputs.version }})" >> $GITHUB_STEP_SUMMARY
-          if [[ "${{ needs.validate-version.outputs.is_prerelease }}" == "false" ]]; then
-            echo "- [PyPI Package](https://pypi.org/project/steam-manifest-tool/)" >> $GITHUB_STEP_SUMMARY
-          fi
+    - name: 📤 Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
