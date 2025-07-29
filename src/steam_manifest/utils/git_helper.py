@@ -1,6 +1,7 @@
 """Git repository helper utilities."""
 
 from typing import Optional
+
 from git import Head, Reference, Remote, Repo
 from git.exc import GitCommandError
 

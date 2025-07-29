@@ -1,9 +1,9 @@
 """GitHub API client for Steam Manifest Tool."""
 
-import os
 import logging
-from typing import Dict, Any, Optional
+import os
 from threading import Lock
+from typing import Any, Dict, Optional
 
 import httpx
 from retrying import retry

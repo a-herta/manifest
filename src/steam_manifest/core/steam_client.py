@@ -1,8 +1,8 @@
 """Steam API client for Steam Manifest Tool."""
 
 import logging
-from typing import Dict, Any, List, Optional
 from threading import Lock
+from typing import Any, Dict, List, Optional
 
 import httpx
 from retrying import retry

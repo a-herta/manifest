@@ -1,15 +1,16 @@
 """Main CLI entry point for Steam Manifest Tool."""
 
+import subprocess
 import sys
 import time
-import subprocess
+
 from colorama import init
 
+from ..core.client import SteamManifestClient
+from ..utils.input_helper import custom_input
+from ..utils.logger import setup_logger
 from .args import parse_arguments
 from .banner import show_banner
-from ..core.client import SteamManifestClient
-from ..utils.logger import setup_logger
-from ..utils.input_helper import custom_input
 
 # Initialize colorama
 init(autoreset=True)

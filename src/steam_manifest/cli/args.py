@@ -1,6 +1,7 @@
 """Command line argument parsing for Steam Manifest Tool."""
 
 from argparse import ArgumentParser, Namespace
+
 from ..core.config import Config
 
 

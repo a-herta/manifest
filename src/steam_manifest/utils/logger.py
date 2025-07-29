@@ -1,6 +1,7 @@
 """Logging utilities for Steam Manifest Tool."""
 
 import logging
+
 from colorlog import ColoredFormatter
 
 from ..core.config import Config

@@ -1,10 +1,10 @@
 """Steam application information extractor for repository statistics."""
 
+import datetime
 import os
 import re
-import datetime
-from typing import Dict, List, Optional, Any
 from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 import vdf
 from git import Actor, GitCommandError, Repo

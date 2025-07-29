@@ -1,6 +1,7 @@
 """Input helper utilities for Steam Manifest Tool."""
 
 from datetime import datetime
+
 from colorama import Fore
 
 

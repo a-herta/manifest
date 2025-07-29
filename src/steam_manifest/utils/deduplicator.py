@@ -1,6 +1,6 @@
 """Deduplication utilities for Steam Manifest Tool."""
 
-from typing import List, Tuple, Optional, Dict
+from typing import Dict, List, Optional, Tuple
 
 
 def remove_duplicates(

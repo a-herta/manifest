@@ -25,7 +25,7 @@ def run_tests():
     print("🧪 Running tests...")
     # For now, just import test to verify structure
     try:
-        from src.steam_manifest import SteamManifestClient, Config
+        from src.steam_manifest import Config, SteamManifestClient
 
         print("✅ Package import test passed!")
     except ImportError as e:

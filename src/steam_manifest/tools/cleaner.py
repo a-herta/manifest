@@ -1,8 +1,8 @@
 """Git repository history cleaner for Steam Manifest repositories."""
 
 import sys
-from typing import Dict, Optional
 from pathlib import Path
+from typing import Dict, Optional
 
 from git import GitCommandError, Repo
 
