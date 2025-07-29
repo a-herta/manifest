@@ -8,7 +8,7 @@ from .git_helper import sync_remote_branches
 
 __all__ = [
     "setup_logger",
-    "custom_input", 
+    "custom_input",
     "remove_duplicates",
     "find_steam_path",
     "sync_remote_branches",

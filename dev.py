@@ -26,6 +26,7 @@ def run_tests():
     # For now, just import test to verify structure
     try:
         from src.steam_manifest import SteamManifestClient, Config
+
         print("✅ Package import test passed!")
     except ImportError as e:
         print(f"❌ Package import test failed: {e}")
@@ -63,17 +64,18 @@ def clean():
         "**/*.pyc",
         "**/*.pyo",
     ]
-    
+
     for pattern in artifacts:
         for path in Path(".").glob(pattern):
             if path.is_dir():
                 import shutil
+
                 shutil.rmtree(path)
                 print(f"Removed directory: {path}")
             else:
                 path.unlink()
                 print(f"Removed file: {path}")
-    
+
     print("✅ Cleanup complete!")
 
 
@@ -86,10 +88,12 @@ def build():
 
 def main():
     """Main development script entry point."""
-    parser = argparse.ArgumentParser(description="Development utility for Steam Manifest Tool")
-    
+    parser = argparse.ArgumentParser(
+        description="Development utility for Steam Manifest Tool"
+    )
+
     commands = parser.add_subparsers(dest="command", help="Available commands")
-    
+
     commands.add_parser("install", help="Install dependencies")
     commands.add_parser("test", help="Run tests")
     commands.add_parser("format", help="Format code")
@@ -97,13 +101,13 @@ def main():
     commands.add_parser("clean", help="Clean build artifacts")
     commands.add_parser("build", help="Build package")
     commands.add_parser("all", help="Run install, format, lint, test, and build")
-    
+
     args = parser.parse_args()
-    
+
     if not args.command:
         parser.print_help()
         return
-    
+
     if args.command == "install":
         install_deps()
     elif args.command == "test":

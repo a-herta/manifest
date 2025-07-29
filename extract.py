@@ -3,5 +3,5 @@
 
 from src.steam_manifest.tools.extractor import extract_repository_info
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     extract_repository_info()

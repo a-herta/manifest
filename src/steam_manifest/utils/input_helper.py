@@ -6,10 +6,10 @@ from colorama import Fore
 
 def custom_input(prompt: str) -> str:
     """Custom input function with colored prompt and timestamp.
-    
+
     Args:
         prompt: The input prompt message
-        
+
     Returns:
         User input string
     """
