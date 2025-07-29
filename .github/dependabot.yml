@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Python dependencies
+  # Python dependencies (Poetry managed)
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
@@ -19,6 +19,7 @@ updates:
     labels:
       - "dependencies"
       - "python"
+      - "poetry"
     allow:
       - dependency-type: "direct"
       - dependency-type: "indirect"
@@ -28,6 +29,8 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "gitpython"
         update-types: ["version-update:semver-major"]
+    # Poetry-specific configuration
+    versioning-strategy: "increase"
 
   # GitHub Actions dependencies
   - package-ecosystem: "github-actions"
