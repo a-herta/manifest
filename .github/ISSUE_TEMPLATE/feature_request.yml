@@ -1,8 +1,8 @@
 name: 🚀 Feature Request
 description: Suggest a new feature or enhancement for Steam Manifest Tool
 title: "[FEATURE] "
-labels: ["enhancement", "needs-triage"]
-assignees: []
+labels: [ "enhancement", "needs-triage" ]
+assignees: [ ]
 
 body:
   - type: markdown

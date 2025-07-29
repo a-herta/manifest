@@ -1,16 +1,14 @@
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "steam-manifest-tool"
 version = "3.5.0"
-authors = [
-    {name = "Steam Manifest Team", email = "dev@steammanifest.tool"},
-]
 description = "A modern tool for fetching and managing Steam game manifest files"
+authors = ["Steam Manifest Team <dev@steammanifest.tool>"]
 readme = "README.md"
-requires-python = ">=3.12"
+packages = [{ include = "steam_manifest", from = "src" }]
+include = ["src/steam_manifest/assets/*"]
+homepage = "https://github.com/steam-manifest/tool"
+repository = "https://github.com/steam-manifest/tool"
+keywords = ["steam", "manifest", "games", "download"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: End Users/Desktop",
@@ -22,44 +20,35 @@ classifiers = [
     "Topic :: Games/Entertainment",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = [
-    "httpx>=0.24.0",
-    "vdf>=3.4",
-    "colorama>=0.4.6",
-    "colorlog>=6.7.0",
-    "retrying>=1.3.4",
-    "gitpython>=3.1.30",
-]
+license = "MIT"
 
-[project.optional-dependencies]
-dev = [
-    "black>=23.0.0",
-    "isort>=5.12.0",
-    "flake8>=6.0.0",
-    "pytest>=7.0.0",
-    "pytest-cov>=4.0.0",
-    "safety>=2.3.0",
-    "bandit>=1.7.0",
-    "build>=0.10.0",
-    "twine>=4.0.0",
-    "pyinstaller>=5.13.0",
-]
+[tool.poetry.dependencies]
+python = "^3.12"
+httpx = ">=0.24.0"
+vdf = ">=3.4"
+colorama = ">=0.4.6"
+colorlog = ">=6.7.0"
+retrying = ">=1.3.4"
+gitpython = ">=3.1.30"
 
-[project.urls]
-"Homepage" = "https://github.com/steam-manifest/tool"
-"Bug Reports" = "https://github.com/steam-manifest/tool/issues"
-"Source" = "https://github.com/steam-manifest/tool"
+[tool.poetry.group.dev.dependencies]
+black = ">=23.0.0"
+isort = ">=5.12.0"
+flake8 = ">=6.0.0"
+pytest = ">=7.0.0"
+pytest-cov = ">=4.0.0"
+safety = ">=2.3.0"
+bandit = ">=1.7.0"
+pyinstaller = ">=5.13.0"
 
-[project.scripts]
-steam-manifest = "src.steam_manifest.cli.main:main"
-steam-extract = "src.steam_manifest.tools.extractor:extract_repository_info"
-steam-clean = "src.steam_manifest.tools.cleaner:clean_repository_history"
+[tool.poetry.scripts]
+steam-manifest = "steam_manifest.cli.main:main"
+steam-extract = "steam_manifest.tools.extractor:extract_repository_info"
+steam-clean = "steam_manifest.tools.cleaner:clean_repository_history"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 88
@@ -86,3 +75,15 @@ line_length = 88
 
 [tool.pylint]
 max-line-length = 88
+
+[tool.poetry.build]
+generate-setup-file = false
+
+# PyInstaller configuration for building executable with icon
+[tool.pyinstaller]
+name = "steam-manifest-tool"
+entry-point = "steam_manifest.cli.main:main"
+icon = "src/steam_manifest/assets/main.ico"
+onefile = true
+console = true
+add-data = ["src/steam_manifest/assets:steam_manifest/assets"]

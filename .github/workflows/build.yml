@@ -24,55 +24,83 @@ jobs:
             platform: macos
 
     steps:
-    - name: 📦 Checkout code
-      uses: actions/checkout@v4
+      - name: 📦 Checkout code
+        uses: actions/checkout@v4
 
-    - name: 🐍 Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.12"
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-    - name: 📋 Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -e .[dev]
-        pip install pyinstaller
+      - name: 📦 Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: latest
+          virtualenvs-create: true
+          virtualenvs-in-project: true
 
-    - name: 🔨 Build executables
-      run: |
-        # Build main CLI tool
-        pyinstaller --onefile --name steam-manifest --console src/steam_manifest/cli/main.py
-        
-        # Build extractor tool
-        pyinstaller --onefile --name steam-extract --console src/steam_manifest/tools/extractor.py
-        
-        # Build cleaner tool  
-        pyinstaller --onefile --name steam-clean --console src/steam_manifest/tools/cleaner.py
+      - name: 📋 Install dependencies
+        run: poetry install
 
-    - name: 📦 Package executables
-      shell: bash
-      run: |
-        mkdir -p release
-        if [ "${{ matrix.platform }}" = "windows" ]; then
-          cp dist/steam-manifest.exe release/
-          cp dist/steam-extract.exe release/
-          cp dist/steam-clean.exe release/
-          cd release && zip -r ../${{ matrix.asset_name }}.zip ./*
-        else
-          cp dist/steam-manifest release/
-          cp dist/steam-extract release/
-          cp dist/steam-clean release/
-          chmod +x release/*
-          cd release && tar -czf ../${{ matrix.asset_name }}.tar.gz ./*
-        fi
-        
-    - name: 📤 Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ matrix.asset_name }}
-        path: |
-          ${{ matrix.asset_name }}.zip
-          ${{ matrix.asset_name }}.tar.gz
+      - name: 🔨 Build executables
+        shell: bash
+        run: |
+          # Set icon path based on platform
+          if [ "${{ matrix.platform }}" = "windows" ]; then
+            ICON_ARG="--icon=src/steam_manifest/assets/main.ico"
+          else
+            ICON_ARG=""
+          fi
+          
+          # Build main CLI tool
+          poetry run pyinstaller \
+            --onefile \
+            --console \
+            --name steam-manifest \
+            --add-data "src/steam_manifest/assets:steam_manifest/assets" \
+            $ICON_ARG \
+            src/steam_manifest/cli/main.py
+          
+          # Build extractor tool
+          poetry run pyinstaller \
+            --onefile \
+            --console \
+            --name steam-extract \
+            $ICON_ARG \
+            src/steam_manifest/tools/extractor.py
+          
+          # Build cleaner tool  
+          poetry run pyinstaller \
+            --onefile \
+            --console \
+            --name steam-clean \
+            $ICON_ARG \
+            src/steam_manifest/tools/cleaner.py
+
+      - name: 📦 Package executables
+        shell: bash
+        run: |
+          mkdir -p release
+          if [ "${{ matrix.platform }}" = "windows" ]; then
+            cp dist/steam-manifest.exe release/
+            cp dist/steam-extract.exe release/
+            cp dist/steam-clean.exe release/
+            cd release && zip -r ../${{ matrix.asset_name }}.zip ./*
+          else
+            cp dist/steam-manifest release/
+            cp dist/steam-extract release/
+            cp dist/steam-clean release/
+            chmod +x release/*
+            cd release && tar -czf ../${{ matrix.asset_name }}.tar.gz ./*
+          fi
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.asset_name }}
+          path: |
+            ${{ matrix.asset_name }}.zip
+            ${{ matrix.asset_name }}.tar.gz
 
   release:
     name: 📦 Create Release
@@ -81,39 +109,43 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/')
     
     steps:
-    - name: 📦 Checkout code
-      uses: actions/checkout@v4
+      - name: 📦 Checkout code
+        uses: actions/checkout@v4
 
-    - name: 📥 Download all artifacts
-      uses: actions/download-artifact@v4
+      - name: 📥 Download all artifacts
+        uses: actions/download-artifact@v4
 
-    - name: 🏷️ Create Release
-      uses: softprops/action-gh-release@v2
-      with:
-        files: |
-          steam-manifest-linux-amd64/*.tar.gz
-          steam-manifest-windows-amd64/*.zip
-          steam-manifest-macos-amd64/*.tar.gz
-        draft: false
-        prerelease: false
-        generate_release_notes: true
-        body: |
-          🎉 **Steam Manifest Tool Release** 
-          
-          ## 📦 Downloads
-          - **Windows**: `steam-manifest-windows-amd64.zip`
-          - **Linux**: `steam-manifest-linux-amd64.tar.gz`  
-          - **macOS**: `steam-manifest-macos-amd64.tar.gz`
-          
-          ## 🚀 What's included
-          - `steam-manifest` - Main CLI tool
-          - `steam-extract` - Repository information extractor
-          - `steam-clean` - Repository history cleaner
-          
-          ## 📋 Installation
-          1. Download the appropriate archive for your platform
-          2. Extract the files
-          3. Add the executables to your PATH
-          4. Run `steam-manifest --help` to get started!
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🏷️ Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            steam-manifest-linux-amd64/*.tar.gz
+            steam-manifest-windows-amd64/*.zip
+            steam-manifest-macos-amd64/*.tar.gz
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          body: |
+            🎉 **Steam Manifest Tool Release** 
+            
+            ## 📦 Downloads
+            - **Windows**: `steam-manifest-windows-amd64.zip`
+            - **Linux**: `steam-manifest-linux-amd64.tar.gz`  
+            - **macOS**: `steam-manifest-macos-amd64.tar.gz`
+            
+            ## 🚀 What's included
+            - `steam-manifest` - Main CLI tool
+            - `steam-extract` - Repository information extractor
+            - `steam-clean` - Repository history cleaner
+            
+            ## 📋 Installation
+            1. Download the appropriate archive for your platform
+            2. Extract the files
+            3. Add the executables to your PATH
+            4. Run `steam-manifest --help` to get started!
+            
+            ## 🔧 Development
+            This version is built with Poetry for improved dependency management.
+            See `POETRY_GUIDE.md` for development instructions.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

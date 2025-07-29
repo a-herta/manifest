@@ -1,8 +1,8 @@
 name: 🐛 Bug Report
 description: Report a bug or issue with Steam Manifest Tool
 title: "[BUG] "
-labels: ["bug", "needs-triage"]
-assignees: []
+labels: [ "bug", "needs-triage" ]
+assignees: [ ]
 
 body:
   - type: markdown
