@@ -88,9 +88,38 @@ jobs:
   build-release:
     name: 🏗️ Build Release Assets
     needs: [validate-version, test-suite]
-    uses: ./.github/workflows/build.yml
-    with:
-      build_type: release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 📦 Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine wheel pyinstaller
+          pip install -r requirements.txt
+
+      - name: 🏗️ Build executables for all platforms
+        run: |
+          # Build for current platform
+          pyinstaller --onefile --name steam-manifest-tool main.py
+          
+      - name: 🏗️ Build Python package
+        run: python -m build
+
+      - name: 📊 Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: |
+            dist/
+            build/
 
   # 📝 生成发布说明
   generate-changelog:

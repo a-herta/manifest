@@ -1,0 +1,81 @@
+name: 🚀 Simple CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  # 基础测试
+  test:
+    name: 🧪 Basic Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🧪 Test imports
+        run: |
+          python -c "from src.steam_manifest import SteamManifestClient, Config; print('✅ Import test passed')"
+
+      - name: 🏃 Test CLI
+        run: |
+          python main.py --help
+          python main.py --version
+
+  # 简单构建
+  build:
+    name: 🏗️ Simple Build
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller build
+
+      - name: 🏗️ Build executable
+        run: |
+          pyinstaller --onefile --name steam-manifest-tool main.py
+
+      - name: 🏗️ Build package
+        run: |
+          python -m build
+
+      - name: 🧪 Test executable
+        run: |
+          dist/steam-manifest-tool --version
+
+      - name: 📊 Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: |
+            dist/
+            build/
