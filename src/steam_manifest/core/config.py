@@ -1,6 +1,5 @@
 """Configuration settings for Steam Manifest Tool."""
 
-from pathlib import Path
 from typing import Final
 
 

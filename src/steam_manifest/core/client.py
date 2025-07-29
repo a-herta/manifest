@@ -1,19 +1,18 @@
 """Main client for Steam Manifest Tool."""
 
 import logging
-import os
 import time
 from multiprocessing import pool
 from pathlib import Path
 from threading import Lock
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import vdf
 
 from ..utils.deduplicator import remove_duplicates
 from ..utils.input_helper import custom_input
 from ..utils.steam_helper import find_steam_path
-from .config import Config, URLBuilder
+from .config import Config
 from .github_client import GitHubClient
 from .steam_client import SteamClient
 
