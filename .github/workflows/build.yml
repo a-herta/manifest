@@ -36,15 +36,12 @@ jobs:
           - os: ubuntu-latest
             platform: linux
             extension: ""
-            icon: ""
           - os: windows-latest
             platform: windows
             extension: ".exe"
-            icon: "-i main.ico"
           - os: macos-latest
             platform: macos
             extension: ""
-            icon: ""
 
     steps:
       - name: 📥 Checkout code
@@ -66,7 +63,6 @@ jobs:
         run: |
           pyinstaller --onefile \
             --name ${{ env.APP_NAME }}-${{ matrix.platform }} \
-            ${{ matrix.icon }} \
             --distpath dist/${{ matrix.platform }} \
             --workpath build/${{ matrix.platform }} \
             --specpath build \
