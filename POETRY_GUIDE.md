@@ -23,6 +23,7 @@ pip install poetry
 ```bash
 git clone https://github.com/steam-manifest/tool.git
 cd tool
+# 推荐使用Python 3.12
 poetry install
 ```
 
@@ -148,6 +149,13 @@ poetry publish -r testpypi
 # 发布到 PyPI（正式）
 poetry publish
 ```
+
+## Python版本支持
+
+- **支持版本**: Python 3.10 - 3.13
+- **推荐版本**: Python 3.12
+- **最低版本**: Python 3.10
+- **最高版本**: Python 3.13 (不包含3.14)
 
 ### 发布 GitHub Release
 
