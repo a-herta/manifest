@@ -30,19 +30,19 @@ def check_python_version():
     """检查Python版本是否符合要求"""
     import sys
     version = sys.version_info
-    if version.major == 3 and 10 <= version.minor <= 13:
+    if version.major == 3 and 11 <= version.minor <= 13:
         print(f"✅ Python版本检查通过: {version.major}.{version.minor}.{version.micro}")
         return True
     else:
         print(f"❌ Python版本不符合要求: {version.major}.{version.minor}.{version.micro}")
-        print("   要求: Python 3.10 - 3.13 (推荐: 3.12)")
+        print("   要求: Python 3.11 - 3.13 (推荐: 3.12)")
         return False
 
 def main():
     """主构建流程"""
     print("🚀 Steam Manifest Tool 构建脚本")
     print("=" * 50)
-    print("📋 Python版本要求: 3.10 - 3.13 (推荐: 3.12)")
+    print("📋 Python版本要求: 3.11 - 3.13 (推荐: 3.12)")
     print("=" * 50)
     
     # 检查Python版本

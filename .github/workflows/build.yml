@@ -60,22 +60,6 @@ jobs:
             --add-data "src/steam_manifest/assets:steam_manifest/assets" \
             $ICON_ARG \
             src/steam_manifest/cli/main.py
-          
-          # Build extractor tool
-          poetry run pyinstaller \
-            --onefile \
-            --console \
-            --name steam-extract \
-            $ICON_ARG \
-            src/steam_manifest/tools/extractor.py
-          
-          # Build cleaner tool  
-          poetry run pyinstaller \
-            --onefile \
-            --console \
-            --name steam-clean \
-            $ICON_ARG \
-            src/steam_manifest/tools/cleaner.py
 
       - name: 📦 Package executables
         shell: bash
@@ -83,13 +67,9 @@ jobs:
           mkdir -p release
           if [ "${{ matrix.platform }}" = "windows" ]; then
             cp dist/steam-manifest.exe release/
-            cp dist/steam-extract.exe release/
-            cp dist/steam-clean.exe release/
             cd release && zip -r ../${{ matrix.asset_name }}.zip ./*
           else
             cp dist/steam-manifest release/
-            cp dist/steam-extract release/
-            cp dist/steam-clean release/
             chmod +x release/*
             cd release && tar -czf ../${{ matrix.asset_name }}.tar.gz ./*
           fi
@@ -135,8 +115,6 @@ jobs:
             
             ## 🚀 What's included
             - `steam-manifest` - Main CLI tool
-            - `steam-extract` - Repository information extractor
-            - `steam-clean` - Repository history cleaner
             
             ## 📋 Installation
             1. Download the appropriate archive for your platform

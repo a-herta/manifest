@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
-        python-version: [ "3.10", "3.11", "3.12", "3.13" ]
+        python-version: [ "3.11", "3.12", "3.13" ]
 
     steps:
       - name: 📦 Checkout code
@@ -50,8 +50,6 @@ jobs:
       - name: 🚀 Test CLI installation
         run: |
           poetry run steam-manifest --help
-          poetry run steam-extract --help
-          poetry run steam-clean --help
 
       - name: ✅ Test basic functionality
         run: |
