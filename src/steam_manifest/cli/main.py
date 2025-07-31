@@ -50,7 +50,7 @@ def main():
             sys.exit(1)
 
     except KeyboardInterrupt:
-        print("\n⚠️ Operation cancelled by user")
+        print("⚠️ Operation cancelled by user")
         sys.exit(0)
     except Exception as e:
         print(f"❌ Unexpected error: {str(e)}")
