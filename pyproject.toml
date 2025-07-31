@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "steam-manifest-tool"
-version = "3.5.0"
+version = "3.6.0"
 description = "A modern tool for fetching and managing Steam game manifest files"
 authors = ["Steam Manifest Team <dev@steammanifest.tool>"]
 readme = "README.md"

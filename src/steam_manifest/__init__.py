@@ -1,6 +1,6 @@
 """Steam Manifest Tool - A modern tool for fetching Steam game manifest files."""
 
-__version__ = "3.5.0"
+__version__ = "3.6.0"
 __author__ = "Steam Manifest Team"
 __description__ = "A tool for fetching and managing Steam game manifest files"
 

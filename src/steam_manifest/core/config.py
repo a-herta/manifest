@@ -7,7 +7,7 @@ class Config:
     """Configuration settings for the Steam Manifest Tool."""
 
     # Version information
-    VERSION: Final[str] = "3.5.0"
+    VERSION: Final[str] = "3.6.0"
 
     # Network settings
     TIMEOUT: Final[int] = 30
